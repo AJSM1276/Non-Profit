@@ -1,0 +1,128 @@
+/* Footer Container */
+.footer-container {
+  background: linear-gradient(135deg, hsl(220, 100%, 99%), hsl(220, 80%, 96%));
+  padding: 4rem 0;
+  box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.05);
+}
+
+/* Footer Layout */
+.footer {
+  width: 85%;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 2rem;
+  margin: 0 auto;
+  color: hsl(220, 48%, 28%);
+}
+
+.footer-heading a {
+  color: hsl(220, 48%, 28%);
+  text-decoration: none;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  transition: color 0.3s ease-out;
+  position: relative;
+}
+
+.footer-heading a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -3px;
+  width: 0;
+  height: 2px;
+  background: hsl(220, 70%, 50%);
+  transition: width 0.4s ease-out;
+}
+
+.footer-heading a:hover {
+  color: hsl(220, 70%, 50%);
+}
+
+.footer-heading a:hover::after {
+  width: 100%;
+}
+
+/* Newsletter Section */
+.hero {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem 0;
+  text-align: center;
+}
+
+.hero h2 {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: hsl(220, 48%, 28%);
+}
+
+.hero form {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+
+#sign-up {
+  width: 260px;
+  height: 42px;
+  border-radius: 6px;
+  padding-left: 0.75rem;
+  font-size: 1rem;
+  font-weight: 500;
+  box-shadow: 0 2px 6px hsla(220, 48%, 28%, 0.1);
+  border: 1px solid hsl(220, 60%, 80%);
+  transition: all 0.3s ease;
+}
+
+#sign-up:focus {
+  border-color: hsl(220, 70%, 50%);
+  box-shadow: 0 2px 10px hsla(220, 70%, 50%, 0.3);
+}
+
+#sign-up-btn {
+  width: 110px;
+  height: 42px;
+  border-radius: 6px;
+  background: hsl(220, 48%, 28%);
+  border: none;
+  color: white;
+  font-size: 1rem;
+  font-weight: 600;
+  transition: all 0.3s ease-out;
+}
+
+#sign-up-btn:hover {
+  background: hsl(220, 70%, 50%);
+  cursor: pointer;
+}
+
+.footer-copyright {
+  color: black !important; /* Ensures it overrides other styles */
+  text-align: center;
+  font-size: 0.9rem;
+  padding-top: 1rem;
+  opacity: 0.8; /* Optional: makes it look subtle */
+}
+
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .footer {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  
+  .hero form {
+    flex-direction: column;
+  }
+  
+  #sign-up {
+    width: 100%;
+  }
+}
