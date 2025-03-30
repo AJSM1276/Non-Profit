@@ -1,669 +1,470 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <!--=============== REMIXICONS ===============-->
-    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
 
     <!--=============== CSS ===============-->
-    <link rel="stylesheet" href="/public/assets/nav-assets/css/styles.css">
-    <link rel="stylesheet" href="/public/main-css/footer.css">
-    <link rel="stylesheet" href="/public/main-html/student-pages/css/all-courses.css">
+    <link rel="stylesheet" href="/public/assets/nav-assets/css/styles.css" />
+    <link rel="stylesheet" href="/public/main-css/footer.css" />
+    <link
+      rel="stylesheet"
+      href="/public/main-html/student-pages/css/all-courses.css"
+    />
     <title>Tutorly - All Courses</title>
     <style>
-        /* Add this style to create space between header and content */
-        .main-container {
-            margin-top: 80px; /* Adjust this value as needed */
-        }
-        
-        /* Optional: Adjust the hero section height if needed */
-        .courses-hero {
-            height: 50vh; /* Reduced from 60vh */
-        }
-        /* Star Rating Styles */
-.course-rating {
-    margin-bottom: 1.2rem;
-    display: flex;
-    align-items: center;
-}
+      /* Add this style to create space between header and content */
+      .main-container {
+        margin-top: 80px; /* Adjust this value as needed */
+      }
 
-.star-rating {
-    display: inline-flex;
-    font-size: 1.2rem;
-    cursor: pointer;
-    margin-right: 0.5rem;
-}
+      /* Optional: Adjust the hero section height if needed */
+      .courses-hero {
+        height: 50vh; /* Reduced from 60vh */
+      }
+      /* Star Rating Styles */
+      .course-rating {
+        margin-bottom: 1.2rem;
+        display: flex;
+        align-items: center;
+      }
 
-.star {
-    color: #ccc;
-    transition: all 0.2s;
-    margin-right: 2px;
-}
+      .star-rating {
+        display: inline-flex;
+        font-size: 1.2rem;
+        cursor: pointer;
+        margin-right: 0.5rem;
+      }
 
-.star:hover,
-.star.active {
-    color: #ffc107;
-    text-shadow: 0 0 4px rgba(255, 193, 7, 0.5);
-}
+      .star {
+        color: #ccc;
+        transition: all 0.2s;
+        margin-right: 2px;
+      }
 
-.rating-count {
-    font-size: 0.8rem;
-    color: hsl(220, 48%, 28%);
-    vertical-align: middle;
-    opacity: 0.8;
-}
+      .star:hover,
+      .star.active {
+        color: #ffc107;
+        text-shadow: 0 0 4px rgba(255, 193, 7, 0.5);
+      }
+
+      .rating-count {
+        font-size: 0.8rem;
+        color: hsl(220, 48%, 28%);
+        vertical-align: middle;
+        opacity: 0.8;
+      }
     </style>
-</head>
-<body>
+  </head>
+  <body>
     <!--=============== HEADER ===============-->
     <header class="header">
-        <nav class="nav container">
-            <div class="nav__data">
-                <a href="/index.html" class="nav__logo">
-                  <i class="fa-solid fa-graduation-cap"></i> Tutorly
-                </a>
+      <nav class="nav container">
+        <div class="nav__data">
+          <a href="/index.html" class="nav__logo">
+            <i class="fa-solid fa-graduation-cap"></i> Tutorly
+          </a>
 
-                <div class="nav__toggle" id="nav-toggle">
-                    <i class="ri-menu-line nav__toggle-menu"></i>
-                    <i class="ri-close-line nav__toggle-close"></i>
+          <div class="nav__toggle" id="nav-toggle">
+            <i class="ri-menu-line nav__toggle-menu"></i>
+            <i class="ri-close-line nav__toggle-close"></i>
+          </div>
+        </div>
+
+        <!--=============== NAV MENU ===============-->
+        <div class="nav__menu" id="nav-menu">
+          <ul class="nav__list">
+            <li>
+              <a href="./index.html" class="nav__link">Home</a>
+            </li>
+            <li>
+              <a
+                href="./public/main-html/student-pages/course-pages/courses.html"
+                class="nav__link"
+                >All Courses</a
+              >
+            </li>
+
+            <!--=============== DROPDOWN 1 ===============-->
+            <li class="dropdown__item">
+              <div class="nav__link dropdown__button">
+                Discover <i class="ri-arrow-down-s-line dropdown__arrow"></i>
+              </div>
+
+              <div class="dropdown__container">
+                <div class="dropdown__content">
+                  <div class="dropdown__group">
+                    <div class="dropdown__icon">
+                      <i class="fa-solid fa-star"></i>
+                    </div>
+
+                    <span class="dropdown__title">Most viewed courses</span>
+
+                    <ul class="dropdown__list">
+                      <li>
+                        <a href="#" class="dropdown__link">AP Biology</a>
+                      </li>
+                      <li>
+                        <a href="#" class="dropdown__link"
+                          >Anatomy & Physiology</a
+                        >
+                      </li>
+                      <li>
+                        <a href="#" class="dropdown__link">Music Production</a>
+                      </li>
+                    </ul>
+                  </div>
+
+                  <div class="dropdown__group">
+                    <div class="dropdown__icon">
+                      <i class="fa-solid fa-fire"></i>
+                    </div>
+
+                    <span class="dropdown__title">Popular courses</span>
+
+                    <ul class="dropdown__list">
+                      <li>
+                        <a href="#" class="dropdown__link">AP Biology</a>
+                      </li>
+                      <li>
+                        <a href="#" class="dropdown__link"
+                          >Anatomy & Physiology</a
+                        >
+                      </li>
+                      <li>
+                        <a href="#" class="dropdown__link">Music Production</a>
+                      </li>
+                    </ul>
+                  </div>
+
+                  <div class="dropdown__group">
+                    <div class="dropdown__icon">
+                      <i class="fa-solid fa-mobile-screen-button"></i>
+                    </div>
+
+                    <span class="dropdown__title">Social Media</span>
+
+                    <ul class="dropdown__list">
+                      <li>
+                        <a href="#" class="dropdown__link">Discord</a>
+                      </li>
+                      <li>
+                        <a href="#" class="dropdown__link">Instagram</a>
+                      </li>
+                      <li>
+                        <a href="#" class="dropdown__link">YouTube</a>
+                      </li>
+                      <li>
+                        <a href="#" class="dropdown__link">TikTok</a>
+                      </li>
+                    </ul>
+                  </div>
+
+                  <div class="dropdown__group">
+                    <div class="dropdown__icon">
+                      <i class="fa-solid fa-chalkboard-user"></i>
+                    </div>
+
+                    <span class="dropdown__title">Become A Tutor</span>
+
+                    <ul class="dropdown__list">
+                      <li>
+                        <a href="#" class="dropdown__link">Info</a>
+                      </li>
+                      <li>
+                        <a href="#" class="dropdown__link">Apply</a>
+                      </li>
+                    </ul>
+                  </div>
                 </div>
-            </div>
+              </div>
+            </li>
 
-            <!--=============== NAV MENU ===============-->
-            <div class="nav__menu" id="nav-menu">
-                <ul class="nav__list">
-                    <li>
-                        <a href="./index.html" class="nav__link">Home</a>
-                    </li>
-                    <li>
-                        <a href="./public/main-html/student-pages/course-pages/courses.html" class="nav__link">All Courses</a>
-                    </li>
+            <!--=============== DROPDOWN 2 ===============-->
+            <li class="dropdown__item">
+              <div class="nav__link dropdown__button">
+                Resources <i class="ri-arrow-down-s-line dropdown__arrow"></i>
+              </div>
 
-                    <!--=============== DROPDOWN 1 ===============-->
-                    <li class="dropdown__item">                      
-                        <div class="nav__link dropdown__button">
-                            Discover <i class="ri-arrow-down-s-line dropdown__arrow"></i>
-                        </div>
+              <div class="dropdown__container">
+                <div class="dropdown__content">
+                  <div class="dropdown__group">
+                    <div class="dropdown__icon">
+                      <i class="fa-solid fa-pencil"></i>
+                    </div>
 
-                        <div class="dropdown__container">
-                            <div class="dropdown__content">
-                                <div class="dropdown__group">
-                                    <div class="dropdown__icon">
-                                        <i class="fa-solid fa-star"></i>
-                                    </div>
+                    <span class="dropdown__title">Study techniques</span>
 
-                                    <span class="dropdown__title">Most viewed courses</span>
+                    <ul class="dropdown__list">
+                      <li>
+                        <a href="#" class="dropdown__link"
+                          >Utilizing Pomodoro</a
+                        >
+                      </li>
+                      <li>
+                        <a href="#" class="dropdown__link">Mastering Anki</a>
+                      </li>
+                    </ul>
+                  </div>
 
-                                    <ul class="dropdown__list">
-                                        <li>
-                                            <a href="#" class="dropdown__link">AP Biology</a>
-                                        </li>
-                                        <li>
-                                            <a href="#" class="dropdown__link">Anatomy & Physiology</a>
-                                        </li>
-                                        <li>
-                                            <a href="#" class="dropdown__link">Music Production</a>
-                                        </li>
-                                    </ul>
-                                </div>
+                  <div class="dropdown__group">
+                    <div class="dropdown__icon">
+                      <i class="fa-solid fa-user-group"></i>
+                    </div>
 
-                                <div class="dropdown__group">
-                                    <div class="dropdown__icon">
-                                        <i class="fa-solid fa-fire"></i>
-                                    </div>
+                    <span class="dropdown__title">Community</span>
 
-                                    <span class="dropdown__title">Popular courses</span>
+                    <ul class="dropdown__list">
+                      <li>
+                        <a href="#" class="dropdown__link">Community forum</a>
+                      </li>
+                      <li>
+                        <a href="#" class="dropdown__link">Newsletter</a>
+                      </li>
+                    </ul>
+                  </div>
 
-                                    <ul class="dropdown__list">
-                                        <li>
-                                            <a href="#" class="dropdown__link">AP Biology</a>
-                                        </li>
-                                        <li>
-                                            <a href="#" class="dropdown__link">Anatomy & Physiology</a>
-                                        </li>
-                                        <li>
-                                            <a href="#" class="dropdown__link">Music Production</a>
-                                        </li>
-                                    </ul>
-                                </div>
+                  <div class="dropdown__group">
+                    <div class="dropdown__icon">
+                      <i class="fa-solid fa-globe"></i>
+                    </div>
 
-                                <div class="dropdown__group">
-                                    <div class="dropdown__icon">
-                                        <i class="fa-solid fa-mobile-screen-button"></i>
-                                    </div>
+                    <span class="dropdown__title">Others</span>
 
-                                    <span class="dropdown__title">Social Media</span>
+                    <ul class="dropdown__list">
+                      <li>
+                        <a href="#" class="dropdown__link">Recent blogs</a>
+                      </li>
+                      <li>
+                        <a href="#" class="dropdown__link"
+                          >Scholarship opportunities</a
+                        >
+                      </li>
+                      <li>
+                        <a href="#" class="dropdown__link">Webinar</a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </li>
 
-                                    <ul class="dropdown__list">
-                                        <li>
-                                            <a href="#" class="dropdown__link">Discord</a>
-                                        </li>
-                                        <li>
-                                            <a href="#" class="dropdown__link">Instagram</a>
-                                        </li>
-                                        <li>
-                                            <a href="#" class="dropdown__link">YouTube</a>
-                                        </li>
-                                        <li>
-                                            <a href="#" class="dropdown__link">TikTok</a>
-                                        </li>
-                                    </ul>
-                                </div>
+            <!--=============== DROPDOWN 3 ===============-->
+            <li class="dropdown__item">
+              <div class="nav__link dropdown__button">
+                Company <i class="ri-arrow-down-s-line dropdown__arrow"></i>
+              </div>
 
-                                <div class="dropdown__group">
-                                    <div class="dropdown__icon">
-                                      <i class="fa-solid fa-chalkboard-user"></i>
-                                    </div>
+              <div class="dropdown__container">
+                <div class="dropdown__content">
+                  <div class="dropdown__group">
+                    <div class="dropdown__icon">
+                      <i class="fa-solid fa-circle-info"></i>
+                    </div>
 
-                                    <span class="dropdown__title">Become A Tutor</span>
+                    <span class="dropdown__title">About Tutorly</span>
 
-                                    <ul class="dropdown__list">
-                                        <li>
-                                            <a href="#" class="dropdown__link">Info</a>
-                                        </li>
-                                        <li>
-                                            <a href="#" class="dropdown__link">Apply</a>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                    </li>
+                    <ul class="dropdown__list">
+                      <li>
+                        <a href="#" class="dropdown__link">About</a>
+                      </li>
+                      <li>
+                        <a href="#" class="dropdown__link">Founders</a>
+                      </li>
+                      <li>
+                        <a href="#" class="dropdown__link">Our Values</a>
+                      </li>
+                    </ul>
+                  </div>
 
-                    <!--=============== DROPDOWN 2 ===============-->
-                    <li class="dropdown__item">
-                        <div class="nav__link dropdown__button">
-                            Resources <i class="ri-arrow-down-s-line dropdown__arrow"></i>
-                        </div>
+                  <div class="dropdown__group">
+                    <div class="dropdown__icon">
+                      <i class="fa-solid fa-user-shield"></i>
+                    </div>
 
-                        <div class="dropdown__container">
-                            <div class="dropdown__content">
-                                <div class="dropdown__group">
-                                    <div class="dropdown__icon">
-                                        <i class="fa-solid fa-pencil"></i>
-                                    </div>
+                    <span class="dropdown__title">Safety and quality</span>
 
-                                    <span class="dropdown__title">Study techniques</span>
-
-                                    <ul class="dropdown__list">
-                                        <li>
-                                            <a href="#" class="dropdown__link">Utilizing Pomodoro</a>
-                                        </li>
-                                        <li>
-                                            <a href="#" class="dropdown__link">Mastering Anki</a>
-                                        </li>
-                                    </ul>
-                                </div>
-
-                                <div class="dropdown__group">
-                                    <div class="dropdown__icon">
-                                        <i class="fa-solid fa-user-group"></i>
-                                    </div>
-
-                                    <span class="dropdown__title">Community</span>
-
-                                    <ul class="dropdown__list">
-                                        <li>
-                                            <a href="#" class="dropdown__link">Community forum</a>
-                                        </li>
-                                        <li>
-                                            <a href="#" class="dropdown__link">Newsletter</a>
-                                        </li>
-                                    </ul>
-                                </div>
-
-                                <div class="dropdown__group">
-                                    <div class="dropdown__icon">
-                                        <i class="fa-solid fa-globe"></i>
-                                    </div>
-
-                                    <span class="dropdown__title">Others</span>
-
-                                    <ul class="dropdown__list">
-                                        <li>
-                                            <a href="#" class="dropdown__link">Recent blogs</a>
-                                        </li>
-                                        <li>
-                                            <a href="#" class="dropdown__link">Scholarship opportunities</a>
-                                        </li>
-                                        <li>
-                                            <a href="#" class="dropdown__link">Webinar</a>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                    </li>
-
-                    <!--=============== DROPDOWN 3 ===============-->
-                    <li class="dropdown__item">                        
-                        <div class="nav__link dropdown__button">
-                            Company <i class="ri-arrow-down-s-line dropdown__arrow"></i>
-                        </div>
-
-                        <div class="dropdown__container">
-                            <div class="dropdown__content">
-                                <div class="dropdown__group">
-                                    <div class="dropdown__icon">
-                                        <i class="fa-solid fa-circle-info"></i>
-                                    </div>
-
-                                    <span class="dropdown__title">About Tutorly</span>
-
-                                    <ul class="dropdown__list">
-                                        <li>
-                                            <a href="#" class="dropdown__link">About</a>
-                                        </li>
-                                        <li>
-                                            <a href="#" class="dropdown__link">Founders</a>
-                                        </li>
-                                        <li>
-                                            <a href="#" class="dropdown__link">Our Values</a>
-                                        </li>
-                                    </ul>
-                                </div>
-
-                                <div class="dropdown__group">
-                                    <div class="dropdown__icon">
-                                        <i class="fa-solid fa-user-shield"></i>
-                                    </div>
-
-                                    <span class="dropdown__title">Safety and quality</span>
-
-                                    <ul class="dropdown__list">
-                                        <li>
-                                            <a href="#" class="dropdown__link">Terms of Service</a>
-                                        </li>
-                                        <li>
-                                            <a href="#" class="dropdown__link">Privacy Policy</a>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                    </li>
-                </ul>
-            </div>
-        </nav>
+                    <ul class="dropdown__list">
+                      <li>
+                        <a href="#" class="dropdown__link">Terms of Service</a>
+                      </li>
+                      <li>
+                        <a href="#" class="dropdown__link">Privacy Policy</a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </nav>
     </header>
 
     <!--=============== MAIN CONTENT ===============-->
     <main class="main-container">
-        <section class="courses-hero">
-            <div class="hero-content">
-                <h1>Explore Our Courses</h1>
-                <p>Find the perfect course to expand your knowledge and skills with our expert tutors.</p>
-                <div class="search-container">
-                    <input type="text" placeholder="Search courses...">
-                    <button><i class="ri-search-line"></i></button>
-                </div>
-            </div>
-        </section>
-
-        <section class="courses-section">
-            <div class="courses-filter">
-                <div class="filter-header">
-                    <h3>Filter Courses</h3>
-                    <button class="clear-filters">Clear All</button>
-                </div>
-                
-                <div class="filter-group">
-                    <h4>Categories</h4>
-                    <ul>
-                        <li><a href="#" class="active">All Categories</a></li>
-                        <li><a href="#">Science</a></li>
-                        <li><a href="#">Mathematics</a></li>
-                        <li><a href="#">Humanities</a></li>
-                        <li><a href="#">Arts</a></li>
-                        <li><a href="#">Technology</a></li>
-                        <li><a href="#">Languages</a></li>
-                    </ul>
-                </div>
-                
-                <div class="filter-group">
-                    <h4>Level</h4>
-                    <ul>
-                        <li><a href="#" class="active">All Levels</a></li>
-                        <li><a href="#">Beginner</a></li>
-                        <li><a href="#">Intermediate</a></li>
-                        <li><a href="#">Advanced</a></li>
-                    </ul>
-                </div>
-            </div>
-
-            <div class="courses-grid">
-                <div class="course-card">
-                    <div class="course-image">
-                        <img src="https://via.placeholder.com/300x200" alt="AP Biology Course">
-                        <span class="popular-tag">Popular</span>
-                    </div>
-                    <div class="course-info">
-                        <div class="course-category">Science</div>
-                        <h3 class="course-title">AP Biology</h3>
-                        <p class="course-description">Master the core scientific principles, theories, and processes of biology.</p>
-                        <div class="course-meta">
-                            <span><i class="ri-user-line"></i> Dr. Sarah Johnson</span>
-                        </div>
-                        <div class="course-rating">
-                            <div class="star-rating" data-course-id="1">
-                                <span class="star" data-value="1">☆</span>
-                                <span class="star" data-value="2">☆</span>
-                                <span class="star" data-value="3">☆</span>
-                                <span class="star" data-value="4">☆</span>
-                                <span class="star" data-value="5">☆</span>
-                            </div>
-                            <span class="rating-count">(0 ratings)</span>
-                        </div>
-                        <a href="#" class="enroll-button">Enroll Now</a>
-                    </div>
-                </div>
-
-                <div class="course-card">
-                    <div class="course-image">
-                        <img src="https://via.placeholder.com/300x200" alt="Calculus Course">
-                        <span class="new-tag">New</span>
-                    </div>
-                    <div class="course-info">
-                        <div class="course-category">Mathematics</div>
-                        <h3 class="course-title">Calculus I</h3>
-                        <p class="course-description">Learn limits, derivatives, and integrals with practical applications.</p>
-                        <div class="course-meta">
-                            <span><i class="ri-user-line"></i> Prof. Michael Chen</span>
-                        </div>
-                        <div class="course-rating">
-                            <div class="star-rating" data-course-id="2">
-                                <span class="star" data-value="1">☆</span>
-                                <span class="star" data-value="2">☆</span>
-                                <span class="star" data-value="3">☆</span>
-                                <span class="star" data-value="4">☆</span>
-                                <span class="star" data-value="5">☆</span>
-                            </div>
-                            <span class="rating-count">(0 ratings)</span>
-                        </div>
-                        <a href="#" class="enroll-button">Enroll Now</a>
-                    </div>
-                </div>
-
-                <div class="course-card">
-                    <div class="course-image">
-                        <img src="https://via.placeholder.com/300x200" alt="Music Production Course">
-                    </div>
-                    <div class="course-info">
-                        <div class="course-category">Arts</div>
-                        <h3 class="course-title">Music Production</h3>
-                        <p class="course-description">Create professional-quality music with digital audio workstations.</p>
-                        <div class="course-meta">
-                            <span><i class="ri-user-line"></i> Alex Martinez</span>
-                        </div>
-                        <div class="course-rating">
-                            <div class="star-rating" data-course-id="3">
-                                <span class="star" data-value="1">☆</span>
-                                <span class="star" data-value="2">☆</span>
-                                <span class="star" data-value="3">☆</span>
-                                <span class="star" data-value="4">☆</span>
-                                <span class="star" data-value="5">☆</span>
-                            </div>
-                            <span class="rating-count">(0 ratings)</span>
-                        </div>
-                        <a href="#" class="enroll-button">Enroll Now</a>
-                    </div>
-                </div>
-
-                <div class="course-card">
-                    <div class="course-image">
-                        <img src="https://via.placeholder.com/300x200" alt="Spanish Course">
-                    </div>
-                    <div class="course-info">
-                        <div class="course-category">Languages</div>
-                        <h3 class="course-title">Spanish for Beginners</h3>
-                        <p class="course-description">Build a foundation in Spanish with essential vocabulary and grammar.</p>
-                        <div class="course-meta">
-                            <span><i class="ri-user-line"></i> Maria Gonzalez</span>
-                        </div>
-                        <div class="course-rating">
-                            <div class="star-rating" data-course-id="4">
-                                <span class="star" data-value="1">☆</span>
-                                <span class="star" data-value="2">☆</span>
-                                <span class="star" data-value="3">☆</span>
-                                <span class="star" data-value="4">☆</span>
-                                <span class="star" data-value="5">☆</span>
-                            </div>
-                            <span class="rating-count">(0 ratings)</span>
-                        </div>
-                        <a href="#" class="enroll-button">Enroll Now</a>
-                    </div>
-                </div>
-
-                <div class="course-card">
-                    <div class="course-image">
-                        <img src="https://via.placeholder.com/300x200" alt="Web Development Course">
-                        <span class="popular-tag">Popular</span>
-                    </div>
-                    <div class="course-info">
-                        <div class="course-category">Technology</div>
-                        <h3 class="course-title">Web Development Bootcamp</h3>
-                        <p class="course-description">Learn HTML, CSS, JavaScript and build responsive websites.</p>
-                        <div class="course-meta">
-                            <span><i class="ri-user-line"></i> David Wilson</span>
-                        </div>
-                        <div class="course-rating">
-                            <div class="star-rating" data-course-id="5">
-                                <span class="star" data-value="1">☆</span>
-                                <span class="star" data-value="2">☆</span>
-                                <span class="star" data-value="3">☆</span>
-                                <span class="star" data-value="4">☆</span>
-                                <span class="star" data-value="5">☆</span>
-                            </div>
-                            <span class="rating-count">(0 ratings)</span>
-                        </div>
-                        <a href="#" class="enroll-button">Enroll Now</a>
-                    </div>
-                </div>
-
-                <div class="course-card">
-                    <div class="course-image">
-                        <img src="https://via.placeholder.com/300x200" alt="Psychology Course">
-                    </div>
-                    <div class="course-info">
-                        <div class="course-category">Humanities</div>
-                        <h3 class="course-title">Introduction to Psychology</h3>
-                        <p class="course-description">Explore the scientific study of behavior and mental processes.</p>
-                        <div class="course-meta">
-                            <span><i class="ri-user-line"></i> Dr. Emily Parker</span>
-                        </div>
-                        <div class="course-rating">
-                            <div class="star-rating" data-course-id="6">
-                                <span class="star" data-value="1">☆</span>
-                                <span class="star" data-value="2">☆</span>
-                                <span class="star" data-value="3">☆</span>
-                                <span class="star" data-value="4">☆</span>
-                                <span class="star" data-value="5">☆</span>
-                            </div>
-                            <span class="rating-count">(0 ratings)</span>
-                        </div>
-                        <a href="#" class="enroll-button">Enroll Now</a>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <div class="pagination-container">
-            <div class="pagination"></div>
+      <section class="courses-hero">
+        <div class="hero-content">
+          <h1>Explore Our Courses</h1>
+          <p>
+            Find the perfect course to expand your knowledge and skills with our
+            expert tutors.
+          </p>
+          <div class="search-container">
+            <input type="text" placeholder="Search courses..." />
+            <button><i class="ri-search-line"></i></button>
+          </div>
         </div>
+      </section>
+
+      <section class="courses-section">
+        <div class="courses-filter">
+          <div class="filter-header">
+            <h3>Filter Courses</h3>
+            <button class="clear-filters">Clear All</button>
+          </div>
+
+          <div class="filter-group">
+            <h4>Categories</h4>
+            <ul>
+              <li><a href="#" class="active">All Categories</a></li>
+              <li><a href="#">Science</a></li>
+              <li><a href="#">Mathematics</a></li>
+              <li><a href="#">Humanities</a></li>
+              <li><a href="#">Arts</a></li>
+              <li><a href="#">Technology</a></li>
+              <li><a href="#">Languages</a></li>
+            </ul>
+          </div>
+
+          <div class="filter-group">
+            <h4>Level</h4>
+            <ul>
+              <li><a href="#" class="active">All Levels</a></li>
+              <li><a href="#">Beginner</a></li>
+              <li><a href="#">Intermediate</a></li>
+              <li><a href="#">Advanced</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="courses-grid">
+          <div class="course-card">
+            <div class="course-image">
+              <img
+                src="https://via.placeholder.com/300x200"
+                alt="AP Biology Course"
+              />
+              <span class="popular-tag">Popular</span>
+            </div>
+            <div class="course-info">
+              <div class="course-category">Science</div>
+              <h3 class="course-title">AP Biology</h3>
+              <p class="course-description">
+                Master the core scientific principles, theories, and processes
+                of biology.
+              </p>
+              <div class="course-meta">
+                <span><i class="ri-user-line"></i> Aldrich Magpali</span>
+              </div>
+
+              <a href="../../course-pages/apbiology/home.html" class="enroll-button">View Course</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <div class="pagination-container">
+        <div class="pagination"></div>
+      </div>
     </main>
 
     <!--=============== FOOTER ===============-->
     <div class="footer-container">
-        <div class="footer">
-          <div class="footer-heading footer-1">
-            <h2>Navigation</h2>
-            <br>
-            <a href="/index.html">Home</a>
-            <br>
-            <a href="#">Discover</a>
-            <br>
-            <a href="#">Resources</a>
-            <br>
-            <a href="#">Company</a>
-          </div>
-          <div class="footer-heading footer-2">
-            <h2>Connect</h2>
-            <br>
-            <a href="#">Discord</a>
-            <br>
-            <a href="#">YouTube</a>
-            <br>
-            <a href="#">Instagram</a>
-            <br>
-            <a href="#">TikTok</a>
-          </div>
-          <div class="footer-heading footer-3">
-            <h2>Help</h2>
-            <br>
-            <a href="#">FAQ</a>
-            <br>
-            <a href="/public/main-html/contact.html">Contact Us</a>
-            <br>
-            <a href="#">Privacy Policy</a>
-            <br>
-            <a href="#">Terms of Service</a>
-          </div>
+      <div class="footer">
+        <div class="footer-heading footer-1">
+          <h2>Navigation</h2>
+          <br />
+          <a href="../../../../index.html">Home</a>
+          <br />
+          <a href="#">Discover</a>
+          <br />
+          <a href="#">Resources</a>
+          <br />
+          <a href="#">Company</a>
         </div>
-        <br>
-        <br>
-        <br>
-        <!--=============== NEWSLETTER ===============-->
-        <hr>
-        <div class="newsletter footer-email-form">
-          <h2>Join Our Newsletter!</h2>
-          <p style="margin-bottom: 15px;">Free resources, study guides, and tutoring updates—straight to your inbox</p>
-          <form name="submit-to-google-sheet">
-              <input type="email" name="Email" placeholder="Your Email Address" required id="sign-up">
-              <button type="submit" id="sign-up-btn" onclick="changeText()">Sign Up</button>
-          </form>
-          <span id="msg" class="sign-up-disappear"></span>
-          <br>
-          <p style="font-size: 11px;">By subscribing, you agree to our <a href="#">Terms of Service</a> and <a href="#">Privacy Policy</a>.</p>
+        <div class="footer-heading footer-2">
+          <h2>Connect</h2>
+          <br />
+          <a href="#">Discord</a>
+          <br />
+          <a href="#">YouTube</a>
+          <br />
+          <a href="#">Instagram</a>
+          <br />
+          <a href="#">TikTok</a>
+        </div>
+        <div class="footer-heading footer-3">
+          <h2>Help</h2>
+          <br />
+          <a href="../../help/faq.html">FAQ</a>
+          <br />
+          <a href="../../help/contact.html">Contact Us</a>
+          <br />
+          <a href="../../help/privacy-policy.html">Privacy Policy</a>
+          <br />
+          <a href="../../help/terms-of-service.html">Terms of Service</a>
+        </div>
       </div>
-      <p class="footer-copyright" style="color: white; font-weight: 200; text-align: center">
+      <br />
+      <br />
+      <br />
+      <!--=============== NEWSLETTER ===============-->
+      <hr />
+      <div class="newsletter footer-email-form">
+        <h2>Join Our Newsletter!</h2>
+        <p style="margin-bottom: 15px">
+          Free resources, study guides, and tutoring updates—straight to your
+          inbox
+        </p>
+        <form name="submit-to-google-sheet">
+          <input
+            type="email"
+            name="Email"
+            placeholder="Your Email Address"
+            required
+            id="sign-up"
+          />
+          <button type="submit" id="sign-up-btn" onclick="changeText()">
+            Sign Up
+          </button>
+        </form>
+        <span id="msg" class="sign-up-disappear"></span>
+        <br />
+        <p style="font-size: 11px">
+          By subscribing, you agree to our <a href="#">Terms of Service</a> and
+          <a href="#">Privacy Policy</a>.
+        </p>
+      </div>
+      <p
+        class="footer-copyright"
+        style="color: white; font-weight: 200; text-align: center"
+      >
         &copy 2025 Tutorly. All Rights Reserved
       </p>
     </div>
 
     <!--=============== MAIN JS ===============-->
-    <script src="/public/assets/nav-assets/js/main.js"></script>
-    <script>
-        // Rating System
-        document.addEventListener('DOMContentLoaded', function() {
-            // Initialize ratings from localStorage
-            let courseRatings = JSON.parse(localStorage.getItem('courseRatings')) || {};
-            
-            // Set up rating for each course
-            document.querySelectorAll('.star-rating').forEach(ratingContainer => {
-                const courseId = ratingContainer.getAttribute('data-course-id');
-                const stars = ratingContainer.querySelectorAll('.star');
-                const ratingCountEl = ratingContainer.nextElementSibling;
-                
-                // Initialize with saved rating or default
-                if (!courseRatings[courseId]) {
-                    courseRatings[courseId] = {
-                        average: 0,
-                        count: 0,
-                        userRating: 0
-                    };
-                }
-                
-                // Display current average
-                updateStarDisplay(stars, courseRatings[courseId].average);
-                updateRatingCount(ratingCountEl, courseRatings[courseId].count);
-                
-                // Add event listeners
-                stars.forEach(star => {
-                    star.addEventListener('click', () => {
-                        const ratingValue = parseInt(star.getAttribute('data-value'));
-                        const courseData = courseRatings[courseId];
-                        
-                        // If user already rated, adjust their previous rating
-                        const previousRating = courseData.userRating || 0;
-                        
-                        // Calculate new average
-                        const newCount = previousRating ? courseData.count : courseData.count + 1;
-                        const totalRatings = courseData.average * courseData.count;
-                        const newTotal = totalRatings - previousRating + ratingValue;
-                        const newAverage = newTotal / newCount;
-                        
-                        // Update data
-                        courseData.average = newAverage;
-                        courseData.count = newCount;
-                        courseData.userRating = ratingValue;
-                        
-                        // Save to storage
-                        localStorage.setItem('courseRatings', JSON.stringify(courseRatings));
-                        
-                        // Update display
-                        updateStarDisplay(stars, newAverage);
-                        updateRatingCount(ratingCountEl, newCount);
-                    });
-                    
-                    star.addEventListener('mouseover', () => {
-                        const hoverValue = parseInt(star.getAttribute('data-value'));
-                        highlightStars(stars, hoverValue);
-                    });
-                    
-                    star.addEventListener('mouseout', () => {
-                        updateStarDisplay(stars, courseRatings[courseId].average);
-                    });
-                });
-            });
-            
-            function updateStarDisplay(stars, averageRating) {
-                stars.forEach(star => {
-                    const starValue = parseInt(star.getAttribute('data-value'));
-                    star.textContent = starValue <= averageRating ? '★' : '☆';
-                    star.classList.toggle('active', starValue <= averageRating);
-                });
-            }
-            
-            function highlightStars(stars, upToValue) {
-                stars.forEach(star => {
-                    const starValue = parseInt(star.getAttribute('data-value'));
-                    star.textContent = starValue <= upToValue ? '★' : '☆';
-                });
-            }
-            
-            function updateRatingCount(element, count) {
-                element.textContent = `(${count} ${count === 1 ? 'rating' : 'ratings'})`;
-            }
-            
-            // Initialize all ratings on page load
-            function initializeRatings() {
-                document.querySelectorAll('.course-card').forEach((card, index) => {
-                    const courseId = index + 1;
-                    if (!courseRatings[courseId]) {
-                        courseRatings[courseId] = {
-                            average: Math.random() * 2 + 3, // Random between 3-5 for demo
-                            count: Math.floor(Math.random() * 100) + 5, // Random 5-105 for demo
-                            userRating: 0
-                        };
-                    }
-                    const ratingContainer = card.querySelector('.star-rating');
-                    const stars = ratingContainer.querySelectorAll('.star');
-                    const ratingCountEl = ratingContainer.nextElementSibling;
-                    
-                    updateStarDisplay(stars, courseRatings[courseId].average);
-                    updateRatingCount(ratingCountEl, courseRatings[courseId].count);
-                });
-                localStorage.setItem('courseRatings', JSON.stringify(courseRatings));
-            }
-            
-            // Initialize with some demo ratings if none exist
-            if (Object.keys(courseRatings).length === 0) {
-                initializeRatings();
-            }
-        });
-        </script>
-</body>
+    <script src="../../../js/main.js"></script>
+  </body>
 </html>

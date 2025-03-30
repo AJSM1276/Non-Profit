@@ -5,11 +5,11 @@
   --header-height: 3.5rem;
   /*========== Colors ==========*/
   /*Color mode HSL(hue, saturation, lightness)*/
-  --first-color: hsl(220, 70%, 50%);
-  --first-color-lighten: hsl(220, 68%, 97%);
-  --title-color: hsl(220, 48%, 28%);
-  --text-color: hsl(220, 12%, 45%);
-  --body-color: hsl(220, 100%, 99%);
+  --first-color: hsl(145, 34%, 61%);
+  --first-color-lighten: hsl(146, 69%, 16%);
+  --title-color: hsl(0, 0%, 100%);
+  --text-color: hsl(144, 28%, 79%);
+  --body-color: hsl(145, 48%, 28%);
   /*========== Font and typography ==========*/
   /*.5rem = 8px | 1rem = 16px ...*/
   --body-font: "Poppins", sans-serif;
@@ -88,6 +88,10 @@ a {
   font-weight: var(--font-semi-bold);
   transition: color 0.3s;
 }
+
+#tutorly {
+  margin-right: auto; /* Pushes Tutoriy to the far right */
+}
 .nav__logo i {
   font-size: 1.25rem;
 }
@@ -112,6 +116,9 @@ a {
 }
 .nav__toggle-close {
   opacity: 0;
+}
+#tutorly {
+  padding-left: 2.5rem;
 }
 @media screen and (max-width: 1118px) {
   .nav__menu {
@@ -141,10 +148,11 @@ a {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  transition: background-color 0.3s;
+  transition: all .3s ease-in-out;
 }
 .nav__link:hover {
   background-color: var(--first-color-lighten);
+  transition: all .3s ease-in-out;
 }
 
 /* Show menu */
@@ -231,6 +239,17 @@ a {
   .dropdown__group {
     padding-left: 1.5rem;
   }
+  #tutorly {
+    padding-left: 0;
+  }
+  .nav__logo {
+    display: grid;
+    align-items: center;
+    column-gap: 0.25rem;
+    color: var(--title-color);
+    font-weight: var(--font-semi-bold);
+    transition: color 0.3s;
+  }
 }
 /* For large devices */
 @media screen and (min-width: 1118px) {
@@ -248,6 +267,7 @@ a {
     column-gap: 3rem;
     height: 100%;
   }
+  
   .nav li {
     display: flex;
   }
@@ -256,6 +276,7 @@ a {
   }
   .nav__link:hover {
     background-color: initial;
+    color: var(--first-color);
   }
   /* Dropdown */
   .dropdown__button {
@@ -267,12 +288,13 @@ a {
     position: absolute;
     left: 0;
     right: 0;
-    top: 6.5rem;
+    top: .5rem;
     background-color: var(--body-color);
     box-shadow: 0 6px 8px hsla(220, 68%, 12%, 0.05);
     pointer-events: none;
     opacity: 0;
-    transition: top 0.4s, opacity 0.3s;
+    transition: top .2s, opacity 0.3s;
+    border-radius: 0 0 30px 30px;
   }
   .dropdown__content {
     grid-template-columns: repeat(4, max-content);
@@ -282,6 +304,7 @@ a {
   }
   .dropdown__group {
     padding: 4rem 0;
+    padding-left: 2.5rem;
     align-content: baseline;
     row-gap: 1.25rem;
   }
@@ -306,6 +329,9 @@ a {
   }
   .dropdown__title {
     font-size: var(--normal-font-size);
+  }
+  .dropdown__list:hover {
+    color: var(--first-color);
   }
   .dropdown__link {
     font-size: var(--small-font-size);

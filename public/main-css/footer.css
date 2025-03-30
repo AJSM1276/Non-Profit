@@ -1,128 +1,157 @@
-/* Footer Container */
-.footer-container {
-  background: linear-gradient(135deg, hsl(220, 100%, 99%), hsl(220, 80%, 96%));
-  padding: 4rem 0;
-  box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.05);
-}
-
-/* Footer Layout */
+/* Footer Styles */
 .footer {
-  width: 85%;
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  gap: 2rem;
+  background: hsl(220, 48%, 28%);
+  color: white;
+  padding: 4rem 5% 2rem;
+}
+
+.footer-container {
+  max-width: 1200px;
   margin: 0 auto;
-  color: hsl(220, 48%, 28%);
 }
 
-.footer-heading a {
-  color: hsl(220, 48%, 28%);
-  text-decoration: none;
-  font-weight: 600;
-  letter-spacing: 0.5px;
-  transition: color 0.3s ease-out;
+.footer-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 2rem;
+  margin-bottom: 3rem;
+}
+
+.footer-column h3 {
+  font-size: 1.3rem;
+  margin-bottom: 1.5rem;
   position: relative;
+  display: inline-block;
 }
 
-.footer-heading a::after {
+.footer-column h3::after {
   content: "";
   position: absolute;
+  bottom: -8px;
   left: 0;
-  bottom: -3px;
-  width: 0;
-  height: 2px;
+  width: 50px;
+  height: 3px;
   background: hsl(220, 70%, 50%);
-  transition: width 0.4s ease-out;
 }
 
-.footer-heading a:hover {
-  color: hsl(220, 70%, 50%);
-}
-
-.footer-heading a:hover::after {
-  width: 100%;
-}
-
-/* Newsletter Section */
-.newsletter {
+.footer-logo {
+  font-size: 1.5rem;
   display: flex;
-  flex-direction: column;
   align-items: center;
-  padding: 2rem 0;
-  text-align: center;
+  gap: 0.5rem;
+  margin-bottom: 1.5rem;
 }
 
-.newsletter h2 {
-  font-size: 1.8rem;
-  font-weight: 700;
-  color: hsl(220, 48%, 28%);
+.footer-about {
+  opacity: 0.8;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
 }
 
-.newsletter form {
+.footer-social {
   display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
   gap: 1rem;
 }
 
-#sign-up {
-  width: 260px;
-  height: 42px;
-  border-radius: 6px;
-  padding-left: 0.75rem;
-  font-size: 1rem;
-  font-weight: 500;
-  box-shadow: 0 2px 6px hsla(220, 48%, 28%, 0.1);
-  border: 1px solid hsl(220, 60%, 80%);
+.footer-social a {
+  color: white;
+  font-size: 1.2rem;
   transition: all 0.3s ease;
 }
 
-#sign-up:focus {
-  border-color: hsl(220, 70%, 50%);
-  box-shadow: 0 2px 10px hsla(220, 70%, 50%, 0.3);
+.footer-social a:hover {
+  color: hsl(220, 70%, 50%);
+  transform: translateY(-3px);
 }
 
-#sign-up-btn {
-  width: 110px;
-  height: 42px;
-  border-radius: 6px;
-  background: hsl(220, 48%, 28%);
-  border: none;
+.footer-links {
+  list-style: none;
+}
+
+.footer-links li {
+  margin-bottom: 0.8rem;
+}
+
+.footer-links a {
+  color: rgba(255, 255, 255, 0.8);
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.footer-links a:hover {
   color: white;
-  font-size: 1rem;
-  font-weight: 600;
-  transition: all 0.3s ease-out;
+  padding-left: 5px;
 }
 
-#sign-up-btn:hover {
+.footer-newsletter input {
+  width: 100%;
+  padding: 0.8rem;
+  border: none;
+  border-radius: 50px;
+  margin-bottom: 1rem;
+}
+
+.footer-newsletter button {
+  width: 100%;
+  padding: 0.8rem;
   background: hsl(220, 70%, 50%);
+  color: white;
+  border: none;
+  border-radius: 50px;
+  font-weight: 600;
   cursor: pointer;
+  transition: all 0.3s ease;
 }
 
-.footer-copyright {
-  color: black !important; /* Ensures it overrides other styles */
-  text-align: center;
-  font-size: 0.9rem;
-  padding-top: 1rem;
-  opacity: 0.8; /* Optional: makes it look subtle */
+.footer-newsletter button:hover {
+  background: white;
+  color: hsl(220, 48%, 28%);
 }
 
+.footer-disclaimer {
+  font-size: 0.8rem;
+  opacity: 0.6;
+  margin-top: 1rem;
+}
 
-/* Responsive Design */
+.footer-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 2rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.footer-payments {
+  display: flex;
+  gap: 1rem;
+  font-size: 1.5rem;
+}
+
+/* Responsive Styles */
 @media (max-width: 768px) {
-  .footer {
-    flex-direction: column;
-    align-items: center;
+  .footer-grid {
+    grid-template-columns: 1fr;
     text-align: center;
   }
   
-  .newsletter form {
-    flex-direction: column;
+  .footer-social {
+    justify-content: center;
   }
   
-  #sign-up {
-    width: 100%;
+  .footer-column h3::after {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  
+  .footer-links a:hover {
+    padding-left: 0;
+  }
+  
+  .footer-bottom {
+    flex-direction: column;
+    text-align: center;
   }
 }

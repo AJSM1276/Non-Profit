@@ -1,344 +1,288 @@
 <!DOCTYPE html>
-    <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-        <!--=============== REMIXICONS ===============-->
-        <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-
-        <!--=============== CSS ===============-->
-        <link rel="stylesheet" href="./public/assets/nav-assets/css/styles.css">
-        <link rel="stylesheet" href="./public/main-css/footer.css">
-        <link rel="stylesheet" href="./public/main-css/home.css">
-
-        <title>Tutorly</title>
-    </head>
-    <body>
-        <!--=============== HEADER ===============-->
-        <header class="header">
-            <nav class="nav container">
-                <div class="nav__data">
-                    <a href="./index.html" class="nav__logo">
-                      <i class="fa-solid fa-graduation-cap"></i> Tutorly
-                    </a>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Tutorly - Premium online tutoring platform with expert high school and college tutors">
     
+    <!-- Favicon -->
+    <link rel="icon" href="./public/assets/favicon.ico" type="image/x-icon">
+    
+    <!-- Fonts & Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="./public/main-css/header.css">
+    <link rel="stylesheet" href="./public/main-css/home.css">
+    <link rel="stylesheet" href="./public/css/footer.css">
+    
+    <title>Tutorly | Premium Online Tutoring</title>
+    
+    <!-- Open Graph Tags -->
+    <meta property="og:title" content="Tutorly | Premium Online Tutoring">
+    <meta property="og:description" content="Learn from expert high school and college tutors across various subjects">
+    <meta property="og:image" content="https://yourdomain.com/public/assets/social-preview.jpg">
+    <meta property="og:url" content="https://yourdomain.com">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <nav class="nav container">
+            <div class="nav__data">
+                <a href="./index.html" class="nav__logo">
+                    <i class="fa-solid fa-graduation-cap"></i> Tutorly
+                </a>
                     <div class="nav__toggle" id="nav-toggle">
                         <i class="ri-menu-line nav__toggle-menu"></i>
                         <i class="ri-close-line nav__toggle-close"></i>
                     </div>
                 </div>
+            </div>
 
-                <!--=============== NAV MENU ===============-->
-                <div class="nav__menu" id="nav-menu">
-                    <ul class="nav__list">
-                        <li>
-                            <a href="./index.html" class="nav__link">Home</a>
-                        </li>
-                        <li>
-                            <a href="./public/main-html/student-pages/course-pages/courses.html" class="nav__link">All Courses</a>
-                        </li>
+            <!-- Nav Menu -->
+            <div class="nav__menu" id="nav-menu">
+                <ul class="nav__list">
+                    <li><a href="./index.html" class="nav__link">Home</a></li>
+                    <li><a href="./courses.html" class="nav__link">All Courses</a></li>
 
-                        <!--=============== DROPDOWN 1 ===============-->
-                        <li class="dropdown__item">                      
-                            <div class="nav__link dropdown__button">
-                                Discover <i class="ri-arrow-down-s-line dropdown__arrow"></i>
-                            </div>
+                    <li class="dropdown__item">
+                        <div class="nav__link dropdown__button">
+                            Discover <i class="ri-arrow-down-s-line dropdown__arrow"></i>
+                        </div>
+                        <div class="dropdown__container">
+                            <div class="dropdown__content">
+                                <div class="dropdown__group">
+                                    <div class="dropdown__icon"><i class="fa-solid fa-star"></i></div>
+                                    <span class="dropdown__title">Most viewed courses</span>
+                                    <ul class="dropdown__list">
+                                        <li><a href="./public/main-html/course-pages/apbiology/apbiology-home.html" class="dropdown__link">AP Biology</a></li>
+                                        <li><a href="#" class="dropdown__link">Anatomy & Physiology</a></li>
+                                        <li><a href="#" class="dropdown__link">Music Production</a></li>
+                                    </ul>
+                                </div>
 
-                            <div class="dropdown__container">
-                                <div class="dropdown__content">
-                                    <div class="dropdown__group">
-                                        <div class="dropdown__icon">
-                                            <i class="fa-solid fa-star"></i>
-                                        </div>
-    
-                                        <span class="dropdown__title">Most viewed courses</span>
-    
-                                        <ul class="dropdown__list">
-                                            <li>
-                                                <a href="#" class="dropdown__link">AP Biology</a>
-                                            </li>
-                                            <li>
-                                                <a href="#" class="dropdown__link">Anatomy & Physiology</a>
-                                            </li>
-                                            <li>
-                                                <a href="#" class="dropdown__link">Music Production</a>
-                                            </li>
-                                        </ul>
-                                    </div>
-    
-                                    <div class="dropdown__group">
-                                        <div class="dropdown__icon">
-                                            <i class="fa-solid fa-fire"></i>
-                                        </div>
-    
-                                        <span class="dropdown__title">Popular courses</span>
-    
-                                        <ul class="dropdown__list">
-                                            <li>
-                                                <a href="#" class="dropdown__link">AP Biology</a>
-                                            </li>
-                                            <li>
-                                                <a href="#" class="dropdown__link">Anatomy & Physiology</a>
-                                            </li>
-                                            <li>
-                                                <a href="#" class="dropdown__link">Music Production</a>
-                                            </li>
-                                        </ul>
-                                    </div>
-    
-                                    <div class="dropdown__group">
-                                        <div class="dropdown__icon">
-                                            <i class="fa-solid fa-mobile-screen-button"></i>
-                                        </div>
-    
-                                        <span class="dropdown__title">Social Media</span>
-    
-                                        <ul class="dropdown__list">
-                                            <li>
-                                                <a href="#" class="dropdown__link">Discord</a>
-                                            </li>
-                                            <li>
-                                                <a href="#" class="dropdown__link">Instagram</a>
-                                            </li>
-                                            <li>
-                                                <a href="#" class="dropdown__link">YouTube</a>
-                                            </li>
-                                            <li>
-                                                <a href="#" class="dropdown__link">TikTok</a>
-                                            </li>
-                                        </ul>
-                                    </div>
-    
-                                    <div class="dropdown__group">
-                                        <div class="dropdown__icon">
-                                          <i class="fa-solid fa-chalkboard-user"></i>
-                                        </div>
-    
-                                        <span class="dropdown__title">Become A Tutor</span>
-    
-                                        <ul class="dropdown__list">
-                                            <li>
-                                                <a href="#" class="dropdown__link">Info</a>
-                                            </li>
-                                            <li>
-                                                <a href="#" class="dropdown__link">Apply</a>
-                                            </li>
-                                        </ul>
-                                    </div>
+                                <div class="dropdown__group">
+                                    <div class="dropdown__icon"><i class="fa-solid fa-fire"></i></div>
+                                    <span class="dropdown__title">Popular courses</span>
+                                    <ul class="dropdown__list">
+                                        <li><a href="#" class="dropdown__link">AP Biology</a></li>
+                                        <li><a href="#" class="dropdown__link">Anatomy & Physiology</a></li>
+                                        <li><a href="#" class="dropdown__link">Music Production</a></li>
+                                    </ul>
                                 </div>
                             </div>
-                        </li>
+                        </div>
+                    </li>
 
-                        <!--=============== DROPDOWN 2 ===============-->
-                        <li class="dropdown__item">
-                            <div class="nav__link dropdown__button">
-                                Resources <i class="ri-arrow-down-s-line dropdown__arrow"></i>
-                            </div>
-
-                            <div class="dropdown__container">
-                                <div class="dropdown__content">
-                                    <div class="dropdown__group">
-                                        <div class="dropdown__icon">
-                                            <i class="fa-solid fa-pencil"></i>
-                                        </div>
-    
-                                        <span class="dropdown__title">Study techniques</span>
-    
-                                        <ul class="dropdown__list">
-                                            <li>
-                                                <a href="#" class="dropdown__link">Utilizing Pomodoro</a>
-                                            </li>
-                                            <li>
-                                                <a href="#" class="dropdown__link">Mastering Anki</a>
-                                            </li>
-                                        </ul>
-                                    </div>
-    
-                                    <div class="dropdown__group">
-                                        <div class="dropdown__icon">
-                                            <i class="fa-solid fa-user-group"></i>
-                                        </div>
-    
-                                        <span class="dropdown__title">Community</span>
-    
-                                        <ul class="dropdown__list">
-                                            <li>
-                                                <a href="#" class="dropdown__link">Community forum</a>
-                                            </li>
-                                            <li>
-                                                <a href="#" class="dropdown__link">Newsletter</a>
-                                            </li>
-                                        </ul>
-                                    </div>
-    
-                                    <div class="dropdown__group">
-                                        <div class="dropdown__icon">
-                                            <i class="fa-solid fa-globe"></i>
-                                        </div>
-    
-                                        <span class="dropdown__title">Others</span>
-    
-                                        <ul class="dropdown__list">
-                                            <li>
-                                                <a href="#" class="dropdown__link">Recent blogs</a>
-                                            </li>
-                                            <li>
-                                                <a href="#" class="dropdown__link">Scholarship opportunities</a>
-                                            </li>
-                                            <li>
-                                                <a href="#" class="dropdown__link">Webinar</a>
-                                            </li>
-                                        </ul>
-                                    </div>
+                    <li class="dropdown__item">
+                        <div class="nav__link dropdown__button">
+                            Resources <i class="ri-arrow-down-s-line dropdown__arrow"></i>
+                        </div>
+                        <div class="dropdown__container">
+                            <div class="dropdown__content">
+                                <div class="dropdown__group">
+                                    <div class="dropdown__icon"><i class="fa-solid fa-pencil"></i></div>
+                                    <span class="dropdown__title">Study techniques</span>
+                                    <ul class="dropdown__list">
+                                        <li><a href="#" class="dropdown__link">Utilizing Pomodoro</a></li>
+                                        <li><a href="#" class="dropdown__link">Mastering Anki</a></li>
+                                    </ul>
                                 </div>
                             </div>
-                        </li>
+                        </div>
+                    </li>
 
-                        <!--=============== DROPDOWN 3 ===============-->
-                        <li class="dropdown__item">                        
-                            <div class="nav__link dropdown__button">
-                                Company <i class="ri-arrow-down-s-line dropdown__arrow"></i>
-                            </div>
+                    <li><a href="./about.html" class="nav__link">About</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
 
-                            <div class="dropdown__container">
-                                <div class="dropdown__content">
-                                    <div class="dropdown__group">
-                                        <div class="dropdown__icon">
-                                            <i class="fa-solid fa-circle-info"></i>
-                                        </div>
-    
-                                        <span class="dropdown__title">About Tutorly</span>
-    
-                                        <ul class="dropdown__list">
-                                            <li>
-                                                <a href="#" class="dropdown__link">About</a>
-                                            </li>
-                                            <li>
-                                                <a href="#" class="dropdown__link">Founders</a>
-                                            </li>
-                                            <li>
-                                                <a href="#" class="dropdown__link">Our Values</a>
-                                            </li>
-                                        </ul>
-                                    </div>
-    
-                                    <div class="dropdown__group">
-                                        <div class="dropdown__icon">
-                                            <i class="fa-solid fa-user-shield"></i>
-                                        </div>
-    
-                                        <span class="dropdown__title">Safety and quality</span>
-    
-                                        <ul class="dropdown__list">
-                                            <li>
-                                                <a href="#" class="dropdown__link">Terms of Service</a>
-                                            </li>
-                                            <li>
-                                                <a href="#" class="dropdown__link">Privacy Policy</a>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                        </li>
+    <!-- Main Content -->
+    <main>
+        <!-- Hero Section -->
+        <section class="hero-section">
+            <div class="hero-content">
+                <h1 class="hero-title">Master Any Subject With <span>Peer Tutors</span></h1>
+                <p class="hero-subtitle">1-on-1 tutoring from qualified high school & college students at 100% less than professional services</p>
+                
+                <div class="hero-cta">
+                    <a href="./courses.html" class="cta-button primary-cta">
+                        <i class="ri-play-circle-line"></i> Explore Courses
+                    </a>
+                    <a href="./signup.html" class="cta-button secondary-cta">
+                        <i class="ri-user-add-line"></i> Free Sign Up
+                    </a>
+                </div>
+                
+                <div class="hero-stats">
+                    <div class="stat-item">
+                        <span class="stat-number">500+</span>
+                        <span class="stat-label">Active Tutors</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">10K+</span>
+                        <span class="stat-label">Students Helped</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">4.9★</span>
+                        <span class="stat-label">Average Rating</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="hero-image">
+                <img src="./public/assets/images/Tutorlylogo.png" alt="Students learning online" loading="lazy">
+            </div>
+        </section>
+
+        <!-- Trust Badges -->
+
+        <!-- Course Highlights -->
+        <section class="course-highlights">
+            <h2 class="section-title">Most Popular Courses</h2>
+            <p class="section-subtitle">Join 10,000+ students mastering these subjects</p>
+            
+            <div class="course-cards">
+                <div class="course-card featured">
+                    <div class="course-badge">BEST SELLER</div>
+                    <div class="course-icon"><i class="fas fa-dna"></i></div>
+                    <h3 class="course-title">AP Biology Mastery</h3>
+                    <p class="course-desc">Complete curriculum coverage with lab simulations</p>
+                    <div class="course-meta">
+                        <span class="rating">4.9★ (1,240)</span>
+                        <span class="duration"><i class="ri-time-line"></i> 32 hrs</span>
+                    </div>
+                    <a href="#" class="course-cta">Enroll Now</a>
+                </div>
+                
+                <div class="course-card">
+                    <div class="course-icon"><i class="fas fa-calculator"></i></div>
+                    <h3 class="course-title">AP Calculus AB/BC</h3>
+                    <p class="course-desc">Conquer limits, derivatives, and integrals</p>
+                    <div class="course-meta">
+                        <span class="rating">4.8★ (980)</span>
+                        <span class="duration"><i class="ri-time-line"></i> 28 hrs</span>
+                    </div>
+                    <a href="#" class="course-cta">Enroll Now</a>
+                </div>
+                
+                <div class="course-card new">
+                    <div class="course-badge">NEW</div>
+                    <div class="course-icon"><i class="fas fa-music"></i></div>
+                    <h3 class="course-title">Music Production</h3>
+                    <p class="course-desc">From beginner beats to professional tracks</p>
+                    <div class="course-meta">
+                        <span class="rating">4.7★ (650)</span>
+                        <span class="duration"><i class="ri-time-line"></i> 40 hrs</span>
+                    </div>
+                    <a href="#" class="course-cta">Enroll Now</a>
+                </div>
+            </div>
+            
+            <div class="view-all-courses">
+                <a href="./courses.html" class="view-all-btn">
+                    View All 120+ Courses <i class="ri-arrow-right-line"></i>
+                </a>
+            </div>
+        </section>
+
+        <!-- Value Proposition -->
+        <section class="value-proposition">
+            <h2 class="section-title">Why Learn With Tutorly?</h2>
+            <p class="section-subtitle">The peer tutoring advantage</p>
+            
+            <div class="value-cards">
+                <div class="value-card">
+                    <div class="value-icon"><i class="fas fa-dollar-sign"></i></div>
+                    <h3>100% More Affordable</h3>
+                    <p>Peer tutors mean no premium markups - just quality help at fair prices</p>
+                </div>
+                
+                <div class="value-card">
+                    <div class="value-icon"><i class="fas fa-clock"></i></div>
+                    <h3>Flexible Scheduling</h3>
+                    <p>Book sessions 24/7 with tutors across all time zones</p>
+                </div>
+                
+                <div class="value-card">
+                    <div class="value-icon"><i class="fas fa-chalkboard-user"></i></div>
+                    <h3>Recent Experience</h3>
+                    <p>Our tutors aced these courses recently - they know what works</p>
+                </div>
+                
+                <div class="value-card">
+                    <div class="value-icon"><i class="fas fa-graduation-cap"></i></div>
+                    <h3>College-Credited</h3>
+                    <p>Many tutors are Ivy League/Top 30 undergrads</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-grid">
+                <div class="footer-column">
+                    <h3 class="footer-logo">
+                        <i class="fa-solid fa-graduation-cap"></i> Tutorly
+                    </h3>
+                    <p class="footer-about">
+                        Peer-to-peer learning platform connecting students with qualified tutors.
+                    </p>
+                    <div class="footer-social">
+                        <a href="#"><i class="fab fa-discord"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                        <a href="#"><i class="fab fa-tiktok"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Navigation</h3>
+                    <ul class="footer-links">
+                        <li><a href="./index.html">Home</a></li>
+                        <li><a href="./courses.html">Courses</a></li>
+                        <li><a href="./about.html">About</a></li>
                     </ul>
                 </div>
-            </nav>
-        </header>
-        <!--=============== HERO ===============-->
-        <div class="hero">
-            <h1>Welcome to Tutorly</h1>
-            <p>Start your free learning journey today and explore a variety of subjects with qualified high school and college tutors!</p>
-            <a href="./public/main-html/student-pages/course-pages/all-courses.html" class="cta-button">Explore Courses</a>
-        </div>
-        <!--=============== ABOUT/KEY OFFERINGS ===============-->
-        <h2 class="about-h2"><a href="./public/main-html/about.html">About Us</a></h2>
-        <div class="about-container">
-            <div class="about-heading heading-1">
-                <a class="about-subheading" href="#">Expertise</a>
-                <p>High quality lessons provided by tutors across high schools and colleges in the United States. Eliminate the stress of asking teachers questions by talking to tutors around the same age as you!</p>
-              </div>
-              <div class="about-heading heading-2">
-                <a class="about-subheading" href="#">Online Courses</a>
-                <p>No time to attend our live sessions? No worries! Head over to our online courses section to watch pre-recorded videos brought to you by our tutors!</p>
-              </div>
-              <div class="about-heading heading-3">
-                <a class="about-subheading" href="#">Nonprofit Initiative</a>
-                <p>100% of contributions directly fund our community work! Your support helps maintain this platform and allows us to partner with organizations. While we're not yet a tax-exempt nonprofit ourselves, every dollar fuels our mission.</p>
-              </div>
-              <div class="about-heading heading-4">
-                <a class="about-subheading" href="#">Unlimited resources</a>
-                <p>Explore many resources beyond Tutorly! With every course comes a collection of beneficial resources that can speed up and improve your learning!</p>
-              </div>
-              <div class="about-heading heading-5">
-                <a class="about-subheading" href="#">Hobby tutoring</a>
-                <p>Unlike other resources, Tutorly offers lessons for hobbies!</p>
-              </div>
-              <div class="about-heading heading-6">
-                <a class="about-subheading" href="#">Live Tutoring</a>
-                <p>Weekly live tutoring sessions! Ask tutors questions to improve your understanding!</p>
-              </div>
-        </div>
-        <p class="about-p">Click the any of the heading to learn more.</p>
-        <!--=============== FOOTER ===============-->
-        <div class="footer-container">
-            <div class="footer">
-              <div class="footer-heading footer-1">
-                <h2>Navigation</h2>
-                <br>
-                <a href="./index.html">Home</a>
-                <br>
-                <a href="#">Discover</a>
-                <br>
-                <a href="#">Resources</a>
-                <br>
-                <a href="#">Company</a>
-              </div>
-              <div class="footer-heading footer-2">
-                <h2>Connect</h2>
-                <br>
-                <a href="#">Discord</a>
-                <br>
-                <a href="#">YouTube</a>
-                <br>
-                <a href="#">Instagram</a>
-                <br>
-                <a href="#">TikTok</a>
-              </div>
-              <div class="footer-heading footer-3">
-                <h2>Help</h2>
-                <br>
-                <a href="#">FAQ</a>
-                <br>
-                <a href="./public/main-html/contact.html">Contact Us</a>
-                <br>
-                <a href="#">Privacy Policy</a>
-                <br>
-                <a href="#">Terms of Service</a>
-              </div>
+                
+                <div class="footer-column">
+                    <h3>Support</h3>
+                    <ul class="footer-links">
+                        <li><a href="./contact.html">Contact</a></li>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Newsletter</h3>
+                    <form class="footer-newsletter">
+                        <input type="email" placeholder="Your email address" required>
+                        <button type="submit">Subscribe</button>
+                    </form>
+                    <p class="footer-disclaimer">
+                        By subscribing, you agree to our Privacy Policy.
+                    </p>
+                </div>
             </div>
-            <br>
-            <br>
-            <br>
-            <!--=============== NEWSLETTER ===============-->
-            <hr>
-            <div class="newsletter footer-email-form">
-              <h2>Join Our Newsletter!</h2>
-              <p style="margin-bottom: 15px;">Free resources, study guides, and tutoring updates—straight to your inbox</p>
-              <form name="submit-to-google-sheet">
-                  <input type="email" name="Email" placeholder="Your Email Address" required id="sign-up">
-                  <button type="submit" id="sign-up-btn" onclick="changeText()">Sign Up</button>
-              </form>
-              <span id="msg" class="sign-up-disappear"></span>
-              <br>
-              <p style="font-size: 11px;">By subscribing, you agree to our <a href="#">Terms of Service</a> and <a href="#">Privacy Policy</a>.</p>
-          </div>
-          <p class="footer-copyright" style="color: white; font-weight: 200; text-align: center">
-            &copy 2025 Tutorly. All Rights Reserved
-          </p>
-        <!--=============== MAIN JS ===============-->
-        <script src="./public/assets/nav-assets/js/main.js"></script>
-    </body>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2025 Tutorly. All rights reserved.</p>
+                <div class="footer-payments">
+                    <i class="fab fa-cc-visa"></i>
+                    <i class="fab fa-cc-mastercard"></i>
+                    <i class="fab fa-cc-paypal"></i>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="./public/js/main.js"></script>
+</body>
 </html>
