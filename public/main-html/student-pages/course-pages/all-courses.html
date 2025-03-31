@@ -15,7 +15,7 @@
     
     <!-- CSS -->
     <link rel="stylesheet" href="../../../main-css/header.css">
-    <link rel="stylesheet" href="./public/main-css/home.css">
+    <link rel="stylesheet" href="./all-courses.css">
     <link rel="stylesheet" href="../../../main-css/footer.css">
     
     <title>Tutorly | Premium Online Tutoring</title>
@@ -31,7 +31,7 @@
     <header class="header">
         <nav class="nav container">
             <div class="nav__data">
-                <a href="./index.html" class="nav__logo">
+                <a href="../../../../index.html" class="nav__logo">
                     <i class="fa-solid fa-graduation-cap"></i> Tutorly
                 </a>
                     <div class="nav__toggle" id="nav-toggle">
@@ -44,8 +44,8 @@
             <!-- Nav Menu -->
             <div class="nav__menu" id="nav-menu">
                 <ul class="nav__list">
-                    <li><a href="./index.html" class="nav__link">Home</a></li>
-                    <li><a href="./public/main-html/student-pages/course-pages/all-courses.html" class="nav__link">All Courses</a></li>
+                    <li><a href="../../../../index.html" class="nav__link">Home</a></li>
+                    <li><a href="./all-courses.html" class="nav__link">All Courses</a></li>
 
                     <li class="dropdown__item">
                         <div class="nav__link dropdown__button">
@@ -57,7 +57,7 @@
                                     <div class="dropdown__icon"><i class="fa-solid fa-star"></i></div>
                                     <span class="dropdown__title">Newly released courses</span>
                                     <ul class="dropdown__list">
-                                        <li><a href="./public/main-html/course-pages/apbiology/apbiology-home.html" class="dropdown__link">AP Biology</a></li>
+                                        <li><a href="../../../main-html/course-pages/apbiology/apbiology-home.html" class="dropdown__link">AP Biology</a></li>
                                     </ul>
                                 </div>
 
@@ -65,7 +65,7 @@
                                     <div class="dropdown__icon"><i class="fa-solid fa-fire"></i></div>
                                     <span class="dropdown__title">Popular courses</span>
                                     <ul class="dropdown__list">
-                                        <li><a href="./public/main-html/course-pages/apbiology/apbiology-home.html" class="dropdown__link">AP Biology</a></li>
+                                        <li><a href="../../../main-html/course-pages/apbiology/apbiology-home.html" class="dropdown__link">AP Biology</a></li>
                                     </ul>
                                 </div>
                             </div>
@@ -82,145 +82,101 @@
                                     <div class="dropdown__icon"><i class="fa-solid fa-pencil"></i></div>
                                     <span class="dropdown__title">Study techniques</span>
                                     <ul class="dropdown__list">
-                                        <li><a href="./public/main-html/still-working.html" class="dropdown__link">Pomodoro</a></li>
-                                        <li><a href="./public/main-html/course-pages/anki/anki-home.html" class="dropdown__link">Anki</a></li>
+                                        <li><a href="../../still-working.html" class="dropdown__link">Pomodoro</a></li>
+                                        <li><a href="../../course-pages/anki/anki-home.html" class="dropdown__link">Anki</a></li>
                                     </ul>
                                 </div>
                             </div>
                         </div>
                     </li>
 
-                    <li><a href="./public/main-html/company/about.html" class="nav__link">About</a></li>
+                    <li><a href="../../company/about.html" class="nav__link">About</a></li>
                 </ul>
             </div>
         </nav>
     </header>
 
     <!-- Main Content -->
-<main class="notion-embed-container">
-  <!-- Replace with your Notion embed code -->
-  <div class="notion-embed">
+    <section class="notion-embed-section">
+      <br><br><br>
       <iframe 
-          src="https://notion.site/embed/YOUR-PAGE-ID" 
-          frameborder="0" 
-          allowfullscreen
-          style="width:100%;height:100%;min-height:80vh;"
-      ></iframe>
-  </div>
-  
-  <!-- Fallback for non-iframe browsers -->
-  <div class="notion-fallback">
-      <p>View our courses on <a href="https://www.notion.so/tutorlyonline/AP-Biology-Live-Meeting-Schedule-1c6007644bdf804ca1c4e2a464f04d79?pvs=4">Notion</a></p>
-  </div>
-</main>
-
-<style>
-  .notion-embed-container {
-      padding: 2rem 5%;
-      max-width: 1400px;
-      margin: 0 auto;
-  }
-  
-  .notion-embed {
-      width: 100%;
-      height: 80vh;
-      min-height: 600px;
-      border-radius: 12px;
-      overflow: hidden;
-      box-shadow: 0 4px 20px rgba(0,0,0,0.1);
-  }
-  
-  .notion-fallback {
-      display: none;
-      text-align: center;
-      padding: 2rem;
-  }
-  
-  @media (max-width: 768px) {
-      .notion-embed {
-          height: 70vh;
-          min-height: 500px;
-      }
-  }
-</style>
-
-<script>
-  // Check if iframes are blocked
-  if (window.HTMLIFrameElement === undefined) {
-      document.querySelector('.notion-embed').style.display = 'none';
-      document.querySelector('.notion-fallback').style.display = 'block';
-  }
-</script>
+        src="https://www.notion.so/tutorlyonline/All-Courses-1c7007644bdf8080a573e092c9f63ad9?pvs=4" 
+        width="100%" 
+        height="1200" 
+        frameborder="0" 
+        allowfullscreen>
+      </iframe>
+    </section>
     <!-- Footer -->
     <footer class="footer">
-        <div class="footer-container">
-            <div class="footer-grid">
-                <div class="footer-column">
-                    <h3 class="footer-logo">
-                        <i class="fa-solid fa-graduation-cap"></i> Tutorly
-                    </h3>
-                    <p class="footer-about">
-                        Peer-to-peer learning platform connecting students with qualified tutors.
-                    </p>
-                    <div class="footer-social">
-                        <a href="#"><i class="fab fa-discord"></i></a>
-                        <a href="#"><i class="fab fa-instagram"></i></a>
-                        <a href="#"><i class="fab fa-youtube"></i></a>
-                        <a href="#"><i class="fab fa-tiktok"></i></a>
-                    </div>
-                </div>
-                
-                <div class="footer-column">
-                    <h3>Navigation</h3>
-                    <ul class="footer-links">
-                        <li><a href="./index.html">Home</a></li>
-                        <li><a href="./public/main-html/student-pages/course-pages/all-courses.html">Courses</a></li>
-                        <li><a href="./public/main-html/company/about.html">About</a></li>
-                    </ul>
-                </div>
-                
-                <div class="footer-column">
-                    <h3>Support</h3>
-                    <ul class="footer-links">
-                        <li><a href="./public/main-html/help/contact.html">Contact</a></li>
-                        <li><a href="./public/main-html/help/faq.html">FAQ</a></li>
-                        <li><a href="./public/main-html/help/privacy-policy.html">Privacy Policy</a></li>
-                    </ul>
-                </div>
+      <div class="footer-container">
+          <div class="footer-grid">
+              <div class="footer-column">
+                  <h3 class="footer-logo">
+                      <i class="fa-solid fa-graduation-cap"></i> Tutorly
+                  </h3>
+                  <p class="footer-about">
+                      Peer-to-peer learning platform connecting students with qualified tutors.
+                  </p>
+                  <div class="footer-social">
+                      <a href="#"><i class="fab fa-discord"></i></a>
+                      <a href="#"><i class="fab fa-instagram"></i></a>
+                      <a href="#"><i class="fab fa-youtube"></i></a>
+                      <a href="#"><i class="fab fa-tiktok"></i></a>
+                  </div>
+              </div>
+              
+              <div class="footer-column">
+                  <h3>Navigation</h3>
+                  <ul class="footer-links">
+                      <li><a href="../../../../index.html">Home</a></li>
+                      <li><a href="./all-courses.html">Courses</a></li>
+                      <li><a href="../../company/about.html">About</a></li>
+                  </ul>
+              </div>
+              
+              <div class="footer-column">
+                  <h3>Support</h3>
+                  <ul class="footer-links">
+                      <li><a href="../../help/contact.html">Contact</a></li>
+                      <li><a href="../../help/faq.html">FAQ</a></li>
+                      <li><a href="../../help/privacy-policy.html">Privacy Policy</a></li>
+                  </ul>
+              </div>
 
-                <div class="footer-column">
-                    <h3>Apply</h3>
-                    <ul class="footer-links">
-                        <li><a href="./public/main-html/hiring-applications/tutor-application.html">Tutor Application</a></li>
-                        <li><a href="./public/main-html/hiring-applications/content-creator-application.html">Content Creator Application</a></li>
-                        <li><a href="./public/main-html/hiring-applications/other-applications.html">Other Applications</a></li>
-                    </ul>
-                </div>
-                
-                <!-- <div class="footer-column">
-                    <h3>Newsletter</h3>
-                    <form class="footer-newsletter">
-                        <input type="email" placeholder="Your email address" required>
-                        <button type="submit">Subscribe</button>
-                    </form>
-                    <p class="footer-disclaimer">
-                        By subscribing, you agree to our Privacy Policy.
-                    </p>
-                </div> -->
-            </div>
-            
-            <div class="footer-bottom">
-                <p>&copy; 2025 Tutorly. All rights reserved.</p>
-                <div class="footer-payments">
-                    <i class="fab fa-cc-visa"></i>
-                    <i class="fab fa-cc-mastercard"></i>
-                    <i class="fab fa-cc-paypal"></i>
-                </div>
-            </div>
-        </div>
-    </footer>
+              <div class="footer-column">
+                  <h3>Apply</h3>
+                  <ul class="footer-links">
+                      <li><a href="../../hiring-applications/tutor-application.html">Tutor Application</a></li>
+                      <li><a href="../../hiring-applications/content-creator-application.html">Content Creator Application</a></li>
+                      <li><a href="../../hiring-applications/other-applications.html">Other Applications</a></li>
+                  </ul>
+              </div>
+              
+              <!-- <div class="footer-column">
+                  <h3>Newsletter</h3>
+                  <form class="footer-newsletter">
+                      <input type="email" placeholder="Your email address" required>
+                      <button type="submit">Subscribe</button>
+                  </form>
+                  <p class="footer-disclaimer">
+                      By subscribing, you agree to our Privacy Policy.
+                  </p>
+              </div> -->
+          </div>
+          
+          <div class="footer-bottom">
+              <p>&copy; 2025 Tutorly. All rights reserved.</p>
+              <div class="footer-payments">
+                  <i class="fab fa-cc-visa"></i>
+                  <i class="fab fa-cc-mastercard"></i>
+                  <i class="fab fa-cc-paypal"></i>
+              </div>
+          </div>
+      </div>
+  </footer>
 
-    <!-- JavaScript -->
-    <script src="../../../js/main.js"></script>
+  <!-- JavaScript -->
+  <script src="../../../js/main.js"></script>
 </body>
 </html>
