@@ -69,7 +69,7 @@
   justify-content: space-between;
   align-items: center;
   background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.05)),
-    url("https://images.unsplash.com/photo-1623239260654-329189722b4b?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+    url("../images/hero.jpg");
   background-size: cover;
   background-position: center;
   background-attachment: fixed;

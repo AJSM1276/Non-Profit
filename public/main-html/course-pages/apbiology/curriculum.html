@@ -3,122 +3,890 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tutorly - Coming Soon</title>
+    <meta name="description" content="Tutorly - Premium online tutoring platform with expert high school and college tutors">
+    
+    <!-- Favicon -->
+    <link rel="icon" href="./public/assets/favicon.ico" type="image/x-icon">
+    
+    <!-- Fonts & Icons -->
     <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="./css/apbiology-footer.css">
+    <link rel="stylesheet" href="./css/apbiology-header.css">
+    <link rel="stylesheet" href="./css/apbiology-home.css">
+    
+    <title>Tutorly | AP Biology</title>
+    
     <style>
-        @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap");
-        
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: "Poppins", sans-serif;
+        /* Enhanced Curriculum Styles */
+        .curriculum-container {
+            max-width: 1000px;
+            margin: 3rem auto;
+            padding: 0 1.5rem;
+            animation: fadeIn 0.6s ease-out;
         }
         
-        body {
-            background-color: hsl(144, 28%, 79%);
-            height: 100vh;
-            display: flex;
-            justify-content: center;
-            align-items: center;
+        .curriculum-header {
             text-align: center;
-            padding: 20px;
+            margin-bottom: 2.5rem;
         }
         
-        .construction-container {
-            max-width: 600px;
-            width: 100%;
+        .curriculum-title {
+            font-size: 2.5rem;
+            color: #1a4d2d;
+            margin-bottom: 0.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 1rem;
         }
         
-        .emoji-container {
-            font-size: 4rem;
-            margin-bottom: 1.5rem;
-            height: 80px;
-            position: relative;
-        }
-        
-        .emoji {
-            position: absolute;
-            left: 50%;
-            transform: translateX(-50%);
-            animation: float 3s ease-in-out infinite;
-        }
-        
-        .emoji:nth-child(1) {
-            animation-delay: 0s;
-        }
-        
-        .emoji:nth-child(2) {
-            animation-delay: 0.5s;
-        }
-        
-        .emoji:nth-child(3) {
-            animation-delay: 1s;
-        }
-        
-        @keyframes float {
-            0%, 100% {
-                transform: translateY(0) translateX(-50%);
-            }
-            50% {
-                transform: translateY(-15px) translateX(-50%);
-            }
-        }
-        
-        h1 {
-            font-size: 2.2rem;
-            color: hsl(145, 48%, 28%);
-            margin-bottom: 1rem;
-            font-weight: 600;
-        }
-        
-        p {
+        .curriculum-subtitle {
+            color: #5d9b7b;
             font-size: 1.1rem;
-            color: hsl(145, 48%, 28%);
-            margin-bottom: 2rem;
-            line-height: 1.6;
+            max-width: 600px;
+            margin: 0 auto;
         }
         
-        .cta-button {
-            padding: 1.2rem 2.5rem;
-            font-size: 1.2rem;
-            font-weight: 600;
-            background: hsl(145, 48%, 28%);
-            color: white;
-            text-decoration: none;
-            border-radius: 15px;
-            transition: all 0.6s ease;
-            box-shadow: 0 3px 12px rgba(0, 0, 0, 0.2);
-            display: inline-block;
+        .units-grid {
+            display: flex;
+            flex-direction: column;
+            gap: 1.25rem;
         }
         
-        .cta-button:hover {
-            background: hsl(145, 48%, 28%);
+        .unit-card {
+            background: white;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+            transition: all 0.3s ease;
+            opacity: 0;
+            transform: translateY(20px);
+        }
+        
+        /* Staggered unit animations */
+        .unit-card:nth-child(1) { animation: fadeInUp 0.6s ease-out 0.1s forwards; }
+        .unit-card:nth-child(2) { animation: fadeInUp 0.6s ease-out 0.2s forwards; }
+        .unit-card:nth-child(3) { animation: fadeInUp 0.6s ease-out 0.3s forwards; }
+        .unit-card:nth-child(4) { animation: fadeInUp 0.6s ease-out 0.4s forwards; }
+        .unit-card:nth-child(5) { animation: fadeInUp 0.6s ease-out 0.5s forwards; }
+        .unit-card:nth-child(6) { animation: fadeInUp 0.6s ease-out 0.6s forwards; }
+        .unit-card:nth-child(7) { animation: fadeInUp 0.6s ease-out 0.7s forwards; }
+        .unit-card:nth-child(8) { animation: fadeInUp 0.6s ease-out 0.8s forwards; }
+        .unit-card:nth-child(9) { animation: fadeInUp 0.6s ease-out 0.9s forwards; }
+        .unit-card:nth-child(10) { animation: fadeInUp 0.6s ease-out 1.0s forwards; }
+        .unit-card:nth-child(11) { animation: fadeInUp 0.6s ease-out 1.1s forwards; }
+        
+        .unit-card:hover {
             transform: translateY(-3px);
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+            box-shadow: 0 6px 20px rgba(0,0,0,0.12);
+        }
+        
+        .unit-header {
+    padding: 1.25rem 1.75rem;
+    background: #2d6a4f; /* Changed from gradient to solid color */
+    color: white;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+body {
+    background-color: white;
+}
+
+.curriculum-container {
+    background-color: white; /* This was empty before - now set to white */
+}
+
+.unit-header:hover {
+    background: #1a4d2d; /* Changed from gradient to solid color */
+}
+        
+        .unit-number {
+            width: 32px;
+            height: 32px;
+            background: #d8f3dc;
+            color: #1a4d2d;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 1rem;
+            font-weight: bold;
+            font-size: 0.95rem;
+            flex-shrink: 0;
+        }
+        
+        .unit-title {
+            flex-grow: 1;
+            font-weight: 600;
+            font-size: 1.1rem;
+        }
+        
+        .unit-toggle {
+            width: 22px;
+            height: 22px;
+            transition: transform 0.4s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+            flex-shrink: 0;
+        }
+        
+        .unit-card.active .unit-toggle {
+            transform: rotate(180deg);
+        }
+        
+        .chapters-list {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height .4s cubic-bezier(0.4, 0, 0.2, 1);
+            background: white;
+        }
+        
+        .unit-card.active .chapters-list {
+            max-height: 2000px;
+        }
+        
+        .chapter-item {
+            padding: 1.25rem 1.75rem;
+            border-bottom: 1px solid #f5f5f5;
+            display: flex;
+            align-items: center;
+            opacity: 0;
+            transform: translateY(-10px);
+            transition: 
+                opacity 0.3s ease,
+                transform 0.3s ease,
+                background-color 0.2s ease;
+        }
+        
+        .unit-card.active .chapter-item {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        /* Staggered chapter animations */
+        .unit-card.active .chapter-item:nth-child(1) { transition-delay: 0.1s; }
+        .unit-card.active .chapter-item:nth-child(2) { transition-delay: 0.15s; }
+        .unit-card.active .chapter-item:nth-child(3) { transition-delay: 0.2s; }
+        .unit-card.active .chapter-item:nth-child(4) { transition-delay: 0.25s; }
+        .unit-card.active .chapter-item:nth-child(5) { transition-delay: 0.3s; }
+        .unit-card.active .chapter-item:nth-child(6) { transition-delay: 0.35s; }
+        .unit-card.active .chapter-item:nth-child(7) { transition-delay: 0.4s; }
+        .unit-card.active .chapter-item:nth-child(8) { transition-delay: 0.45s; }
+        .unit-card.active .chapter-item:nth-child(9) { transition-delay: 0.5s; }
+        .unit-card.active .chapter-item:nth-child(10) { transition-delay: 0.55s; }
+        .unit-card.active .chapter-item:nth-child(11) { transition-delay: 0.6s; }
+        
+        .chapter-item:hover {
+            background: #f9f9f9;
+        }
+        
+        .chapter-number {
+            color: #2d6a4f;
+            font-weight: 600;
+            min-width: 50px;
+            font-family: 'Inter', sans-serif;
+        }
+        
+        .chapter-title {
+            flex-grow: 1;
+            color: #333;
+        }
+        
+        .chapter-duration {
+            font-size: 0.85rem;
+            color: #2d6a4f;
+            background: rgba(93, 155, 123, 0.1);
+            padding: 0.35rem 0.75rem;
+            border-radius: 20px;
+            font-weight: 500;
+        }
+        
+        .header {
+    position: relative;
+    z-index: 100;
+}
+
+        /* Animations */
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        
+        @keyframes fadeInUp {
+            from { 
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to { 
+                opacity: 1;
+                transform: translateY(0);
+            }
         }
         
         @media (max-width: 768px) {
-            h1 {
-                font-size: 1.8rem;
+            .curriculum-container {
+                padding: 0 1rem;
+                margin: 2rem auto;
             }
             
-            .emoji-container {
-                font-size: 3rem;
+            .curriculum-title {
+                font-size: 2rem;
+            }
+            
+            .unit-header {
+                padding: 1.1rem 1.25rem;
+            }
+            
+            .chapter-item {
+                padding: 1rem 1.25rem;
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 0.5rem;
+            }
+            
+            .chapter-duration {
+                align-self: flex-start;
             }
         }
     </style>
 </head>
 <body>
-    <div class="construction-container">
-        <div class="emoji-container">
-            <div class="emoji">🚧</div>
-            <div class="emoji">🧬</div>
+    <!-- Your Original Header -->
+    <header class="header">
+        <nav class="nav container">
+            <div class="nav__data">
+                <a href="./apbiology-home.html" class="nav__logo">
+                    <i class="fa-solid fa-dna"></i> AP Bio Hub
+                </a>
+                <a href="./still-working.html" class="nav__logo" id="tutorly">
+                    <i class="fa-solid fa-graduation-cap"></i> Tutorly
+                </a>
+                    <div class="nav__toggle" id="nav-toggle">
+                        <i class="ri-menu-line nav__toggle-menu"></i>
+                        <i class="ri-close-line nav__toggle-close"></i>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Nav Menu -->
+            <div class="nav__menu" id="nav-menu">
+                <ul class="nav__list">
+                    <li><a href="./apbiology-home.html" class="nav__link">AP Bio Home</a></li>
+                    <li class="dropdown__item">
+                        <div class="nav__link dropdown__button">
+                            Discover <i class="ri-arrow-down-s-line dropdown__arrow"></i>
+                        </div>
+                        <div class="dropdown__container">
+                            <div class="dropdown__content">
+                                <div class="dropdown__group">
+                                    <div class="dropdown__icon"><i class="fa-solid fa-video"></i></i></div>
+                                    <span class="dropdown__title">Most viewed courses</span>
+                                    <ul class="dropdown__list">
+                                        <li><a href="./prerecorded-videos.html" class="dropdown__link">Pre-recorded Videos</a></li>
+                                        <li><a href="./past-meeting-recordings.html" class="dropdown__link">Live Meeting Recordings</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li class="dropdown__item">
+                        <div class="nav__link dropdown__button">
+                            Resources <i class="ri-arrow-down-s-line dropdown__arrow"></i>
+                        </div>
+                        <div class="dropdown__container">
+                            <div class="dropdown__content">
+                                <div class="dropdown__group">
+                                    <div class="dropdown__icon"><i class="fa-solid fa-lightbulb"></i></div>
+                                    <span class="dropdown__title">External Sites</span>
+                                    <ul class="dropdown__list">
+                                        <li><a href="https://portal.biobuddy.com/welcome" class="dropdown__link">BioBuddy</a></li>
+                                        <li><a href="https://apbiopenguins.weebly.com" class="dropdown__link">AP Bio Penguins</a></li>
+                                        <li><a href="https://www.khanacademy.org/science/ap-biology" class="dropdown__link">Khan Academy</a></li>
+                                        <li><a href="https://www.amazon.com/Barrons-Biology-Deborah-Goldberg-M-S/dp/1438008686" class="dropdown__link">Barrons AP Biology</a></li>
+                                    </ul>
+                                    <div class="dropdown__icon"><i class="fa-solid fa-pencil"></i></div>
+                                    <span class="dropdown__title">Study techniques</span>
+                                    <ul class="dropdown__list">
+                                        <li><a href="#" class="dropdown__link">Mastering Anki</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li><a href="../../company/about.html" class="nav__link">About</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Enhanced Main Content -->
+    <main class="curriculum-container">
+        <div class="curriculum-header">
+            <h1 class="curriculum-title">
+                <span>🧬</span> AP Biology Curriculum <span>🧬</span>
+            </h1>
+            <p class="curriculum-subtitle">Explore all 8 units and their chapters with detailed learning objectives</p>
         </div>
-        <h1>We're Still Working on This Page!</h1>
-        <p>Our team is busy creating something amazing here. Check back soon for updates!</p>
-        <a href="../../../index.html" class="cta-button">Return Home</a>
-    </div>
+        
+        <div class="units-grid">
+            <!-- Unit 1 -->
+            <div class="unit-card">
+                <div class="unit-header">
+                    <div class="unit-number">1</div>
+                    <div class="unit-title">Chemistry of Life</div>
+                    <svg class="unit-toggle" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <polyline points="6 9 12 15 18 9"></polyline>
+                    </svg>
+                </div>
+                <div class="chapters-list">
+                    <div class="chapter-item">
+                        <div class="chapter-number">1.1</div>
+                        <div class="chapter-title">Structure of Water and Hydrogen Bonding</div>
+                        <!-- <div class="chapter-duration">2 classes</div> -->
+                    </div>
+                    <div class="chapter-item">
+                        <div class="chapter-number">1.2</div>
+                        <div class="chapter-title">Elements of Life</div>
+                        <!-- <div class="chapter-duration">1 class</div> -->
+                    </div>
+                    <div class="chapter-item">
+                        <div class="chapter-number">1.3</div>
+                        <div class="chapter-title">Introduction to Biological Macromolecules</div>
+                        <!-- <div class="chapter-duration">3 classes</div> -->
+                    </div>
+                    <div class="chapter-item">
+                        <div class="chapter-number">1.4</div>
+                        <div class="chapter-title">Properties of Biological Macromolecules</div>
+                        <!-- <div class="chapter-duration">3 classes</div> -->
+                    </div>
+                    <div class="chapter-item">
+                        <div class="chapter-number">1.5</div>
+                        <div class="chapter-title">Structure and Function of Biological Macromolecules</div>
+                        <!-- <div class="chapter-duration">3 classes</div> -->
+                    </div>
+                    <div class="chapter-item">
+                        <div class="chapter-number">1.6</div>
+                        <div class="chapter-title">Nucleic Acids</div>
+                        <!-- <div class="chapter-duration">3 classes</div> -->
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Unit 2 -->
+            <div class="unit-card">
+                <div class="unit-header">
+                    <div class="unit-number">2</div>
+                    <div class="unit-title">Cell Structure and Function</div>
+                    <svg class="unit-toggle" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <polyline points="6 9 12 15 18 9"></polyline>
+                    </svg>
+                </div>
+                <div class="chapters-list">
+                    <div class="chapter-item">
+                        <div class="chapter-number">2.1</div>
+                        <div class="chapter-title">Cell Structure: Subcellular Components</div>
+                        <!-- <div class="chapter-duration">3 classes</div> -->
+                    </div>
+                    <div class="chapter-item">
+                        <div class="chapter-number">2.2</div>
+                        <div class="chapter-title">Cell Structure and Function</div>
+                        <!-- <div class="chapter-duration">2 classes</div> -->
+                    </div>
+                    <div class="chapter-item">
+                        <div class="chapter-number">2.3</div>
+                        <div class="chapter-title">Cell Size</div>
+                        <!-- <div class="chapter-duration">1 class</div> -->
+                    </div>
+                    <div class="chapter-item">
+                        <div class="chapter-number">2.4</div>
+                        <div class="chapter-title">Plasma Membranes</div>
+                        <!-- <div class="chapter-duration">1 class</div> -->
+                    </div>
+                    <div class="chapter-item">
+                        <div class="chapter-number">2.5</div>
+                        <div class="chapter-title">Membrane Permeability</div>
+                        <!-- <div class="chapter-duration">1 class</div> -->
+                    </div>
+                    <div class="chapter-item">
+                        <div class="chapter-number">2.6</div>
+                        <div class="chapter-title">Membrane Transport</div>
+                        <!-- <div class="chapter-duration">1 class</div> -->
+                    </div>
+                    <div class="chapter-item">
+                        <div class="chapter-number">2.7</div>
+                        <div class="chapter-title">Facilitated Diffusion</div>
+                        <!-- <div class="chapter-duration">1 class</div> -->
+                    </div>
+                    <div class="chapter-item">
+                        <div class="chapter-number">2.8</div>
+                        <div class="chapter-title">Tonicity and Osmoregulation</div>
+                        <!-- <div class="chapter-duration">1 class</div> -->
+                    </div>
+                    <div class="chapter-item">
+                        <div class="chapter-number">2.9</div>
+                        <div class="chapter-title">Mechanisms of Transport</div>
+                        <!-- <div class="chapter-duration">1 class</div> -->
+                    </div>
+                    <div class="chapter-item">
+                        <div class="chapter-number">2.10</div>
+                        <div class="chapter-title">Cell Compartmentalization</div>
+                        <!-- <div class="chapter-duration">1 class</div> -->
+                    </div>
+                    <div class="chapter-item">
+                        <div class="chapter-number">2.11</div>
+                        <div class="chapter-title">Origins of Cell Compartmentalization</div>
+                        <!-- <div class="chapter-duration">1 class</div> -->
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Unit 3 -->
+            <div class="unit-card">
+                <div class="unit-header">
+                    <div class="unit-number">3</div>
+                    <div class="unit-title">Cellular Energetics</div>
+                    <svg class="unit-toggle" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <polyline points="6 9 12 15 18 9"></polyline>
+                    </svg>
+                </div>
+                <div class="chapters-list">
+                    <div class="chapter-item">
+                        <div class="chapter-number">3.1</div>
+                        <div class="chapter-title">Enzyme Structure</div>
+                        <!-- <div class="chapter-duration">3 classes</div> -->
+                    </div>
+                    <div class="chapter-item">
+                        <div class="chapter-number">3.2</div>
+                        <div class="chapter-title">Enzyme Catalysis</div>
+                        <!-- <div class="chapter-duration">2 classes</div> -->
+                    </div>
+                    <div class="chapter-item">
+                        <div class="chapter-number">3.3</div>
+                        <div class="chapter-title">Environmental Impacts on Enzyme Function</div>
+                        <!-- <div class="chapter-duration">1 class</div> -->
+                    </div>
+                    <div class="chapter-item">
+                        <div class="chapter-number">3.4</div>
+                        <div class="chapter-title">Cellular Energy</div>
+                        <!-- <div class="chapter-duration">1 class</div> -->
+                    </div>
+                    <div class="chapter-item">
+                        <div class="chapter-number">3.5</div>
+                        <div class="chapter-title">Photosynthesis</div>
+                        <!-- <div class="chapter-duration">1 class</div> -->
+                    </div>
+                    <div class="chapter-item">
+                        <div class="chapter-number">3.6</div>
+                        <div class="chapter-title">Cellular Respiration</div>
+                        <!-- <div class="chapter-duration">1 class</div> -->
+                    </div>
+                    <div class="chapter-item">
+                        <div class="chapter-number">3.7</div>
+                        <div class="chapter-title">Fitness</div>
+                        <!-- <div class="chapter-duration">1 class</div> -->
+                    </div>
+                </div>
+            </div>
+
+            <!-- Unit 4 -->
+            <div class="unit-card">
+                <div class="unit-header">
+                    <div class="unit-number">4</div>
+                    <div class="unit-title">Cell Communication and Cell Cycle</div>
+                    <svg class="unit-toggle" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <polyline points="6 9 12 15 18 9"></polyline>
+                    </svg>
+                </div>
+                <div class="chapters-list">
+                    <div class="chapter-item">
+                        <div class="chapter-number">4.1</div>
+                        <div class="chapter-title">Cell Communication</div>
+                        <!-- <div class="chapter-duration">3 classes</div> -->
+                    </div>
+                    <div class="chapter-item">
+                        <div class="chapter-number">4.2</div>
+                        <div class="chapter-title">Introduction to Signal Transduction</div>
+                        <!-- <div class="chapter-duration">2 classes</div> -->
+                    </div>
+                    <div class="chapter-item">
+                        <div class="chapter-number">4.3</div>
+                        <div class="chapter-title">Signal Transduction</div>
+                        <!-- <div class="chapter-duration">1 class</div> -->
+                    </div>
+                    <div class="chapter-item">
+                        <div class="chapter-number">4.4</div>
+                        <div class="chapter-title">Changes in Signal Transduction Pathways</div>
+                        <!-- <div class="chapter-duration">1 class</div> -->
+                    </div>
+                    <div class="chapter-item">
+                        <div class="chapter-number">4.5</div>
+                        <div class="chapter-title">Feedback</div>
+                        <!-- <div class="chapter-duration">1 class</div> -->
+                    </div>
+                    <div class="chapter-item">
+                        <div class="chapter-number">4.6</div>
+                        <div class="chapter-title">Cell Cycle</div>
+                        <!-- <div class="chapter-duration">1 class</div> -->
+                    </div>
+                    <div class="chapter-item">
+                        <div class="chapter-number">4.7</div>
+                        <div class="chapter-title">Regulation of Cell Cycle</div>
+                        <!-- <div class="chapter-duration">1 class</div> -->
+                    </div>
+                </div>
+            </div>
+
+            <!-- Unit 5 -->
+            <div class="unit-card">
+                <div class="unit-header">
+                    <div class="unit-number">5</div>
+                    <div class="unit-title">Heredity</div>
+                    <svg class="unit-toggle" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <polyline points="6 9 12 15 18 9"></polyline>
+                    </svg>
+                </div>
+                <div class="chapters-list">
+                    <div class="chapter-item">
+                        <div class="chapter-number">5.1</div>
+                        <div class="chapter-title">Meiosis</div>
+                        <!-- <div class="chapter-duration">3 classes</div> -->
+                    </div>
+                    <div class="chapter-item">
+                        <div class="chapter-number">5.2</div>
+                        <div class="chapter-title">Meiosis and Genetic Diversity</div>
+                        <!-- <div class="chapter-duration">2 classes</div> -->
+                    </div>
+                    <div class="chapter-item">
+                        <div class="chapter-number">5.3</div>
+                        <div class="chapter-title">Mendelian Genetics</div>
+                        <!-- <div class="chapter-duration">1 class</div> -->
+                    </div>
+                    <div class="chapter-item">
+                        <div class="chapter-number">5.4</div>
+                        <div class="chapter-title">Non-Mendelian Genetics</div>
+                        <!-- <div class="chapter-duration">1 class</div> -->
+                    </div>
+                    <div class="chapter-item">
+                        <div class="chapter-number">5.5</div>
+                        <div class="chapter-title">Environmental Effects on Phenotype</div>
+                        <!-- <div class="chapter-duration">1 class</div> -->
+                    </div>
+                    <div class="chapter-item">
+                        <div class="chapter-number">5.6</div>
+                        <div class="chapter-title">Chromosomal Inheritance</div>
+                        <!-- <div class="chapter-duration">1 class</div> -->
+                    </div>
+                </div>
+            </div>
+
+            <!-- Add more units as needed -->
+            <!-- Unit 6 -->
+            <div class="unit-card">
+                <div class="unit-header">
+                    <div class="unit-number">6</div>
+                    <div class="unit-title">Gene Expression and Regulation</div>
+                    <svg class="unit-toggle" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <polyline points="6 9 12 15 18 9"></polyline>
+                    </svg>
+                </div>
+                <div class="chapters-list">
+                    <div class="chapter-item">
+                        <div class="chapter-number">6.1</div>
+                        <div class="chapter-title">DNA and RNA Structure</div>
+                        <!-- <div class="chapter-duration">3 classes</div> -->
+                    </div>
+                    <div class="chapter-item">
+                        <div class="chapter-number">6.2</div>
+                        <div class="chapter-title">Replication</div>
+                        <!-- <div class="chapter-duration">2 classes</div> -->
+                    </div>
+                    <div class="chapter-item">
+                        <div class="chapter-number">6.3</div>
+                        <div class="chapter-title">Transcription and RNA Processing</div>
+                        <!-- <div class="chapter-duration">1 class</div> -->
+                    </div>
+                    <div class="chapter-item">
+                        <div class="chapter-number">6.4</div>
+                        <div class="chapter-title">Translation</div>
+                        <!-- <div class="chapter-duration">1 class</div> -->
+                    </div>
+                    <div class="chapter-item">
+                        <div class="chapter-number">6.5</div>
+                        <div class="chapter-title">Regulation of Gene Expression</div>
+                        <!-- <div class="chapter-duration">1 class</div> -->
+                    </div>
+                    <div class="chapter-item">
+                        <div class="chapter-number">6.6</div>
+                        <div class="chapter-title">Gene Expression and Cell Specialization</div>
+                        <!-- <div class="chapter-duration">1 class</div> -->
+                    </div>
+                    <div class="chapter-item">
+                        <div class="chapter-number">6.7</div>
+                        <div class="chapter-title">Mutations</div>
+                        <!-- <div class="chapter-duration">1 class</div> -->
+                    </div>
+                    <div class="chapter-item">
+                        <div class="chapter-number">6.8</div>
+                        <div class="chapter-title">Biotechnology</div>
+                        <!-- <div class="chapter-duration">1 class</div> -->
+                    </div>
+                </div>
+            </div>
+            <!-- Unit 7 -->
+            <div class="unit-card">
+                <div class="unit-header">
+                    <div class="unit-number">7</div>
+                    <div class="unit-title">Natural Selection</div>
+                    <svg class="unit-toggle" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <polyline points="6 9 12 15 18 9"></polyline>
+                    </svg>
+                </div>
+                <div class="chapters-list">
+                    <div class="chapter-item">
+                        <div class="chapter-number">7.1</div>
+                        <div class="chapter-title">Introduction to Natural Selection</div>
+                        <!-- <div class="chapter-duration">3 classes</div> -->
+                    </div>
+                    <div class="chapter-item">
+                        <div class="chapter-number">7.2</div>
+                        <div class="chapter-title">Natural Selection</div>
+                        <!-- <div class="chapter-duration">2 classes</div> -->
+                    </div>
+                    <div class="chapter-item">
+                        <div class="chapter-number">7.3</div>
+                        <div class="chapter-title">Artificial Selection</div>
+                        <!-- <div class="chapter-duration">1 class</div> -->
+                    </div>
+                    <div class="chapter-item">
+                        <div class="chapter-number">7.4</div>
+                        <div class="chapter-title">Population Genetics</div>
+                        <!-- <div class="chapter-duration">1 class</div> -->
+                    </div>
+                    <div class="chapter-item">
+                        <div class="chapter-number">7.5</div>
+                        <div class="chapter-title">Hardy-Weinberg Equilibrium</div>
+                        <!-- <div class="chapter-duration">1 class</div> -->
+                    </div>
+                    <div class="chapter-item">
+                        <div class="chapter-number">7.6</div>
+                        <div class="chapter-title">Evidence of Evolution</div>
+                        <!-- <div class="chapter-duration">1 class</div> -->
+                    </div>
+                    <div class="chapter-item">
+                        <div class="chapter-number">7.7</div>
+                        <div class="chapter-title">Common Ancestry</div>
+                        <!-- <div class="chapter-duration">1 class</div> -->
+                    </div>
+                    <div class="chapter-item">
+                        <div class="chapter-number">7.8</div>
+                        <div class="chapter-title">Continuing Evolution</div>
+                        <!-- <div class="chapter-duration">1 class</div> -->
+                    </div>
+                    <div class="chapter-item">
+                        <div class="chapter-number">7.9</div>
+                        <div class="chapter-title">Phylogeny</div>
+                        <!-- <div class="chapter-duration">1 class</div> -->
+                    </div>
+                    <div class="chapter-item">
+                        <div class="chapter-number">7.10</div>
+                        <div class="chapter-title">Speciation</div>
+                        <!-- <div class="chapter-duration">1 class</div> -->
+                    </div>
+                    <div class="chapter-item">
+                        <div class="chapter-number">7.11</div>
+                        <div class="chapter-title">Extinction</div>
+                        <!-- <div class="chapter-duration">1 class</div> -->
+                    </div>
+                    <div class="chapter-item">
+                        <div class="chapter-number">7.12</div>
+                        <div class="chapter-title">Variations in Populations</div>
+                        <!-- <div class="chapter-duration">1 class</div> -->
+                    </div>
+                    <div class="chapter-item">
+                        <div class="chapter-number">7.13</div>
+                        <div class="chapter-title">Origin of Life on Earth</div>
+                        <!-- <div class="chapter-duration">1 class</div> -->
+                    </div>
+                </div>
+            </div>
+            <div class="unit-card">
+                <div class="unit-header">
+                    <div class="unit-number">8</div>
+                    <div class="unit-title">Ecology</div>
+                    <svg class="unit-toggle" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <polyline points="6 9 12 15 18 9"></polyline>
+                    </svg>
+                </div>
+                <div class="chapters-list">
+                    <div class="chapter-item">
+                        <div class="chapter-number">8.1</div>
+                        <div class="chapter-title">Responses to the Environment</div>
+                        <!-- <div class="chapter-duration">3 classes</div> -->
+                    </div>
+                    <div class="chapter-item">
+                        <div class="chapter-number">8.2</div>
+                        <div class="chapter-title">Energy Flow Through Ecosystems</div>
+                        <!-- <div class="chapter-duration">2 classes</div> -->
+                    </div>
+                    <div class="chapter-item">
+                        <div class="chapter-number">8.3</div>
+                        <div class="chapter-title">Population Ecology</div>
+                        <!-- <div class="chapter-duration">1 class</div> -->
+                    </div>
+                    <div class="chapter-item">
+                        <div class="chapter-number">8.4</div>
+                        <div class="chapter-title">Effect of Density of Populations</div>
+                        <!-- <div class="chapter-duration">1 class</div> -->
+                    </div>
+                    <div class="chapter-item">
+                        <div class="chapter-number">8.5</div>
+                        <div class="chapter-title">Community Ecology</div>
+                        <!-- <div class="chapter-duration">1 class</div> -->
+                    </div>
+                    <div class="chapter-item">
+                        <div class="chapter-number">8.6</div>
+                        <div class="chapter-title">Biodiversity</div>
+                        <!-- <div class="chapter-duration">1 class</div> -->
+                    </div>
+                    <div class="chapter-item">
+                        <div class="chapter-number">8.7</div>
+                        <div class="chapter-title">Disruptions to Ecosystems</div>
+                        <!-- <div class="chapter-duration">1 class</div> -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Your Original Footer -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-grid">
+                <div class="footer-column">
+                    <h3 class="footer-logo">
+                        <i class="fa-solid fa-graduation-cap"></i> Tutorly
+                    </h3>
+                    <p class="footer-about">
+                        Peer-to-peer learning platform connecting students with qualified tutors.
+                    </p>
+                    <div class="footer-social">
+                        <a href="#"><i class="fab fa-discord"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                        <a href="#"><i class="fab fa-tiktok"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Navigation</h3>
+                    <ul class="footer-links">
+                        <li><a href="./apbiology-home.html">AP Bio Home</a></li>
+                        <li><a href="./curriculum.html">Curriculum</a></li>
+                        <li><a href="./resources.html">Resources</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Support</h3>
+                    <ul class="footer-links">
+                        <li><a href="../../help/contact.html">Contact</a></li>
+                        <li><a href="../../help/faq.html">FAQ</a></li>
+                        <li><a href="../../help/privacy-policy.html">Privacy Policy</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-column">
+                    <h3>Apply</h3>
+                    <ul class="footer-links">
+                        <li><a href="#">Become A Tutor</a></li>
+                        <li><a href="#">Join AP Bio Hub </a></li>
+                        <li><a href="#">More Info</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Newsletter</h3>
+                    <form class="footer-newsletter">
+                        <input type="email" placeholder="Your email address" required>
+                        <button type="submit">Subscribe</button>
+                    </form>
+                    <p class="footer-disclaimer">
+                        By subscribing, you agree to our Privacy Policy.
+                    </p>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2025 Tutorly. All rights reserved.</p>
+                <div class="footer-payments">
+                    <i class="fab fa-cc-visa"></i>
+                    <i class="fab fa-cc-mastercard"></i>
+                    <i class="fab fa-cc-paypal"></i>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="./apbiology.js"></script>
+    <script>
+        // Enhanced Unit Dropdown Functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const unitHeaders = document.querySelectorAll('.unit-header');
+            
+            unitHeaders.forEach(header => {
+                header.addEventListener('click', function() {
+                    const unit = this.parentElement;
+                    const wasActive = unit.classList.contains('active');
+                    
+                    // Close all other units
+                    document.querySelectorAll('.unit-card').forEach(u => {
+                        if (u !== unit && u.classList.contains('active')) {
+                            u.classList.remove('active');
+                        }
+                    });
+                    
+                    // Toggle current unit
+                    unit.classList.toggle('active', !wasActive);
+                });
+            });
+            
+            // Mobile menu toggle (preserving your existing functionality)
+            const navToggle = document.getElementById('nav-toggle');
+            const navMenu = document.getElementById('nav-menu');
+            
+            if (navToggle && navMenu) {
+                navToggle.addEventListener('click', function() {
+                    navMenu.classList.toggle('show-menu');
+                    this.classList.toggle('active');
+                });
+            }
+        });
+        // Replace your existing mobile menu toggle code with this:
+document.addEventListener('DOMContentLoaded', function() {
+    const navToggle = document.getElementById('nav-toggle');
+    const navMenu = document.getElementById('nav-menu');
+    
+    if (navToggle && navMenu) {
+        navToggle.addEventListener('click', function() {
+            // Toggle the menu visibility
+            navMenu.classList.toggle('show-menu');
+            // Toggle the hamburger/close icons
+            this.classList.toggle('active');
+        });
+    }
+    
+    // Keep your existing unit dropdown functionality
+    const unitHeaders = document.querySelectorAll('.unit-header');
+    // ... rest of your unit dropdown code
+});
+    </script>
 </body>
 </html>
