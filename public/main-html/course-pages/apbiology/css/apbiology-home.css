@@ -74,7 +74,8 @@
   background-position: center;
   background-attachment: fixed;
   padding: 6rem 5%;
-  height: 80vh;
+  width: 100%;
+  height: auto;
   color: white;
   position: relative;
 }
