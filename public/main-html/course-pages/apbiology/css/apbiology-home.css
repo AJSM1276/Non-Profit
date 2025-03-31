@@ -74,13 +74,27 @@
     url("../images/hero.jpg");
   background-size: cover;
   background-position: center;
-  background-attachment: fixed;
   padding: 6rem 5%;
   color: white;
   position: relative;
   width: 100%;
-  height: 100vh;
-  padding: 10px 10%;
+  min-height: 100vh; /* Changed from height to min-height */
+}
+
+/* Mobile-specific fixes */
+@media (max-width: 768px) {
+  .hero-section {
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    min-height: 90vh; /* Slightly taller on mobile */
+    padding: 4rem 5%;
+    background-attachment: scroll; /* Remove fixed background on mobile */
+  }
+  
+  .hero-content {
+    margin-bottom: 2rem;
+  }
 }
 
 .hero-content {
