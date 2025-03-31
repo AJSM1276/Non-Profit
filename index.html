@@ -45,7 +45,7 @@
             <div class="nav__menu" id="nav-menu">
                 <ul class="nav__list">
                     <li><a href="./index.html" class="nav__link">Home</a></li>
-                    <li><a href="./courses.html" class="nav__link">All Courses</a></li>
+                    <li><a href="./public/main-html/student-pages/course-pages/all-courses.html" class="nav__link">All Courses</a></li>
 
                     <li class="dropdown__item">
                         <div class="nav__link dropdown__button">
@@ -55,11 +55,9 @@
                             <div class="dropdown__content">
                                 <div class="dropdown__group">
                                     <div class="dropdown__icon"><i class="fa-solid fa-star"></i></div>
-                                    <span class="dropdown__title">Most viewed courses</span>
+                                    <span class="dropdown__title">Newly released courses</span>
                                     <ul class="dropdown__list">
                                         <li><a href="./public/main-html/course-pages/apbiology/apbiology-home.html" class="dropdown__link">AP Biology</a></li>
-                                        <li><a href="#" class="dropdown__link">Anatomy & Physiology</a></li>
-                                        <li><a href="#" class="dropdown__link">Music Production</a></li>
                                     </ul>
                                 </div>
 
@@ -67,9 +65,7 @@
                                     <div class="dropdown__icon"><i class="fa-solid fa-fire"></i></div>
                                     <span class="dropdown__title">Popular courses</span>
                                     <ul class="dropdown__list">
-                                        <li><a href="#" class="dropdown__link">AP Biology</a></li>
-                                        <li><a href="#" class="dropdown__link">Anatomy & Physiology</a></li>
-                                        <li><a href="#" class="dropdown__link">Music Production</a></li>
+                                        <li><a href="./public/main-html/course-pages/apbiology/apbiology-home.html" class="dropdown__link">AP Biology</a></li>
                                     </ul>
                                 </div>
                             </div>
@@ -86,15 +82,15 @@
                                     <div class="dropdown__icon"><i class="fa-solid fa-pencil"></i></div>
                                     <span class="dropdown__title">Study techniques</span>
                                     <ul class="dropdown__list">
-                                        <li><a href="#" class="dropdown__link">Utilizing Pomodoro</a></li>
-                                        <li><a href="#" class="dropdown__link">Mastering Anki</a></li>
+                                        <li><a href="./public/main-html/still-working.html" class="dropdown__link">Pomodoro</a></li>
+                                        <li><a href="./public/main-html/course-pages/anki/anki-home.html" class="dropdown__link">Anki</a></li>
                                     </ul>
                                 </div>
                             </div>
                         </div>
                     </li>
 
-                    <li><a href="./about.html" class="nav__link">About</a></li>
+                    <li><a href="./public/main-html/company/about.html" class="nav__link">About</a></li>
                 </ul>
             </div>
         </nav>
@@ -106,18 +102,18 @@
         <section class="hero-section">
             <div class="hero-content">
                 <h1 class="hero-title">Master Any Subject With <span>Peer Tutors</span></h1>
-                <p class="hero-subtitle">1-on-1 tutoring from qualified high school & college students at 100% less than professional services</p>
+                <p class="hero-subtitle">Group tutoring from qualified high school & college students at no cost!</p>
                 
                 <div class="hero-cta">
-                    <a href="./courses.html" class="cta-button primary-cta">
+                    <a href="./public/main-html/student-pages/course-pages/all-courses.html" class="cta-button primary-cta">
                         <i class="ri-play-circle-line"></i> Explore Courses
                     </a>
-                    <a href="./signup.html" class="cta-button secondary-cta">
-                        <i class="ri-user-add-line"></i> Free Sign Up
+                    <a href="./public/main-html/hiring-applications/tutor-application.html" class="cta-button secondary-cta">
+                        <i class="ri-user-add-line"></i> Apply As A Tutor
                     </a>
                 </div>
                 
-                <div class="hero-stats">
+                <!-- <div class="hero-stats">
                     <div class="stat-item">
                         <span class="stat-number">500+</span>
                         <span class="stat-label">Active Tutors</span>
@@ -130,7 +126,7 @@
                         <span class="stat-number">4.9★</span>
                         <span class="stat-label">Average Rating</span>
                     </div>
-                </div>
+                </div> -->
             </div>
             
             <div class="hero-image">
@@ -143,48 +139,49 @@
         <!-- Course Highlights -->
         <section class="course-highlights">
             <h2 class="section-title">Most Popular Courses</h2>
-            <p class="section-subtitle">Join 10,000+ students mastering these subjects</p>
+            <p class="section-subtitle">Join other students mastering these subjects</p>
             
             <div class="course-cards">
                 <div class="course-card featured">
-                    <div class="course-badge">BEST SELLER</div>
+                    <div class="course-badge">NEW</div>
                     <div class="course-icon"><i class="fas fa-dna"></i></div>
-                    <h3 class="course-title">AP Biology Mastery</h3>
-                    <p class="course-desc">Complete curriculum coverage with lab simulations</p>
+                    <h3 class="course-title">AP Biology</h3>
+                    <p class="course-desc">Guiding you from the basics of water to cellular communication</p>
                     <div class="course-meta">
-                        <span class="rating">4.9★ (1,240)</span>
-                        <span class="duration"><i class="ri-time-line"></i> 32 hrs</span>
+                        <span class="rating">College Board Standard</span>
+                        <span class="duration"><i class="ri-time-line"></i> 8 Units</span>
                     </div>
-                    <a href="#" class="course-cta">Enroll Now</a>
+                    <a href="./public/main-html/course-pages/apbiology/apbiology-home.html" class="course-cta">View Course</a>
                 </div>
                 
                 <div class="course-card">
-                    <div class="course-icon"><i class="fas fa-calculator"></i></div>
-                    <h3 class="course-title">AP Calculus AB/BC</h3>
-                    <p class="course-desc">Conquer limits, derivatives, and integrals</p>
+                    <div class="course-badge">Coming Soon...</div>
+                    <div class="course-icon"><i class="fa-solid fa-rocket"></i></div>
+                    <h3 class="course-title">Physics</h3>
+                    <p class="course-desc">Conquer basic kinematics, all the way to electromagnetism</p>
                     <div class="course-meta">
-                        <span class="rating">4.8★ (980)</span>
-                        <span class="duration"><i class="ri-time-line"></i> 28 hrs</span>
+                        <span class="rating">General Curriculum</span>
+                        <span class="duration"><i class="ri-time-line"></i> TBD</span>
                     </div>
-                    <a href="#" class="course-cta">Enroll Now</a>
+                    <a href="./public/main-html/still-working.html" class="course-cta">View Course</a>
                 </div>
                 
                 <div class="course-card new">
-                    <div class="course-badge">NEW</div>
-                    <div class="course-icon"><i class="fas fa-music"></i></div>
-                    <h3 class="course-title">Music Production</h3>
-                    <p class="course-desc">From beginner beats to professional tracks</p>
+                    <div class="course-badge">Coming Soon...</div>
+                    <div class="course-icon"><i class="fa-solid fa-hands-asl-interpreting"></i></div>
+                    <h3 class="course-title">American Sign Language</h3>
+                    <p class="course-desc">Learn a language you can use in day-to-day life and land a job with</p>
                     <div class="course-meta">
-                        <span class="rating">4.7★ (650)</span>
-                        <span class="duration"><i class="ri-time-line"></i> 40 hrs</span>
+                        <span class="rating">General Curriculum</span>
+                        <span class="duration"><i class="ri-time-line"></i> TBD</span>
                     </div>
-                    <a href="#" class="course-cta">Enroll Now</a>
+                    <a href="./public/main-html/still-working.html" class="course-cta">View Course</a>
                 </div>
             </div>
             
             <div class="view-all-courses">
-                <a href="./courses.html" class="view-all-btn">
-                    View All 120+ Courses <i class="ri-arrow-right-line"></i>
+                <a href="./public/main-html/student-pages/course-pages/all-courses.html" class="view-all-btn">
+                    View All Courses <i class="ri-arrow-right-line"></i>
                 </a>
             </div>
         </section>
@@ -197,14 +194,14 @@
             <div class="value-cards">
                 <div class="value-card">
                     <div class="value-icon"><i class="fas fa-dollar-sign"></i></div>
-                    <h3>100% More Affordable</h3>
-                    <p>Peer tutors mean no premium markups - just quality help at fair prices</p>
+                    <h3>100% Free</h3>
+                    <p>Peer tutoring means complete volunteer work and no hidden costs</p>
                 </div>
                 
                 <div class="value-card">
                     <div class="value-icon"><i class="fas fa-clock"></i></div>
                     <h3>Flexible Scheduling</h3>
-                    <p>Book sessions 24/7 with tutors across all time zones</p>
+                    <p>Meet with tutors live, or watch pre-recorded lessons</p>
                 </div>
                 
                 <div class="value-card">
@@ -215,8 +212,8 @@
                 
                 <div class="value-card">
                     <div class="value-icon"><i class="fas fa-graduation-cap"></i></div>
-                    <h3>College-Credited</h3>
-                    <p>Many tutors are Ivy League/Top 30 undergrads</p>
+                    <h3>Top Tier Educators</h3>
+                    <p>Our tutors have shown results, and you will too</p>
                 </div>
             </div>
         </section>
@@ -245,21 +242,30 @@
                     <h3>Navigation</h3>
                     <ul class="footer-links">
                         <li><a href="./index.html">Home</a></li>
-                        <li><a href="./courses.html">Courses</a></li>
-                        <li><a href="./about.html">About</a></li>
+                        <li><a href="./public/main-html/student-pages/course-pages/all-courses.html">Courses</a></li>
+                        <li><a href="./public/main-html/company/about.html">About</a></li>
                     </ul>
                 </div>
                 
                 <div class="footer-column">
                     <h3>Support</h3>
                     <ul class="footer-links">
-                        <li><a href="./contact.html">Contact</a></li>
-                        <li><a href="#">FAQ</a></li>
-                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="./public/main-html/help/contact.html">Contact</a></li>
+                        <li><a href="./public/main-html/help/faq.html">FAQ</a></li>
+                        <li><a href="./public/main-html/help/privacy-policy.html">Privacy Policy</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-column">
+                    <h3>Apply</h3>
+                    <ul class="footer-links">
+                        <li><a href="./public/main-html/hiring-applications/tutor-application.html">Tutor Application</a></li>
+                        <li><a href="./public/main-html/hiring-applications/content-creator-application.html">Content Creator Application</a></li>
+                        <li><a href="./public/main-html/hiring-applications/other-applications.html">Other Applications</a></li>
                     </ul>
                 </div>
                 
-                <div class="footer-column">
+                <!-- <div class="footer-column">
                     <h3>Newsletter</h3>
                     <form class="footer-newsletter">
                         <input type="email" placeholder="Your email address" required>
@@ -268,7 +274,7 @@
                     <p class="footer-disclaimer">
                         By subscribing, you agree to our Privacy Policy.
                     </p>
-                </div>
+                </div> -->
             </div>
             
             <div class="footer-bottom">

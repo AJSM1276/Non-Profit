@@ -3,122 +3,206 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tutorly - Coming Soon</title>
+    <meta name="description" content="Tutorly - Premium online tutoring platform with expert high school and college tutors">
+    
+    <!-- Favicon -->
+    <link rel="icon" href="./public/assets/favicon.ico" type="image/x-icon">
+    
+    <!-- Fonts & Icons -->
     <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    <style>
-        @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap");
-        
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: "Poppins", sans-serif;
-        }
-        
-        body {
-            background-color: hsl(144, 28%, 79%);
-            height: 100vh;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            text-align: center;
-            padding: 20px;
-        }
-        
-        .construction-container {
-            max-width: 600px;
-            width: 100%;
-        }
-        
-        .emoji-container {
-            font-size: 4rem;
-            margin-bottom: 1.5rem;
-            height: 80px;
-            position: relative;
-        }
-        
-        .emoji {
-            position: absolute;
-            left: 50%;
-            transform: translateX(-50%);
-            animation: float 3s ease-in-out infinite;
-        }
-        
-        .emoji:nth-child(1) {
-            animation-delay: 0s;
-        }
-        
-        .emoji:nth-child(2) {
-            animation-delay: 0.5s;
-        }
-        
-        .emoji:nth-child(3) {
-            animation-delay: 1s;
-        }
-        
-        @keyframes float {
-            0%, 100% {
-                transform: translateY(0) translateX(-50%);
-            }
-            50% {
-                transform: translateY(-15px) translateX(-50%);
-            }
-        }
-        
-        h1 {
-            font-size: 2.2rem;
-            color: hsl(145, 48%, 28%);
-            margin-bottom: 1rem;
-            font-weight: 600;
-        }
-        
-        p {
-            font-size: 1.1rem;
-            color: hsl(145, 48%, 28%);
-            margin-bottom: 2rem;
-            line-height: 1.6;
-        }
-        
-        .cta-button {
-            padding: 1.2rem 2.5rem;
-            font-size: 1.2rem;
-            font-weight: 600;
-            background: hsl(145, 48%, 28%);
-            color: white;
-            text-decoration: none;
-            border-radius: 15px;
-            transition: all 0.6s ease;
-            box-shadow: 0 3px 12px rgba(0, 0, 0, 0.2);
-            display: inline-block;
-        }
-        
-        .cta-button:hover {
-            background: hsl(145, 48%, 28%);
-            transform: translateY(-3px);
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
-        }
-        
-        @media (max-width: 768px) {
-            h1 {
-                font-size: 1.8rem;
-            }
-            
-            .emoji-container {
-                font-size: 3rem;
-            }
-        }
-    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="./css/apbiology-footer.css">
+    <link rel="stylesheet" href="./css/apbiology-header.css">
+    <link rel="stylesheet" href="./css/apbiology-home.css">
+    
+    <title>Tutorly | AP Biology</title>
+    
+    <!-- Open Graph Tags -->
+    <meta property="og:title" content="Tutorly | Premium Online Tutoring">
+    <meta property="og:description" content="Learn from expert high school and college tutors across various subjects">
+    <meta property="og:image" content="https://yourdomain.com/public/assets/social-preview.jpg">
+    <meta property="og:url" content="https://yourdomain.com">
 </head>
 <body>
-    <div class="construction-container">
-        <div class="emoji-container">
-            <div class="emoji">🚧</div>
-            <div class="emoji">🧬</div>
+    <!-- Header -->
+    <header class="header">
+        <nav class="nav container">
+            <div class="nav__data">
+                <a href="./apbiology-home.html" class="nav__logo">
+                    <i class="fa-solid fa-dna"></i> AP Bio Hub
+                </a>
+                <a href="./still-working.html" class="nav__logo" id="tutorly">
+                    <i class="fa-solid fa-graduation-cap"></i> Tutorly
+                </a>
+                    <div class="nav__toggle" id="nav-toggle">
+                        <i class="ri-menu-line nav__toggle-menu"></i>
+                        <i class="ri-close-line nav__toggle-close"></i>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Nav Menu -->
+            <div class="nav__menu" id="nav-menu">
+                <ul class="nav__list">
+                    <li><a href="./apbiology-home.html" class="nav__link">AP Bio Home</a></li>
+                    <li class="dropdown__item">
+                        <div class="nav__link dropdown__button">
+                            Discover <i class="ri-arrow-down-s-line dropdown__arrow"></i>
+                        </div>
+                        <div class="dropdown__container">
+                            <div class="dropdown__content">
+                                <div class="dropdown__group">
+                                    <div class="dropdown__icon"><i class="fa-solid fa-video"></i></i></div>
+                                    <span class="dropdown__title">Most viewed courses</span>
+                                    <ul class="dropdown__list">
+                                        <li><a href="./prerecorded-videos.html" class="dropdown__link">Pre-recorded Videos</a></li>
+                                        <li><a href="./past-meeting-recordings.html" class="dropdown__link">Live Meeting Recordings</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li class="dropdown__item">
+                        <div class="nav__link dropdown__button">
+                            Resources <i class="ri-arrow-down-s-line dropdown__arrow"></i>
+                        </div>
+                        <div class="dropdown__container">
+                            <div class="dropdown__content">
+                                <div class="dropdown__group">
+                                    <div class="dropdown__icon"><i class="fa-solid fa-lightbulb"></i></div>
+                                    <span class="dropdown__title">External Sites</span>
+                                    <ul class="dropdown__list">
+                                        <li><a href="https://portal.biobuddy.com/welcome" class="dropdown__link">BioBuddy</a></li>
+                                        <li><a href="https://apbiopenguins.weebly.com" class="dropdown__link">AP Bio Penguins</a></li>
+                                        <li><a href="https://www.khanacademy.org/science/ap-biology" class="dropdown__link">Khan Academy</a></li>
+                                        <li><a href="https://www.amazon.com/Barrons-Biology-Deborah-Goldberg-M-S/dp/1438008686" class="dropdown__link">Barrons AP Biology</a></li>
+                                    </ul>
+                                    <div class="dropdown__icon"><i class="fa-solid fa-pencil"></i></div>
+                                    <span class="dropdown__title">Study techniques</span>
+                                    <ul class="dropdown__list">
+                                        <li><a href="./still-working.html" class="dropdown__link">Anki</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li><a href="../../company/about.html" class="nav__link">About</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Hero Section -->
+         <br><br>
+        <section class="value-proposition">
+            <h2 class="section-title">Resources</h2>
+            <p class="section-subtitle">Assets that will help you score a 5 on the AP exam | Click a heading to learn more</p>
+            
+            <div class="value-cards">
+                <div class="value-card">
+                    <div class="value-icon"><i class="fa-solid fa-dna"></i></div>
+                    <h3><a href="https://portal.biobuddy.com/welcome">BioBuddy</a></h3>
+                    <p>Free | Detailed videos and explanations from a certified biologist!</p>
+                </div>
+                
+                <div class="value-card">
+                    <div class="value-icon"><i class="fa-solid fa-snowflake"></i></div>
+                    <h3><a href="https://apbiopenguins.weebly.com">AP Bio Penguins</a></h3>
+                    <p>Free | Many practice FRQ's, MCQ's, quizziz, cheat-sheets, and more!</p>
+                </div>
+                
+                <div class="value-card">
+                    <div class="value-icon"><i class="fas fa-chalkboard-user"></i></div>
+                    <h3><a href="https://www.khanacademy.org/science/ap-biology">Khan Academy</a></h3>
+                    <p>Free | Detailed walk throughs for each lesson</p>
+                </div>
+                
+                <div class="value-card">
+                    <div class="value-icon"><i class="fa-solid fa-book"></i></div>
+                    <h3><a href="https://www.amazon.com/Barrons-Biology-Deborah-Goldberg-M-S/dp/1438008686">Barrons AP Biology</a></h3>
+                    <p>$24.45 | Packed with extensive reviews and practice exams</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-grid">
+                <div class="footer-column">
+                    <h3 class="footer-logo">
+                        <i class="fa-solid fa-graduation-cap"></i> Tutorly
+                    </h3>
+                    <p class="footer-about">
+                        Peer-to-peer learning platform connecting students with qualified tutors.
+                    </p>
+                    <div class="footer-social">
+                        <a href="#"><i class="fab fa-discord"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                        <a href="#"><i class="fab fa-tiktok"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Navigation</h3>
+                    <ul class="footer-links">
+                        <li><a href="./apbiology-home.html">AP Bio Home</a></li>
+                        <li><a href="./curriculum.html">Curriculum</a></li>
+                        <li><a href="./resources.html">Resources</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Support</h3>
+                    <ul class="footer-links">
+                        <li><a href="../../help/contact.html">Contact</a></li>
+                        <li><a href="../../help/faq.html">FAQ</a></li>
+                        <li><a href="../../help/privacy-policy.html">Privacy Policy</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-column">
+                    <h3>Apply</h3>
+                    <ul class="footer-links">
+                        <li><a href="#">Tutor Application</a></li>
+                        <li><a href="#">Content Creator Application</a></li>
+                        <li><a href="#">Other Applications</a></li>
+                    </ul>
+                </div>
+                
+                <!-- <div class="footer-column">
+                    <h3>Newsletter</h3>
+                    <form class="footer-newsletter">
+                        <input type="email" placeholder="Your email address" required>
+                        <button type="submit">Subscribe</button>
+                    </form>
+                    <p class="footer-disclaimer">
+                        By subscribing, you agree to our Privacy Policy.
+                    </p>
+                </div> -->
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2025 Tutorly. All rights reserved.</p>
+                <div class="footer-payments">
+                    <i class="fab fa-cc-visa"></i>
+                    <i class="fab fa-cc-mastercard"></i>
+                    <i class="fab fa-cc-paypal"></i>
+                </div>
+            </div>
         </div>
-        <h1>We're Still Working on This Page!</h1>
-        <p>Our team is busy creating something amazing here. Check back soon for updates!</p>
-        <a href="../../../index.html" class="cta-button">Return Home</a>
-    </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="./apbiology.js"></script>
 </body>
 </html>

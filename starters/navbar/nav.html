@@ -1,249 +1,267 @@
 <!DOCTYPE html>
-    <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-        <!--=============== REMIXICONS ===============-->
-        <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <!--=============== REMIXICONS ===============-->
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
 
-        <!--=============== CSS ===============-->
-        <link rel="stylesheet" href="./public/assets/nav-assets/css/styles.css">
-        <link rel="stylesheet" href="./public/main-css/footer.css">
-        <link rel="stylesheet" href="./public/main-css/home.css">
+    <!--=============== CSS ===============-->
+    <link rel="stylesheet" href="./public/assets/nav-assets/css/styles.css" />
+    <link rel="stylesheet" href="./public/main-css/footer.css" />
+    <link rel="stylesheet" href="./public/main-css/home.css" />
 
-        <title>Tutorly</title>
-    </head>
-    <body>
-        <!--=============== HEADER ===============-->
-        <header class="header">
-            <nav class="nav container">
-                <div class="nav__data">
-                    <a href="./index.html" class="nav__logo">
-                      <i class="fa-solid fa-graduation-cap"></i> Tutorly
-                    </a>
-    
-                    <div class="nav__toggle" id="nav-toggle">
-                        <i class="ri-menu-line nav__toggle-menu"></i>
-                        <i class="ri-close-line nav__toggle-close"></i>
+    <title>Tutorly</title>
+  </head>
+  <body>
+    <!--=============== HEADER ===============-->
+    <header class="header">
+      <nav class="nav container">
+        <div class="nav__data">
+          <a href="./index.html" class="nav__logo">
+            <i class="fa-solid fa-graduation-cap"></i> Tutorly
+          </a>
+
+          <div class="nav__toggle" id="nav-toggle">
+            <i class="ri-menu-line nav__toggle-menu"></i>
+            <i class="ri-close-line nav__toggle-close"></i>
+          </div>
+        </div>
+
+        <!--=============== NAV MENU ===============-->
+        <div class="nav__menu" id="nav-menu">
+          <ul class="nav__list">
+            <li>
+              <a href="./index.html" class="nav__link">Home</a>
+            </li>
+            <li>
+              <a
+                href="./public/main-html/student-pages/course-pages/courses.html"
+                class="nav__link"
+                >All Courses</a
+              >
+            </li>
+
+            <!--=============== DROPDOWN 1 ===============-->
+            <li class="dropdown__item">
+              <div class="nav__link dropdown__button">
+                Discover <i class="ri-arrow-down-s-line dropdown__arrow"></i>
+              </div>
+
+              <div class="dropdown__container">
+                <div class="dropdown__content">
+                  <div class="dropdown__group">
+                    <div class="dropdown__icon">
+                      <i class="fa-solid fa-star"></i>
                     </div>
-                </div>
 
-                <!--=============== NAV MENU ===============-->
-                <div class="nav__menu" id="nav-menu">
-                    <ul class="nav__list">
-                        <li>
-                            <a href="./index.html" class="nav__link">Home</a>
-                        </li>
-                        <li>
-                            <a href="./public/main-html/student-pages/course-pages/courses.html" class="nav__link">All Courses</a>
-                        </li>
+                    <span class="dropdown__title">Most viewed courses</span>
 
-                        <!--=============== DROPDOWN 1 ===============-->
-                        <li class="dropdown__item">                      
-                            <div class="nav__link dropdown__button">
-                                Discover <i class="ri-arrow-down-s-line dropdown__arrow"></i>
-                            </div>
-
-                            <div class="dropdown__container">
-                                <div class="dropdown__content">
-                                    <div class="dropdown__group">
-                                        <div class="dropdown__icon">
-                                            <i class="fa-solid fa-star"></i>
-                                        </div>
-    
-                                        <span class="dropdown__title">Most viewed courses</span>
-    
-                                        <ul class="dropdown__list">
-                                            <li>
-                                                <a href="#" class="dropdown__link">AP Biology</a>
-                                            </li>
-                                            <li>
-                                                <a href="#" class="dropdown__link">Anatomy & Physiology</a>
-                                            </li>
-                                            <li>
-                                                <a href="#" class="dropdown__link">Music Production</a>
-                                            </li>
-                                        </ul>
-                                    </div>
-    
-                                    <div class="dropdown__group">
-                                        <div class="dropdown__icon">
-                                            <i class="fa-solid fa-fire"></i>
-                                        </div>
-    
-                                        <span class="dropdown__title">Popular courses</span>
-    
-                                        <ul class="dropdown__list">
-                                            <li>
-                                                <a href="#" class="dropdown__link">AP Biology</a>
-                                            </li>
-                                            <li>
-                                                <a href="#" class="dropdown__link">Anatomy & Physiology</a>
-                                            </li>
-                                            <li>
-                                                <a href="#" class="dropdown__link">Music Production</a>
-                                            </li>
-                                        </ul>
-                                    </div>
-    
-                                    <div class="dropdown__group">
-                                        <div class="dropdown__icon">
-                                            <i class="fa-solid fa-mobile-screen-button"></i>
-                                        </div>
-    
-                                        <span class="dropdown__title">Social Media</span>
-    
-                                        <ul class="dropdown__list">
-                                            <li>
-                                                <a href="#" class="dropdown__link">Discord</a>
-                                            </li>
-                                            <li>
-                                                <a href="#" class="dropdown__link">Instagram</a>
-                                            </li>
-                                            <li>
-                                                <a href="#" class="dropdown__link">YouTube</a>
-                                            </li>
-                                            <li>
-                                                <a href="#" class="dropdown__link">TikTok</a>
-                                            </li>
-                                        </ul>
-                                    </div>
-    
-                                    <div class="dropdown__group">
-                                        <div class="dropdown__icon">
-                                          <i class="fa-solid fa-chalkboard-user"></i>
-                                        </div>
-    
-                                        <span class="dropdown__title">Become A Tutor</span>
-    
-                                        <ul class="dropdown__list">
-                                            <li>
-                                                <a href="#" class="dropdown__link">Info</a>
-                                            </li>
-                                            <li>
-                                                <a href="#" class="dropdown__link">Apply</a>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                        </li>
-
-                        <!--=============== DROPDOWN 2 ===============-->
-                        <li class="dropdown__item">
-                            <div class="nav__link dropdown__button">
-                                Resources <i class="ri-arrow-down-s-line dropdown__arrow"></i>
-                            </div>
-
-                            <div class="dropdown__container">
-                                <div class="dropdown__content">
-                                    <div class="dropdown__group">
-                                        <div class="dropdown__icon">
-                                            <i class="fa-solid fa-pencil"></i>
-                                        </div>
-    
-                                        <span class="dropdown__title">Study techniques</span>
-    
-                                        <ul class="dropdown__list">
-                                            <li>
-                                                <a href="#" class="dropdown__link">Utilizing Pomodoro</a>
-                                            </li>
-                                            <li>
-                                                <a href="#" class="dropdown__link">Mastering Anki</a>
-                                            </li>
-                                        </ul>
-                                    </div>
-    
-                                    <div class="dropdown__group">
-                                        <div class="dropdown__icon">
-                                            <i class="fa-solid fa-user-group"></i>
-                                        </div>
-    
-                                        <span class="dropdown__title">Community</span>
-    
-                                        <ul class="dropdown__list">
-                                            <li>
-                                                <a href="#" class="dropdown__link">Community forum</a>
-                                            </li>
-                                            <li>
-                                                <a href="#" class="dropdown__link">Newsletter</a>
-                                            </li>
-                                        </ul>
-                                    </div>
-    
-                                    <div class="dropdown__group">
-                                        <div class="dropdown__icon">
-                                            <i class="fa-solid fa-globe"></i>
-                                        </div>
-    
-                                        <span class="dropdown__title">Others</span>
-    
-                                        <ul class="dropdown__list">
-                                            <li>
-                                                <a href="#" class="dropdown__link">Recent blogs</a>
-                                            </li>
-                                            <li>
-                                                <a href="#" class="dropdown__link">Scholarship opportunities</a>
-                                            </li>
-                                            <li>
-                                                <a href="#" class="dropdown__link">Webinar</a>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                        </li>
-
-                        <!--=============== DROPDOWN 3 ===============-->
-                        <li class="dropdown__item">                        
-                            <div class="nav__link dropdown__button">
-                                Company <i class="ri-arrow-down-s-line dropdown__arrow"></i>
-                            </div>
-
-                            <div class="dropdown__container">
-                                <div class="dropdown__content">
-                                    <div class="dropdown__group">
-                                        <div class="dropdown__icon">
-                                            <i class="fa-solid fa-circle-info"></i>
-                                        </div>
-    
-                                        <span class="dropdown__title">About Tutorly</span>
-    
-                                        <ul class="dropdown__list">
-                                            <li>
-                                                <a href="#" class="dropdown__link">About</a>
-                                            </li>
-                                            <li>
-                                                <a href="#" class="dropdown__link">Founders</a>
-                                            </li>
-                                            <li>
-                                                <a href="#" class="dropdown__link">Our Values</a>
-                                            </li>
-                                        </ul>
-                                    </div>
-    
-                                    <div class="dropdown__group">
-                                        <div class="dropdown__icon">
-                                            <i class="fa-solid fa-user-shield"></i>
-                                        </div>
-    
-                                        <span class="dropdown__title">Safety and quality</span>
-    
-                                        <ul class="dropdown__list">
-                                            <li>
-                                                <a href="#" class="dropdown__link">Terms of Service</a>
-                                            </li>
-                                            <li>
-                                                <a href="#" class="dropdown__link">Privacy Policy</a>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                        </li>
+                    <ul class="dropdown__list">
+                      <li>
+                        <a href="#" class="dropdown__link">AP Biology</a>
+                      </li>
+                      <li>
+                        <a href="#" class="dropdown__link"
+                          >Anatomy & Physiology</a
+                        >
+                      </li>
+                      <li>
+                        <a href="#" class="dropdown__link">Music Production</a>
+                      </li>
                     </ul>
+                  </div>
+
+                  <div class="dropdown__group">
+                    <div class="dropdown__icon">
+                      <i class="fa-solid fa-fire"></i>
+                    </div>
+
+                    <span class="dropdown__title">Popular courses</span>
+
+                    <ul class="dropdown__list">
+                      <li>
+                        <a href="#" class="dropdown__link">AP Biology</a>
+                      </li>
+                      <li>
+                        <a href="#" class="dropdown__link"
+                          >Anatomy & Physiology</a
+                        >
+                      </li>
+                      <li>
+                        <a href="#" class="dropdown__link">Music Production</a>
+                      </li>
+                    </ul>
+                  </div>
+
+                  <div class="dropdown__group">
+                    <div class="dropdown__icon">
+                      <i class="fa-solid fa-mobile-screen-button"></i>
+                    </div>
+
+                    <span class="dropdown__title">Social Media</span>
+
+                    <ul class="dropdown__list">
+                      <li>
+                        <a href="#" class="dropdown__link">Discord</a>
+                      </li>
+                      <li>
+                        <a href="#" class="dropdown__link">Instagram</a>
+                      </li>
+                      <li>
+                        <a href="#" class="dropdown__link">YouTube</a>
+                      </li>
+                      <li>
+                        <a href="#" class="dropdown__link">TikTok</a>
+                      </li>
+                    </ul>
+                  </div>
+
+                  <div class="dropdown__group">
+                    <div class="dropdown__icon">
+                      <i class="fa-solid fa-chalkboard-user"></i>
+                    </div>
+
+                    <span class="dropdown__title">Become A Tutor</span>
+
+                    <ul class="dropdown__list">
+                      <li>
+                        <a href="#" class="dropdown__link">Info</a>
+                      </li>
+                      <li>
+                        <a href="#" class="dropdown__link">Apply</a>
+                      </li>
+                    </ul>
+                  </div>
                 </div>
-            </nav>
-        </header>
+              </div>
+            </li>
+
+            <!--=============== DROPDOWN 2 ===============-->
+            <li class="dropdown__item">
+              <div class="nav__link dropdown__button">
+                Resources <i class="ri-arrow-down-s-line dropdown__arrow"></i>
+              </div>
+
+              <div class="dropdown__container">
+                <div class="dropdown__content">
+                  <div class="dropdown__group">
+                    <div class="dropdown__icon">
+                      <i class="fa-solid fa-pencil"></i>
+                    </div>
+
+                    <span class="dropdown__title">Study techniques</span>
+
+                    <ul class="dropdown__list">
+                      <li>
+                        <a href="#" class="dropdown__link">Pomodoro</a>
+                      </li>
+                      <li>
+                        <a href="#" class="dropdown__link">Anki</a>
+                      </li>
+                    </ul>
+                  </div>
+
+                  <div class="dropdown__group">
+                    <div class="dropdown__icon">
+                      <i class="fa-solid fa-user-group"></i>
+                    </div>
+
+                    <span class="dropdown__title">Community</span>
+
+                    <ul class="dropdown__list">
+                      <li>
+                        <a href="#" class="dropdown__link">Community forum</a>
+                      </li>
+                      <li>
+                        <a href="#" class="dropdown__link">Newsletter</a>
+                      </li>
+                    </ul>
+                  </div>
+
+                  <div class="dropdown__group">
+                    <div class="dropdown__icon">
+                      <i class="fa-solid fa-globe"></i>
+                    </div>
+
+                    <span class="dropdown__title">Others</span>
+
+                    <ul class="dropdown__list">
+                      <li>
+                        <a href="#" class="dropdown__link">Recent blogs</a>
+                      </li>
+                      <li>
+                        <a href="#" class="dropdown__link"
+                          >Scholarship opportunities</a
+                        >
+                      </li>
+                      <li>
+                        <a href="#" class="dropdown__link">Webinar</a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </li>
+
+            <!--=============== DROPDOWN 3 ===============-->
+            <li class="dropdown__item">
+              <div class="nav__link dropdown__button">
+                Company <i class="ri-arrow-down-s-line dropdown__arrow"></i>
+              </div>
+
+              <div class="dropdown__container">
+                <div class="dropdown__content">
+                  <div class="dropdown__group">
+                    <div class="dropdown__icon">
+                      <i class="fa-solid fa-circle-info"></i>
+                    </div>
+
+                    <span class="dropdown__title">About Tutorly</span>
+
+                    <ul class="dropdown__list">
+                      <li>
+                        <a href="#" class="dropdown__link">About</a>
+                      </li>
+                      <li>
+                        <a href="#" class="dropdown__link">Founders</a>
+                      </li>
+                      <li>
+                        <a href="#" class="dropdown__link">Our Values</a>
+                      </li>
+                    </ul>
+                  </div>
+
+                  <div class="dropdown__group">
+                    <div class="dropdown__icon">
+                      <i class="fa-solid fa-user-shield"></i>
+                    </div>
+
+                    <span class="dropdown__title">Safety and quality</span>
+
+                    <ul class="dropdown__list">
+                      <li>
+                        <a href="#" class="dropdown__link">Terms of Service</a>
+                      </li>
+                      <li>
+                        <a href="#" class="dropdown__link">Privacy Policy</a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+  </body>
+</html>
