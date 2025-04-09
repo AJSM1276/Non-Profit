@@ -670,7 +670,7 @@
 
 /* Feedback Section */
 .feedback-section {
-  background: hsl(145, 20%, 97%);
+  background: hsl(145, 15%, 98%);
   background-image: radial-gradient(
     circle at 10% 20%, 
     hsla(145, 10%, 99%, 0.8) 0%, 
