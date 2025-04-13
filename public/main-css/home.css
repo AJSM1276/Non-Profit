@@ -107,6 +107,11 @@
   margin-bottom: 3rem;
 }
 
+.hero-cta i {
+  position: relative;
+  top: 0.1em; /* Adjust this value (try 0.05em to 0.15em) */
+}
+
 .hero-stats {
   display: flex;
   gap: 2rem;
