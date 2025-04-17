@@ -408,93 +408,204 @@
     <style>
         /* Container for the custom chat button */
         .custom-chat-button {
-            position: fixed;
-            bottom: 20px;
-            right: 20px;
-            display: flex;
-            align-items: center;
-            cursor: pointer;
-            z-index: 1000;
-            transition: transform 0.3s ease;
+          position: fixed;
+          bottom: 20px;
+          right: 20px;
+          display: flex;
+          align-items: center;
+          cursor: pointer;
+          z-index: 1000;
+          transition: transform 0.3s ease;
         }
-        
+  
         .custom-chat-button:hover {
-            transform: scale(1.05);
+          transform: scale(1.05);
         }
-        
+  
         /* Text bubble styling */
         .chat-text-bubble {
-            background-color: #f54a4a;
-            color: white;
-            padding: 8px 16px;
-            border-radius: 20px;
-            font-weight: bold;
-            font-size: 14px;
-            margin-right: 10px;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+          background-color: #f54a4a;
+          color: white;
+          padding: 8px 16px;
+          border-radius: 20px;
+          font-weight: bold;
+          font-size: 14px;
+          margin-right: 10px;
+          box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
         }
-        
+  
         /* Logo container styling */
         .chat-logo {
-            width: 50px;
-            height: 50px;
-            border-radius: 50%;
-            background-color: white;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-            overflow: hidden;
+          width: 50px;
+          height: 50px;
+          border-radius: 50%;
+          background-color: white;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+          overflow: hidden;
         }
-        
+  
         /* Your logo styling */
         .chat-logo img {
-            width: 40px;
-            height: 40px;
-            object-fit: contain;
+          width: 40px;
+          height: 100vh;
+          object-fit: contain;
         }
-    </style>
-    <!-- Example page content -->
-    <div style="height: 100vh; display: flex; align-items: center; justify-content: center; font-family: Arial, sans-serif;">
-        <h1>Your Website Content Here</h1>
-    </div>
-
-    <!-- Custom Chat Button -->
-    <div class="custom-chat-button" id="custom-tawk-button">
+  
+        /* Media query for mobile devices */
+        @media only screen and (max-width: 768px) {
+          .chat-logo {
+            display: none; /* Hide the logo on mobile */
+          }
+  
+          .chat-text-bubble {
+            margin-right: 0; /* Remove right margin since there's no logo */
+          }
+        }
+  
+        /* Remove borders from tawk.to iframe */
+        .tawk-iframe-container,
+        .tawk-min-container {
+          border: none !important;
+          padding: 0 !important;
+          box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3) !important;
+          border-radius: 10px !important;
+          overflow: hidden !important;
+        }
+  
+        /* Remove borders from the chat window */
+        #tawk-body-iframe,
+        #tawk-minified-iframe {
+          border: none !important;
+        }
+  
+        /* Target the iframe documents */
+        iframe[title="chat widget"] {
+          border: none !important;
+        }
+      </style>
+  
+      <!-- Custom Chat Button -->
+      <div class="custom-chat-button" id="custom-tawk-button">
         <div class="chat-text-bubble">Live Chat</div>
         <div class="chat-logo">
-            <!-- Replace this with your actual logo -->
-            <img src="/public/assets/images/tutorlyonly.png" alt="Company Logo">
+          <!-- Replace this with your actual logo -->
+          <img src="/public/assets/images/tutorlyonly.png" alt="Company Logo" />
         </div>
-    </div>
-
-    <!-- tawk.to Integration Script -->
-    <script>
+      </div>
+  
+      <!-- tawk.to Integration Script -->
+      <script>
         // Custom button click handler
-        document.getElementById('custom-tawk-button').addEventListener('click', function() {
+        document
+          .getElementById("custom-tawk-button")
+          .addEventListener("click", function () {
             // If Tawk is loaded, show the chat window
             if (window.Tawk_API && window.Tawk_API.showWidget) {
-                window.Tawk_API.maximize();
+              window.Tawk_API.maximize();
             }
-        });
-
-        // tawk.to Integration (Replace YOUR_TAWK_PROPERTY_ID and YOUR_TAWK_WIDGET_ID with your actual values)
+          });
+  
+        // tawk.to Integration
         var Tawk_API = Tawk_API || {};
         var Tawk_LoadStart = new Date();
-        
-        // Hide the default tawk.to button
-        Tawk_API.onLoad = function() {
-            Tawk_API.hideWidget();
+  
+        // Configure Tawk before loading
+        // This will prevent the chat from auto-opening
+        Tawk_API = Tawk_API || {};
+  
+        // Prevent auto-popup
+        Tawk_API.onBeforeLoad = function () {
+          // Disable automatic popups
+          Tawk_API.disablePopups = true;
         };
-        
-        (function() {
-            var s1 = document.createElement("script");
-            var s0 = document.getElementsByTagName("script")[0];
-            s1.async = true;
-            s1.src = 'https://embed.tawk.to/68007b3e78f7d71911b54352/1ip10c6pm';
-            s1.charset = 'UTF-8';
-            s1.setAttribute('crossorigin', '*');
-            s0.parentNode.insertBefore(s1, s0);
+  
+        // When tawk loads
+        Tawk_API.onLoad = function () {
+          // Hide the default button
+          Tawk_API.hideWidget();
+  
+          // Ensure the widget starts hidden
+          setTimeout(function () {
+            Tawk_API.hideWidget();
+          }, 100);
+  
+          // Apply CSS to remove borders
+          removeTawkBorders();
+        };
+  
+        // Function to remove tawk.to borders
+        function removeTawkBorders() {
+          // Create a new style element
+          const style = document.createElement("style");
+          style.type = "text/css";
+  
+          // CSS to remove borders from tawk.to elements
+          const css = `
+            .tawk-iframe-container, .tawk-min-container {
+                border: none !important;
+                padding: 0 !important;
+                box-shadow: 0 2px 10px rgba(0,0,0,0.3) !important;
+                border-radius: 10px !important;
+                overflow: hidden !important;
+            }
+            
+            #tawk-body-iframe, #tawk-minified-iframe {
+                border: none !important;
+            }
+        `;
+  
+          // Add the CSS to the style element
+          if (style.styleSheet) {
+            style.styleSheet.cssText = css;
+          } else {
+            style.appendChild(document.createTextNode(css));
+          }
+  
+          // Add the style to the document head
+          document.head.appendChild(style);
+  
+          // Try to modify iframe content when available
+          setTimeout(function () {
+            try {
+              const tawkIframes = document.querySelectorAll(
+                'iframe[title="chat widget"]'
+              );
+              tawkIframes.forEach((iframe) => {
+                if (iframe.contentDocument) {
+                  const iframeStyle = document.createElement("style");
+                  iframeStyle.textContent = `
+                            .card, .card-header, .card-body, .card-footer {
+                                border: none !important;
+                            }
+                            .tawk-card {
+                                border: none !important;
+                                box-shadow: none !important;
+                            }
+                        `;
+                  iframe.contentDocument.head.appendChild(iframeStyle);
+                }
+              });
+            } catch (e) {
+              console.log(
+                "Could not modify tawk iframe due to cross-origin restrictions"
+              );
+            }
+          }, 3000);
+        }
+  
+        // Load the tawk.to script
+        (function () {
+          var s1 = document.createElement("script");
+          var s0 = document.getElementsByTagName("script")[0];
+          s1.async = true;
+          s1.src = "https://embed.tawk.to/68007b3e78f7d71911b54352/1ip10c6pm";
+          s1.charset = "UTF-8";
+          s1.setAttribute("crossorigin", "*");
+          s0.parentNode.insertBefore(s1, s0);
         })();
-    </script>
+      </script>
+</body> 
 </html>
