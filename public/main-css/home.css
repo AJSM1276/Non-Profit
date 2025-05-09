@@ -877,3 +877,244 @@
       max-width: 100%;
   }
 }
+/* =============== Gofundme =============== */
+/* =============== GOFUNDME SECTION =============== */
+.gofundme-section {
+  background: linear-gradient(135deg, hsl(220, 80%, 97%), hsl(220, 80%, 99%));
+  padding: 4rem 1.5rem;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.gofundme-section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="none"><path fill="hsl(220, 70%, 50%)" opacity="0.03" d="M0,0 L100,0 L100,100 Q50,80 0,100 Z"/></svg>');
+  background-size: 100% auto;
+  background-repeat: no-repeat;
+  background-position: bottom;
+  z-index: 0;
+}
+
+.gofundme-content {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+  margin: 2rem auto 0;
+  max-width: 1200px;
+  text-align: center;
+  position: relative;
+  z-index: 1;
+}
+
+.gofundme-text {
+  padding: 1.5rem;
+  background: white;
+  border-radius: 15px;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+}
+
+.mobile-icon {
+  font-size: 2.5rem;
+  color: hsl(220, 70%, 50%);
+  margin-bottom: 1rem;
+  display: block;
+}
+
+.gofundme-text h3 {
+  color: hsl(220, 48%, 28%);
+  font-size: 1.5rem;
+  margin-bottom: 1.2rem;
+}
+
+.gofundme-text p {
+  color: hsl(220, 48%, 28%);
+  opacity: 0.9;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+  font-size: 1rem;
+}
+
+.gofundme-list {
+  list-style: none;
+  margin: 1.5rem 0;
+  padding: 0;
+  text-align: left;
+}
+
+.gofundme-list li {
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  color: hsl(220, 48%, 28%);
+  line-height: 1.4;
+  font-size: 0.95rem;
+  padding: 0.5rem 0;
+}
+
+.gofundme-list i {
+  color: hsl(120, 60%, 50%);
+  font-size: 1.1rem;
+  flex-shrink: 0;
+}
+
+.gofundme-cta {
+  width: 100%;
+}
+
+.gofundme-card {
+  background: white;
+  padding: 2rem 1.5rem;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+  text-align: center;
+  border: 1px solid rgba(0,0,0,0.05);
+}
+
+.gofundme-icon {
+  font-size: 2.8rem;
+  color: hsl(220, 48%, 28%);
+  margin-bottom: 1.2rem;
+}
+
+.gofundme-card h3 {
+  color: hsl(220, 48%, 28%);
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+}
+
+.impact-text {
+  color: hsl(220, 48%, 28%);
+  opacity: 0.9;
+  margin: 1.5rem 0;
+  line-height: 1.6;
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+.gofundme-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 1rem 2rem;
+  /* Transition should only be here, not in hover state */
+  transition: all 0.3s ease; 
+  /* Improved gradient with background-size for potential animation */
+  background: hsl(0, 70%, 55%);
+  background-size: 100% 100%;
+  color: white;
+  border-radius: 50px;
+  text-decoration: none;
+  font-weight: 600;
+  margin: 1rem auto 0;
+  border: none;
+  font-size: 1.05rem;
+  /* Fixed rgba syntax - using hex instead */
+  box-shadow: 0 4px 15px rgba(255, 80, 80, 0.3);
+  width: 90%;
+  max-width: 280px;
+  justify-content: center;
+  /* Helps with transform performance */
+  will-change: transform, box-shadow; 
+}
+
+.gofundme-button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 20px rgba(255, 80, 80, 0.4);
+  /* New gradient - use background-position for animation */
+  background: hsl(120, 60%, 40%);
+  /* Alternative for better gradient transition: */
+  background-position: 100% 100%;
+}
+
+.gofundme-note {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  color: hsl(220, 48%, 28%);
+  margin-top: 1.5rem;
+  font-size: 0.85rem;
+  opacity: 0.7;
+}
+
+.gofundme-note i {
+  color: hsl(120, 60%, 40%);
+}
+
+.gratitude-note {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  color: hsl(220, 48%, 28%);
+  margin-top: 2rem;
+  font-size: 0.95rem;
+  font-style: italic;
+  opacity: 0.9;
+}
+
+.gratitude-note i {
+  color: hsl(50, 100%, 50%);
+}
+
+/* Tablet and Desktop Styles */
+@media (min-width: 768px) {
+  .gofundme-section {
+    padding: 5rem 5%;
+  }
+  
+  .gofundme-content {
+    flex-direction: row;
+    text-align: left;
+    gap: 3rem;
+  }
+  
+  .gofundme-text {
+    flex: 1;
+    min-width: 300px;
+    max-width: 600px;
+    padding: 2rem;
+  }
+  
+  .mobile-icon {
+    display: none;
+  }
+  
+  .gofundme-cta {
+    flex: 1;
+    min-width: 300px;
+    max-width: 400px;
+  }
+  
+  .gofundme-card {
+    padding: 2.5rem 2rem;
+  }
+  
+  .gofundme-button {
+    width: auto;
+    padding: 1rem 2.5rem;
+  }
+}
+
+/* Large Mobile Screens (e.g., iPhone Plus sizes) */
+@media (min-width: 414px) and (max-width: 767px) {
+  .gofundme-content {
+    padding: 0 1rem;
+  }
+  
+  .gofundme-list li {
+    justify-content: center;
+  }
+  
+  .gofundme-button {
+    padding: 1rem 1.8rem;
+    font-size: 1rem;
+  }
+}
