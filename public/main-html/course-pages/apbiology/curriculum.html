@@ -274,11 +274,11 @@ body {
     <header class="header">
         <nav class="nav container">
             <div class="nav__data">
-                <a href="/public/main-html/course-pages/apbiology/apbiology-home.html" class="nav__logo">
-                    <i class="fa-solid fa-dna"></i> AP Bio Hub
-                </a>
-                <a href="/index.html" class="nav__logo" id="tutorly">
+                <a href="/index.html" class="nav__logo">
                     <i class="fa-solid fa-graduation-cap"></i> Tutorly
+                </a>
+                <a href="/public/main-html/course-pages/apbiology/apbiology-home.html" class="nav__logo" id="tutorly">
+                    <i class="fa-solid fa-dna"></i> AP Bio Hub
                 </a>
                     <div class="nav__toggle" id="nav-toggle">
                         <i class="ri-menu-line nav__toggle-menu"></i>
@@ -291,19 +291,28 @@ body {
             <div class="nav__menu" id="nav-menu">
                 <ul class="nav__list">
                     <li><a href="/public/main-html/course-pages/apbiology/apbiology-home.html" class="nav__link">AP Bio Home</a></li>
-                    <li><a href="./curriculum.html" class="nav__link">Curriculum</a></li>
+                    <li><a href="/public/main-html/course-pages/apbiology/curriculum.html" class="nav__link">Curriculum</a></li>
                     <li class="dropdown__item">
                         <div class="nav__link dropdown__button">
-                            Discover <i class="ri-arrow-down-s-line dropdown__arrow"></i>
+                            Navigation <i class="ri-arrow-down-s-line dropdown__arrow"></i>
                         </div>
                         <div class="dropdown__container">
                             <div class="dropdown__content">
                                 <div class="dropdown__group">
-                                    <div class="dropdown__icon"><i class="fa-solid fa-video"></i></i></div>
+                                    <div class="dropdown__icon"><i class="fa-solid fa-video"></i></div>
                                     <span class="dropdown__title">Videos</span>
                                     <ul class="dropdown__list">
-                                        <li><a href="https://tutorlyonline.notion.site/AP-Biology-Curriculum-Videos-1d4007644bdf80679518c393e78294b7?pvs=4" class="dropdown__link">Pre-recorded Videos</a></li>
-                                        <li><a href="https://tutorlyonline.notion.site/AP-Biology-Live-Meeting-Recordings-1d4007644bdf801e9354dffe1e21ef66?pvs=4" class="dropdown__link">Live Meeting Recordings</a></li>
+                                        <li><a href="https://tutorlyonline.notion.site/AP-Biology-Curriculum-Videos-1d4007644bdf80679518c393e78294b7?pvs=4" class="dropdown__link" target="_blank">Pre-recorded Videos</a></li>
+                                        <li><a href="https://tutorlyonline.notion.site/AP-Biology-Live-Meeting-Recordings-1d4007644bdf801e9354dffe1e21ef66?pvs=4" class="dropdown__link" target="_blank">Live Meeting Recordings</a></li>
+                                    </ul>
+                                </div>
+                                <div class="dropdown__group">
+                                    <div class="dropdown__icon"><i class="fa-solid fa-star"></i></div>
+                                    <span class="dropdown__title">Test Prep & Review</span>
+                                    <ul class="dropdown__list">
+                                        <li><a href="https://tutorlyonline.notion.site/AP-Biology-Curriculum-Notes-1db007644bdf8069bbb4f7d28a8a50e5?pvs=4" class="dropdown__link" target="_blank">Curriculum Notes</a></li>
+                                        <li><a href="https://tutorlyonline.notion.site/AP-Biology-Curriculum-Flashcards-1ed007644bdf80539a36ef4b93a83efb?pvs=4" class="dropdown__link" target="_blank">Flashcards</a></li>
+                                        <li><a href="https://tutorlyonline.notion.site/AP-Biology-Curriculum-Practice-Assessments-1ed007644bdf8020a6d3fe27acac5242?pvs=4" class="dropdown__link" target="_blank">Assessments</a></li>
                                     </ul>
                                 </div>
                             </div>
@@ -312,7 +321,7 @@ body {
 
                     <li class="dropdown__item">
                         <div class="nav__link dropdown__button">
-                            Resources <i class="ri-arrow-down-s-line dropdown__arrow"></i>
+                            External Resources <i class="ri-arrow-down-s-line dropdown__arrow"></i>
                         </div>
                         <div class="dropdown__container">
                             <div class="dropdown__content">
@@ -320,27 +329,17 @@ body {
                                     <div class="dropdown__icon"><i class="fa-solid fa-lightbulb"></i></div>
                                     <span class="dropdown__title">External Sites</span>
                                     <ul class="dropdown__list">
-                                        <li><a href="https://portal.biobuddy.com/welcome" class="dropdown__link">BioBuddy</a></li>
-                                        <li><a href="https://apbiopenguins.weebly.com" class="dropdown__link">AP Bio Penguins</a></li>
-                                        <li><a href="https://www.khanacademy.org/science/ap-biology" class="dropdown__link">Khan Academy</a></li>
-                                        <li><a href="https://www.amazon.com/Barrons-Biology-Deborah-Goldberg-M-S/dp/1438008686" class="dropdown__link">Barrons AP Biology</a></li>
-                                    </ul>
-                                    <div class="dropdown__icon"><i class="fa-solid fa-pencil"></i></div>
-                                    <span class="dropdown__title">Study techniques</span>
-                                    <ul class="dropdown__list">
-                                        <li><a href="/public/main-html/course-pages/anki/anki-home.html" class="dropdown__link">Anki</a></li>
-                                    </ul>
-                                    <div class="dropdown__icon"><i class="fa-solid fa-user-pen"></i></div>
-                                    <span class="dropdown__title">Tutor Notes</span>
-                                    <ul class="dropdown__list">
-                                        <li><a href="https://tutorlyonline.notion.site/AP-Biology-Curriculum-Notes-1db007644bdf8069bbb4f7d28a8a50e5?pvs=4" class="dropdown__link">Curriculum Notes</a></li>
+                                        <li><a href="https://portal.biobuddy.com/welcome" class="dropdown__link" target="_blank">BioBuddy</a></li>
+                                        <li><a href="https://apbiopenguins.weebly.com" class="dropdown__link" target="_blank">AP Bio Penguins</a></li>
+                                        <li><a href="https://knowt.com/exams/AP/AP-Biology" class="dropdown__link" target="_blank">Knowt</a></li>
+                                        <li><a href="https://www.amazon.com/Barrons-Biology-Deborah-Goldberg-M-S/dp/1438008686" class="dropdown__link" target="_blank">Barrons AP Biology</a></li>
                                     </ul>
                                 </div>
                             </div>
                         </div>
                     </li>
 
-                    <li><a href="/public/main-html/company/about.html" class="nav__link">About</a></li>
+                    <li><a href="https://tutorlyonline.notion.site/AP-Biology-Department-Staff-1da007644bdf80c1aa4aee9f5a364259?pvs=4" class="nav__link" target="_blank">Staff</a></li>
                 </ul>
             </div>
         </nav>
@@ -800,7 +799,7 @@ body {
                         <a href="https://discord.gg/KvTEwuYYXc"><i class="fab fa-discord"></i></a>
                        <a href="https://www.instagram.com/tutorlyonline/"><i class="fab fa-instagram"></i></a>
                         <a href="https://www.youtube.com/channel/UCwMIQD0kkJbeYCDhcY8IqpQ"><i class="fab fa-youtube"></i></a>
-                        <a href="#"><i class="fab fa-tiktok"></i></a>
+                        <a href="https://www.tiktok.com/@tutorlyonline?lang=en"><i class="fab fa-tiktok"></i></a>
                     </div>
                 </div>
                 
@@ -809,7 +808,7 @@ body {
                     <ul class="footer-links">
                         <li><a href="/public/main-html/course-pages/apbiology/apbiology-home.html">AP Bio Home</a></li>
                         <li><a href="./curriculum.html">Curriculum</a></li>
-                        <li><a href="./resources.html">Resources</a></li>
+                        <li><a href="./all-videos.html">Watch Videos</a></li>
                     </ul>
                 </div>
                 
@@ -825,9 +824,9 @@ body {
                 <div class="footer-column">
                     <h3>Apply</h3>
                     <ul class="footer-links">
-                        <li><a href="https://docs.google.com/forms/d/1R4qkJUGbVU2wOrf66pP698quhvezcjS1p672rb2gQUE/edit?pli=1" target="_blank">Tutor Application</a></li>
-                        <li><a href="https://www.notion.so/tutorlyonline/1d4007644bdf81a48a46e96bd661e5b2?pvs=106">Content Creator Application</a></li>
-                        <li><a href="https://www.notion.so/tutorlyonline/1d4007644bdf819799fef3be98708e3a?pvs=106">Other Applications</a></li>
+                        <li><a href="https://docs.google.com/forms/d/e/1FAIpQLSeM8hqQRiLXtN7BpMBetiWBQZ4xrd5PPyISZj0DgV4JlfQPaw/viewform?usp=dialog" target="_blank">Tutor Application</a></li>
+                        <li><a href="https://docs.google.com/forms/d/e/1FAIpQLSeBF2uVM3kbkGdKLWkRXoJY6Xx6Kds646CqPXX_tVenN_AkBg/viewform?usp=dialog" target="_blank">Social Media Manager Application</a></li>
+                        <li><a href="https://docs.google.com/forms/d/e/1FAIpQLSeM8hqQRiLXtN7BpMBetiWBQZ4xrd5PPyISZj0DgV4JlfQPaw/viewform?usp=dialog" target="_blank">Miscellaneous Application</a></li>
                     </ul>
                 </div>
                 
