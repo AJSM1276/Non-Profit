@@ -1,4 +1,16 @@
 RewriteEngine On
-RewriteCond %{REQUEST_URI} !^/public/
-[NC]
-RewriteRule ^(.*)$ /public/$1 [L]
+
+# 1. Remove .html extension (e.g., "/donation" → "/donation.html")
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME}.html -f
+RewriteRule ^([^/]+)/?$ $1.html [L]
+
+# 2. Redirect "/course-name" to "/main-html/course-pages/course-name/course-name-home.html"
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^([^/]+)$ main-html/course-pages/$1/$1-home.html [NC,L]
+
+# 3. Optional: Redirect root-level pages (e.g., "/aphiology" → "/aphiology-home.html")
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(aphiology|donation|help)$ $1.html [NC,L]
