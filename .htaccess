@@ -1,2 +1,0 @@
-RewriteEngine On
-RewriteRule ^apbiology$ /public/main-html/course-pages/apbiology/apbiology-home.html [L]
