@@ -1,0 +1,21 @@
+RewriteEngine On
+
+# 1. Remove .html extension for root-level files (e.g., /donation → /donation.html)
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME}.html -f
+RewriteRule ^([^/]+)/?$ $1.html [L]
+
+# 2. Redirect "/course-name" to "/public/main-html/course-pages/course-name/course-name-home.html"
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^([a-zA-Z0-9_-]+)$ public/main-html/course-pages/$1/$1-home.html [NC,L]
+
+# 3. Optional: Redirect specific root-level pages (e.g., /aphiology → /aphiology-home.html)
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(aphiology|donation|help)$ $1.html [NC,L]
+
+# 4. Force HTTPS and "www" (recommended)
+RewriteCond %{HTTPS} off [OR]
+RewriteCond %{HTTP_HOST} !^www\. [NC]
+RewriteRule ^ https://www.tutorlyonline.org%{REQUEST_URI} [L,R=301]
