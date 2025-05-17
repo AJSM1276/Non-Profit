@@ -431,8 +431,8 @@
     /* Container for the custom chat button */
     .custom-chat-button {
         position: fixed;
-        bottom: 20px;
-        right: 20px;
+        bottom: 25px;
+        right: 29px;
         display: flex;
         align-items: center;
         cursor: pointer;
@@ -441,7 +441,7 @@
     }
     
     .custom-chat-button:hover {
-        transform: scale(1.05);
+        transform: scale(1.25);
     }
     
     /* Text bubble styling */
@@ -509,7 +509,7 @@
   
   <!-- Custom Chat Button -->
   <div class="custom-chat-button" id="custom-tawk-button">
-    <div class="chat-text-bubble">Live Chat</div>
+    <!-- <div class="chat-text-bubble">Live Chat</div> -->
     <div class="chat-logo">
         <!-- Replace this with your actual logo -->
         <img src="./images/apbiologytawktoicon.png" alt="Company Logo">
@@ -553,9 +553,6 @@
         // Apply CSS to remove borders
         removeTawkBorders();
     };
-
-    window.Tawk_API = window.Tawk_API || {};
-    window.Tawk_API.autoStart = false; // Disables auto-opening
     
     // Function to remove tawk.to borders
     function removeTawkBorders() {
