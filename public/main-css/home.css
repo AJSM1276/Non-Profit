@@ -807,12 +807,14 @@
   text-align: center;
 }
 
-.benefits-list, .requirements-list {
+.benefits-list,
+.requirements-list {
   list-style: none;
   margin-bottom: 2rem;
 }
 
-.benefits-list li, .requirements-list li {
+.benefits-list li,
+.requirements-list li {
   margin-bottom: 1rem;
   display: flex;
   align-items: flex-start;
@@ -874,7 +876,7 @@
 /* Responsive adjustments */
 @media (max-width: 768px) {
   .recruitment-card {
-      max-width: 100%;
+    max-width: 100%;
   }
 }
 /* =============== Gofundme =============== */
@@ -916,7 +918,7 @@
   padding: 1.5rem;
   background: white;
   border-radius: 15px;
-  box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
 }
 
 .mobile-icon {
@@ -974,7 +976,7 @@
   border-radius: 15px;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
   text-align: center;
-  border: 1px solid rgba(0,0,0,0.05);
+  border: 1px solid rgba(0, 0, 0, 0.05);
 }
 
 .gofundme-icon {
@@ -1004,7 +1006,7 @@
   gap: 0.6rem;
   padding: 1rem 2rem;
   /* Transition should only be here, not in hover state */
-  transition: all 0.3s ease; 
+  transition: all 0.3s ease;
   /* Improved gradient with background-size for potential animation */
   background: hsl(0, 70%, 55%);
   background-size: 100% 100%;
@@ -1021,7 +1023,7 @@
   max-width: 280px;
   justify-content: center;
   /* Helps with transform performance */
-  will-change: transform, box-shadow; 
+  will-change: transform, box-shadow;
 }
 
 .gofundme-button:hover {
@@ -1069,34 +1071,34 @@
   .gofundme-section {
     padding: 5rem 5%;
   }
-  
+
   .gofundme-content {
     flex-direction: row;
     text-align: left;
     gap: 3rem;
   }
-  
+
   .gofundme-text {
     flex: 1;
     min-width: 300px;
     max-width: 600px;
     padding: 2rem;
   }
-  
+
   .mobile-icon {
     display: none;
   }
-  
+
   .gofundme-cta {
     flex: 1;
     min-width: 300px;
     max-width: 400px;
   }
-  
+
   .gofundme-card {
     padding: 2.5rem 2rem;
   }
-  
+
   .gofundme-button {
     width: auto;
     padding: 1rem 2.5rem;
@@ -1108,11 +1110,11 @@
   .gofundme-content {
     padding: 0 1rem;
   }
-  
+
   .gofundme-list li {
     justify-content: center;
   }
-  
+
   .gofundme-button {
     padding: 1rem 1.8rem;
     font-size: 1rem;
