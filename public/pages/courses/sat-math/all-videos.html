@@ -28,14 +28,14 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     
     <!-- CSS -->
-    <link rel="stylesheet" href="/public/main-css/header.css">
-    <link rel="stylesheet" href="/public/main-css/footer.css">
-    <link rel="stylesheet" href="./applications.css">
+    <link rel="stylesheet" href="./css/apbiology-footer.css">
+    <link rel="stylesheet" href="./css/apbiology-header.css">
+    <link rel="stylesheet" href="./css/apbiology-home.css">
     
-    <title>Tutorly | Applications</title>
+    <title>Tutorly | AP Biology</title>
     
     <!-- Open Graph Tags -->
-    <meta property="og:title" content="Tutorly | Applications">
+    <meta property="og:title" content="Tutorly | Premium Online Tutoring">
     <meta property="og:description" content="Learn from expert high school and college tutors across various subjects">
     <meta property="og:image" content="https://tutorlyonline.org/public/assets/social-preview.jpg">
     <meta property="og:url" content="https://tutorlyonline.org">
@@ -45,8 +45,11 @@
     <header class="header">
         <nav class="nav container">
             <div class="nav__data">
-                <a href="" class="nav__logo">
+                <a href="/" class="nav__logo">
                     <i class="fa-solid fa-graduation-cap"></i> Tutorly
+                </a>
+                <a href="/public/pages/courses/apbiology/home" class="nav__logo" id="tutorly">
+                    <i class="fa-solid fa-dna"></i> AP Bio Hub
                 </a>
                     <div class="nav__toggle" id="nav-toggle">
                         <i class="ri-menu-line nav__toggle-menu"></i>
@@ -58,29 +61,30 @@
             <!-- Nav Menu -->
             <div class="nav__menu" id="nav-menu">
                 <ul class="nav__list">
-                    <li><a href="./" class="nav__link">Home</a></li>
-                    <li><a href="/public/pages/company/about" class="nav__link">About</a></li>
-                    <li><a href="https://tutorlyonline.notion.site/All-Courses-1c7007644bdf8080a573e092c9f63ad9?pvs=4" class="nav__link">All Courses</a></li>
-
+                    <li><a href="/public/pages/courses/apbiology/home" class="nav__link">AP Bio Home</a></li>
+                    <li><a href="https://tutorlyonline.notion.site/AP-Biology-Department-Staff-1da007644bdf80c1aa4aee9f5a364259?pvs=4" class="nav__link" target="_blank">Staff</a></li>
+                    <li><a href="/public/pages/courses/apbiology/curriculum" class="nav__link">Curriculum</a></li>
                     <li class="dropdown__item">
                         <div class="nav__link dropdown__button">
-                            Discover <i class="ri-arrow-down-s-line dropdown__arrow"></i>
+                            Navigation <i class="ri-arrow-down-s-line dropdown__arrow"></i>
                         </div>
                         <div class="dropdown__container">
                             <div class="dropdown__content">
                                 <div class="dropdown__group">
-                                    <div class="dropdown__icon"><i class="fa-solid fa-star"></i></div>
-                                    <span class="dropdown__title">Newly released courses</span>
+                                    <div class="dropdown__icon"><i class="fa-solid fa-video"></i></div>
+                                    <span class="dropdown__title">Videos</span>
                                     <ul class="dropdown__list">
-                                        <li><a href="/public/pages/courses/apbiology/home" class="dropdown__link">AP Biology</a></li>
+                                        <li><a href="https://tutorlyonline.notion.site/AP-Biology-Curriculum-Videos-1d4007644bdf80679518c393e78294b7?pvs=4" class="dropdown__link" target="_blank">Pre-recorded Videos</a></li>
+                                        <li><a href="https://tutorlyonline.notion.site/AP-Biology-Live-Meeting-Recordings-1d4007644bdf801e9354dffe1e21ef66?pvs=4" class="dropdown__link" target="_blank">Live Meeting Recordings</a></li>
                                     </ul>
                                 </div>
-
                                 <div class="dropdown__group">
-                                    <div class="dropdown__icon"><i class="fa-solid fa-fire"></i></div>
-                                    <span class="dropdown__title">Popular courses</span>
+                                    <div class="dropdown__icon"><i class="fa-solid fa-star"></i></div>
+                                    <span class="dropdown__title">Test Prep & Review</span>
                                     <ul class="dropdown__list">
-                                        <li><a href="/public/pages/courses/apbiology/home" class="dropdown__link">AP Biology</a></li>
+                                        <li><a href="https://tutorlyonline.notion.site/AP-Biology-Curriculum-Notes-1db007644bdf8069bbb4f7d28a8a50e5?pvs=4" class="dropdown__link" target="_blank">Curriculum Notes</a></li>
+                                        <li><a href="https://tutorlyonline.notion.site/AP-Biology-Curriculum-Flashcards-1ed007644bdf80539a36ef4b93a83efb?pvs=4" class="dropdown__link" target="_blank">Flashcards</a></li>
+                                        <li><a href="https://tutorlyonline.notion.site/AP-Biology-Curriculum-Practice-Assessments-1ed007644bdf8020a6d3fe27acac5242?pvs=4" class="dropdown__link" target="_blank">Assessments</a></li>
                                     </ul>
                                 </div>
                             </div>
@@ -89,16 +93,18 @@
 
                     <li class="dropdown__item">
                         <div class="nav__link dropdown__button">
-                            Resources <i class="ri-arrow-down-s-line dropdown__arrow"></i>
+                            External Resources <i class="ri-arrow-down-s-line dropdown__arrow"></i>
                         </div>
                         <div class="dropdown__container">
                             <div class="dropdown__content">
                                 <div class="dropdown__group">
-                                    <div class="dropdown__icon"><i class="fa-solid fa-pencil"></i></div>
-                                    <span class="dropdown__title">Study techniques</span>
+                                    <div class="dropdown__icon"><i class="fa-solid fa-lightbulb"></i></div>
+                                    <span class="dropdown__title">External Sites</span>
                                     <ul class="dropdown__list">
-                                        <li><a href="/public/pages/still-working" class="dropdown__link">Pomodoro</a></li>
-                                        <li><a href="/public/pages/courses/anki/anki-home" class="dropdown__link">Anki</a></li>
+                                        <li><a href="https://portal.biobuddy.com/welcome" class="dropdown__link" target="_blank">BioBuddy</a></li>
+                                        <li><a href="https://apbiopenguins.weebly.com" class="dropdown__link" target="_blank">AP Bio Penguins</a></li>
+                                        <li><a href="https://knowt.com/exams/AP/AP-Biology" class="dropdown__link" target="_blank">Knowt</a></li>
+                                        <li><a href="https://www.amazon.com/Barrons-Biology-Deborah-Goldberg-M-S/dp/1438008686" class="dropdown__link" target="_blank">Barrons AP Biology</a></li>
                                     </ul>
                                 </div>
                             </div>
@@ -108,114 +114,90 @@
             </div>
         </nav>
     </header>
-    <main>
-         <!-- Roles Grid -->
-          <br><br>
-        <section class="roles-container">
-            <div class="role-card">
-                <div class="role-icon">
-                    <i class="fas fa-chalkboard-teacher"></i>
-                </div>
-                <h2>Tutor</h2>
-                <p class="role-description">Teach core academic subjects to students at various levels</p>
-                
-                <div class="role-details">
-                    <h3>Ideal For:</h3>
-                    <ul>
-                        <li>College students excelling in their major</li>
-                        <li>High schoolers with top grades in AP courses</li>
-                        <li>Artists, musicians, and creatives</li>
-                    </ul>
-                    
-                    <h3>Requirements:</h3>
-                    <ul>
-                        <li>Demonstrated mastery in your subject/skill</li>
-                        <li>Ability to explain concepts clearly</li>
-                        <li>Commitment to set your own schedule</li>
-                    </ul>
-                </div>
-                
-                <a href="https://docs.google.com/forms/d/e/1FAIpQLScYi5C79uxjRfZlFuTvFYFj--pihv9wCq6TUJg169iXw6QOTA/viewform?usp=dialog" class="role-cta" target="_blank">Apply Now</a>
-            </div>
-            <div class="role-card">
-                <div class="role-icon">
-                    <i class="fas fa-video"></i>
-                </div>
-                <h2>Social Media Managers</h2>
-                <p class="role-description">Create, edit, and advertise Tutorly on social media</p>
-                
-                <div class="role-details">
-                    <h3>Ideal For:</h3>
-                    <ul>
-                        <li>Educators with editing experience</li>
-                        <li>Content creators</li>
-                        <li>Students with outreach experience</li>
-                    </ul>
-                    
-                    <h3>Requirements:</h3>
-                    <ul>
-                        <li>Portfolio of previous work</li>
-                        <li>Understanding of educational pedagogy</li>
-                        <li>Consistent content production ability</li>
-                    </ul>
-                </div>
-                
-                <a href="https://docs.google.com/forms/d/e/1FAIpQLSeBF2uVM3kbkGdKLWkRXoJY6Xx6Kds646CqPXX_tVenN_AkBg/viewform?usp=dialog" class="role-cta" target="_blank">Apply Now</a>
-            </div>
-            <div class="role-card">
-                <div class="role-icon">
-                    <i class="fa-solid fa-ellipsis"></i>
-                </div>
-                <h2>Miscellaneous Role</h2>
-                <p class="role-description">Diverse opportunities for specialized professionals and unique skill sets</p>
-<div class="role-details">
-    <h3>Roles May Include:</h3>
-    <ul>
-        <li>Web developers & technical specialists</li>
-        <li>Community outreach coordinators</li>
-        <li>Event planners & program facilitators</li>
-        <li>Other specialized roles</li>
-    </ul>
+
     
-    <h3>General Requirements:</h3>
-    <ul>
-        <li>Proven experience in your field (portfolio/work samples)</li>
-        <li>Ability to define clear role objectives</li>
-        <li>Strong communication and organizational skills</li>
-        <li>Passion for sharing your expertise</li>
-    </ul>
-</div>
+    <main>
+<br><br>
+    
+        <!-- Video Resources Section -->
+        <section class="course-highlights">
+            <h2 class="section-title">AP Biology Video Resources</h2>
+            <p class="section-subtitle">Choose the learning format that works best for you</p>
+            
+            <div class="course-cards">
+                <!-- Pre-recorded Videos Card -->
+                <div class="course-card animate-in" style="animation-delay: 0.1s;">
+                    <span class="course-badge">Most Popular</span>
+                    <div class="course-icon">
+                        <i class="fas fa-film"></i>
+                    </div>
+                    <h3 class="course-title">Pre-recorded Video Lessons</h3>
+                    <p class="course-desc">Comprehensive video lessons covering all AP Biology units, created by expert tutors with exam-focused content.</p>
+                    <div class="course-meta">
+                        <span><i class="fas fa-clock"></i> 5-25 min each</span>
+                        <span><i class="fas fa-book"></i> 8 Units</span>
+                    </div>
+                    <a href="https://tutorlyonline.notion.site/AP-Biology-Curriculum-Videos-1d4007644bdf80679518c393e78294b7?pvs=4" class="course-cta">Explore Videos</a>
+                </div>
                 
-                <a href="https://docs.google.com/forms/d/e/1FAIpQLSeM8hqQRiLXtN7BpMBetiWBQZ4xrd5PPyISZj0DgV4JlfQPaw/viewform?usp=dialog" class="role-cta" target="_blank">Apply Now</a>
+                <!-- Past Meetings Card -->
+                <div class="course-card animate-in" style="animation-delay: 0.3s;">
+                    <div class="course-icon">
+                        <i class="fas fa-video"></i>
+                    </div>
+                    <h3 class="course-title">Past Live Session Recordings</h3>
+                    <p class="course-desc">Recordings of interactive Zoom sessions with Q&A, problem-solving, and exam strategy discussions.</p>
+                    <div class="course-meta">
+                        <span><i class="fas fa-clock"></i> 30-60 min each</span>
+                        <span><i class="fas fa-users"></i> Real Q&A</span>
+                    </div>
+                    <a href="https://tutorlyonline.notion.site/AP-Biology-Live-Meeting-Recordings-1d4007644bdf801e9354dffe1e21ef66?pvs=4" class="course-cta">View Recordings</a>
+                </div>
             </div>
-
-
-
-            <!-- Add more role cards as needed -->
         </section>
-
-        <!-- Unified Benefits Section -->
-        <section class="role-benefits">
-            <h2>Why Join Tutorly?</h2>
-            <div class="benefits-grid">
-                <div class="benefit-item">
-                    <i class="fas fa-calendar-alt"></i>
-                    <h3>Flexible Scheduling</h3>
-                    <p>Work when you want, how you want</p>
+    
+        <!-- Value Proposition -->
+        <section class="value-proposition">
+            <h2 class="section-title">Why Learn With Our Videos?</h2>
+            <p class="section-subtitle">Quality resources designed for AP Biology success</p>
+            
+            <div class="value-cards">
+                <div class="value-card animate-in" style="animation-delay: 0.1s;">
+                    <div class="value-icon">
+                        <i class="fas fa-check-circle"></i>
+                    </div>
+                    <h3><a href="#">Exam-Aligned Content</a></h3>
+                    <p>All videos follow the official College Board curriculum and focus on topics most likely to appear on the AP exam.</p>
                 </div>
-                <div class="benefit-item">
-                    <i class="fas fa-users"></i>
-                    <h3>Supportive Community</h3>
-                    <p>Connect with other educators</p>
+                
+                <div class="value-card animate-in" style="animation-delay: 0.2s;">
+                    <div class="value-icon">
+                        <i class="fas fa-chalkboard-teacher"></i>
+                    </div>
+                    <h3><a href="#">Expert Instructors</a></h3>
+                    <p>Learn from experienced tutors who know how to explain complex concepts clearly.</p>
                 </div>
-                <div class="benefit-item">
-                    <i class="fas fa-chart-line"></i>
-                    <h3>Growth Opportunities</h3>
-                    <p>Build your portfolio and skills</p>
+                
+                <div class="value-card animate-in" style="animation-delay: 0.3s;">
+                    <div class="value-icon">
+                        <i class="fas fa-user-clock"></i>
+                    </div>
+                    <h3><a href="#">Learn At Your Pace</a></h3>
+                    <p>Pause, rewind, and rewatch videos as needed to fully grasp each concept before moving forward.</p>
+                </div>
+                
+                <div class="value-card animate-in" style="animation-delay: 0.4s;">
+                    <div class="value-icon">
+                        <i class="fas fa-clipboard-check"></i>
+                    </div>
+                    <h3><a href="#">Exam Strategies</a></h3>
+                    <p>Learn proven techniques for tackling multiple-choice questions and maximizing points on free-response sections.</p>
                 </div>
             </div>
         </section>
     </main>
+
+    <!-- Footer -->
     <footer class="footer">
         <div class="footer-container">
             <div class="footer-grid">
@@ -237,9 +219,9 @@
                 <div class="footer-column">
                     <h3>Navigation</h3>
                     <ul class="footer-links">
-                        <li><a href="">Home</a></li>
-                        <li><a href="https://tutorlyonline.notion.site/All-Courses-1c7007644bdf8080a573e092c9f63ad9?pvs=4">Courses</a></li>
-                        <li><a href="/public/pages/company/about">About</a></li>
+                        <li><a href="/public/pages/courses/apbiology/home">AP Bio Home</a></li>
+                        <li><a href="./curriculum">Curriculum</a></li>
+                        <li><a href="./all-videos">Watch Videos</a></li>
                     </ul>
                 </div>
                 
@@ -260,8 +242,8 @@
                         <li><a href="https://docs.google.com/forms/d/e/1FAIpQLSeM8hqQRiLXtN7BpMBetiWBQZ4xrd5PPyISZj0DgV4JlfQPaw/viewform?usp=dialog" target="_blank">Miscellaneous Application</a></li>
                     </ul>
                 </div>
-                
-                <!-- <div class="footer-column">
+<!--                 
+                <div class="footer-column">
                     <h3>Newsletter</h3>
                     <form class="footer-newsletter">
                         <input type="email" placeholder="Your email address" required>
@@ -285,8 +267,8 @@
     </footer>
 
     <!-- JavaScript -->
-    <script src="/public/js/main.js"></script>
-    <!--Start of Tawk.to Script-->
+    <script src="./apbiology.js"></script>
+   <!--Start of Tawk.to Script-->
 <style>
     /* Container for the custom chat button */
     .custom-chat-button {
@@ -321,7 +303,7 @@
         width: 50px;
         height: 50px;
         border-radius: 50%;
-        background-color: hsl(0, 0%, 100%);
+        background-color: hsl(145, 48%, 28%);
         display: flex;
         align-items: center;
         justify-content: center;
@@ -338,7 +320,7 @@
   
     /* Media query for mobile devices */
     @media only screen and (max-width: 768px) {
-        /* .chat-logo {
+                /* .chat-logo {
             display: none;
         } */
         
@@ -372,7 +354,7 @@
     <!-- <div class="chat-text-bubble">Live Chat</div> -->
     <div class="chat-logo">
         <!-- Replace this with your actual logo -->
-        <img src="/public/assets/images/tutorlyonly.png" alt="Company Logo">
+        <img src="./images/apbiologytawktoicon.png" alt="Company Logo">
     </div>
   </div>
   
@@ -475,7 +457,7 @@
         var s1 = document.createElement("script");
         var s0 = document.getElementsByTagName("script")[0];
         s1.async = true;
-        s1.src = 'https://embed.tawk.to/68007b3e78f7d71911b54352/1ip10c6pm';
+        s1.src = 'https://embed.tawk.to/680088b0f308dc1911a96463/1ip11bs31';
         s1.charset = 'UTF-8';
         s1.setAttribute('crossorigin', '*');
         s0.parentNode.insertBefore(s1, s0);

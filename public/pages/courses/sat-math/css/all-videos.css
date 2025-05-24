@@ -1,0 +1,122 @@
+/* =============== AP BIOLOGY HERO =============== */
+.hero-section {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.05)),
+      url("../images/ap-bio-hero.jpg");
+    background-size: cover;
+    background-position: center;
+    min-height: 90vh;
+  }
+  
+  .hero-title span {
+    color: hsl(145, 32%, 46%);
+  }
+  
+  /* Adjust DNA icon animation */
+  .hero-image i {
+    font-size: 8rem;
+    animation: float 6s ease-in-out infinite;
+    color: hsla(145, 34%, 61%, 0.8);
+  }
+  
+  /* =============== VIDEO RESOURCES =============== */
+  .course-highlights {
+    background: white;
+  }
+  
+  /* Card hover effects */
+  .course-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+    border-radius: 50px;
+  }
+  
+  .course-cta {
+    background: hsl(214, 48%, 28%);
+    color: white;
+    border-radius: 50px;
+    transition: all 0.3s ease;
+  }
+  
+  .course-cta:hover {
+    background: hsl(145, 32%, 46%);
+    transform: translateY(-3px);
+  }
+  
+  /* =============== VALUE PROPOSITION =============== */
+  .value-proposition {
+    background: hsl(145, 15%, 99%);
+  }
+  
+  .value-card {
+    background: white;
+    transition: all 0.6s ease;
+  }
+  
+  .value-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+    border-radius: 50px;
+  }
+  
+  .value-card h3 a {
+    color: hsl(214, 48%, 28%);
+  }
+  
+  .value-card h3 a:hover {
+    color: hsl(145, 32%, 46%);
+  }
+  
+  /* =============== CTA SECTION =============== */
+  .cta-section {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+      url("../images/ap-bio-cta.jpg");
+    background-size: cover;
+    background-position: center;
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 768px) {
+    .hero-section {
+      min-height: 80vh;
+      padding: 4rem 5%;
+    }
+    
+    .hero-title {
+      font-size: 2.5rem;
+    }
+    
+    .hero-cta {
+      margin-bottom: 2rem;
+    }
+    
+    .hero-stats {
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    
+    .hero-image i {
+      font-size: 6rem;
+      margin-top: 2rem;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .hero-title {
+      font-size: 2rem;
+    }
+    
+    .hero-subtitle {
+      font-size: 1rem;
+    }
+    
+    .cta-buttons {
+      flex-direction: column;
+    }
+    
+    .primary-cta, 
+    .secondary-cta {
+      width: 100%;
+      margin-right: 0;
+      margin-bottom: 1rem;
+    }
+  }
