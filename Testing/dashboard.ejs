@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tutor Dashboard</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+      rel="stylesheet"
+    />
+    <style>
+      .sidebar {
+        transition: all 0.3s;
+      }
+      .active-link {
+        background-color: #ebf4ff;
+        color: #3b82f6;
+        border-left: 4px solid #3b82f6;
+      }
+    </style>
+  </head>
+  <body class="bg-gray-100">
+    <div class="flex h-screen">
+      <!-- Sidebar -->
+      <div
+        class="sidebar bg-white w-64 space-y-6 py-7 px-2 inset-y-0 left-0 transform shadow-lg"
+      >
+        <div class="flex items-center space-x-2 px-4">
+          <i class="fas fa-graduation-cap text-blue-500 text-2xl"></i>
+          <span class="text-xl font-bold text-gray-800">Tutor Panel</span>
+        </div>
+
+        <nav>
+          <a
+            href="/admin/dashboard"
+            class="block py-2.5 px-4 rounded transition duration-200 active-link"
+          >
+            <i class="fas fa-tachometer-alt mr-2"></i>Dashboard
+          </a>
+          <a
+            href="/admin/students"
+            class="block py-2.5 px-4 rounded transition duration-200 hover:bg-blue-50 hover:text-blue-500"
+          >
+            <i class="fas fa-users mr-2"></i>Students
+          </a>
+          <a
+            href="/admin/schedule"
+            class="block py-2.5 px-4 rounded transition duration-200 hover:bg-blue-50 hover:text-blue-500"
+          >
+            <i class="fas fa-calendar-alt mr-2"></i>Schedule
+          </a>
+          <a
+            href="/admin/resources"
+            class="block py-2.5 px-4 rounded transition duration-200 hover:bg-blue-50 hover:text-blue-500"
+          >
+            <i class="fas fa-book mr-2"></i>Resources
+          </a>
+          <a
+            href="/admin/settings"
+            class="block py-2.5 px-4 rounded transition duration-200 hover:bg-blue-50 hover:text-blue-500"
+          >
+            <i class="fas fa-cog mr-2"></i>Settings
+          </a>
+        </nav>
+      </div>
+
+      <!-- Main Content -->
+      <div class="flex-1 overflow-auto">
+        <!-- Top Navigation -->
+        <header class="bg-white shadow-sm">
+          <div class="flex justify-between items-center py-4 px-6">
+            <div class="flex items-center">
+              <button
+                id="sidebarToggle"
+                class="text-gray-500 focus:outline-none lg:hidden"
+              >
+                <i class="fas fa-bars"></i>
+              </button>
+              <h2 class="text-xl font-semibold text-gray-800 ml-4">
+                Dashboard
+              </h2>
+            </div>
+
+            <div class="flex items-center space-x-4">
+              <div class="relative">
+                <button class="text-gray-500 focus:outline-none">
+                  <i class="fas fa-bell"></i>
+                </button>
+                <span
+                  class="absolute top-0 right-0 h-2 w-2 rounded-full bg-red-500"
+                ></span>
+              </div>
+
+              <div class="relative">
+                <button
+                  id="userMenuButton"
+                  class="flex items-center focus:outline-none"
+                >
+                  <img
+                    src="https://ui-avatars.com/api/?name=<%= user.firstName %>+<%= user.lastName %>&background=3B82F6&color=fff"
+                    alt="User"
+                    class="h-8 w-8 rounded-full"
+                  />
+                  <span class="ml-2 text-gray-700"
+                    ><%= user.firstName %> <%= user.lastName %></span
+                  >
+                  <i class="fas fa-chevron-down ml-1 text-gray-500"></i>
+                </button>
+
+                <div
+                  id="userMenu"
+                  class="hidden absolute right-0 mt-2 w-48 bg-white rounded-md shadow-lg py-1 z-10"
+                >
+                  <a
+                    href="/admin/profile"
+                    class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
+                  >
+                    <i class="fas fa-user mr-2"></i>Profile
+                  </a>
+                  <a
+                    href="/logout"
+                    class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
+                  >
+                    <i class="fas fa-sign-out-alt mr-2"></i>Logout
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </header>
+
+        <!-- Dashboard Content -->
+        <main class="p-6">
+          <div class="mb-8">
+            <h3 class="text-lg font-medium text-gray-900">
+              Welcome back, <%= user.firstName %>!
+            </h3>
+            <p class="mt-1 text-sm text-gray-600">
+              Here's what's happening with your tutoring today.
+            </p>
+          </div>
+
+          <!-- Stats Cards -->
+          <div
+            class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8"
+          >
+            <div class="bg-white rounded-lg shadow p-6">
+              <div class="flex items-center">
+                <div class="p-3 rounded-full bg-blue-100 text-blue-600">
+                  <i class="fas fa-users"></i>
+                </div>
+                <div class="ml-4">
+                  <p class="text-sm font-medium text-gray-500">Students</p>
+                  <p class="text-2xl font-semibold text-gray-900">24</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="bg-white rounded-lg shadow p-6">
+              <div class="flex items-center">
+                <div class="p-3 rounded-full bg-green-100 text-green-600">
+                  <i class="fas fa-calendar-check"></i>
+                </div>
+                <div class="ml-4">
+                  <p class="text-sm font-medium text-gray-500">
+                    Today's Sessions
+                  </p>
+                  <p class="text-2xl font-semibold text-gray-900">3</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="bg-white rounded-lg shadow p-6">
+              <div class="flex items-center">
+                <div class="p-3 rounded-full bg-yellow-100 text-yellow-600">
+                  <i class="fas fa-tasks"></i>
+                </div>
+                <div class="ml-4">
+                  <p class="text-sm font-medium text-gray-500">
+                    Pending Assignments
+                  </p>
+                  <p class="text-2xl font-semibold text-gray-900">12</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="bg-white rounded-lg shadow p-6">
+              <div class="flex items-center">
+                <div class="p-3 rounded-full bg-purple-100 text-purple-600">
+                  <i class="fas fa-star"></i>
+                </div>
+                <div class="ml-4">
+                  <p class="text-sm font-medium text-gray-500">Your Rating</p>
+                  <p class="text-2xl font-semibold text-gray-900">4.8</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Upcoming Sessions -->
+          <div class="bg-white shadow rounded-lg p-6 mb-8">
+            <div class="flex justify-between items-center mb-4">
+              <h4 class="text-lg font-medium text-gray-900">
+                Upcoming Sessions
+              </h4>
+              <a
+                href="/admin/schedule"
+                class="text-sm text-blue-500 hover:text-blue-700"
+                >View All</a
+              >
+            </div>
+
+            <div class="space-y-4">
+              <div
+                class="flex items-center p-3 border border-gray-100 rounded-lg hover:bg-gray-50"
+              >
+                <div
+                  class="flex-shrink-0 bg-blue-100 text-blue-600 p-2 rounded-lg"
+                >
+                  <i class="fas fa-clock"></i>
+                </div>
+                <div class="ml-4 flex-1">
+                  <p class="text-sm font-medium text-gray-900">
+                    Mathematics - Algebra
+                  </p>
+                  <p class="text-sm text-gray-500">Today, 2:00 PM - 3:30 PM</p>
+                </div>
+                <button class="text-blue-500 hover:text-blue-700">
+                  <i class="fas fa-ellipsis-v"></i>
+                </button>
+              </div>
+
+              <div
+                class="flex items-center p-3 border border-gray-100 rounded-lg hover:bg-gray-50"
+              >
+                <div
+                  class="flex-shrink-0 bg-green-100 text-green-600 p-2 rounded-lg"
+                >
+                  <i class="fas fa-clock"></i>
+                </div>
+                <div class="ml-4 flex-1">
+                  <p class="text-sm font-medium text-gray-900">
+                    Physics - Mechanics
+                  </p>
+                  <p class="text-sm text-gray-500">Today, 4:00 PM - 5:30 PM</p>
+                </div>
+                <button class="text-blue-500 hover:text-blue-700">
+                  <i class="fas fa-ellipsis-v"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Recent Students -->
+          <div class="bg-white shadow rounded-lg p-6">
+            <div class="flex justify-between items-center mb-4">
+              <h4 class="text-lg font-medium text-gray-900">Recent Students</h4>
+              <a
+                href="/admin/students"
+                class="text-sm text-blue-500 hover:text-blue-700"
+                >View All</a
+              >
+            </div>
+
+            <div class="overflow-x-auto">
+              <table class="min-w-full divide-y divide-gray-200">
+                <thead class="bg-gray-50">
+                  <tr>
+                    <th
+                      scope="col"
+                      class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider"
+                    >
+                      Name
+                    </th>
+                    <th
+                      scope="col"
+                      class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider"
+                    >
+                      Subject
+                    </th>
+                    <th
+                      scope="col"
+                      class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider"
+                    >
+                      Last Session
+                    </th>
+                    <th
+                      scope="col"
+                      class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider"
+                    >
+                      Status
+                    </th>
+                    <th scope="col" class="relative px-6 py-3"></th>
+                  </tr>
+                </thead>
+                <tbody class="bg-white divide-y divide-gray-200">
+                  <tr>
+                    <td class="px-6 py-4 whitespace-nowrap">
+                      <div class="flex items-center">
+                        <div class="flex-shrink-0 h-10 w-10">
+                          <img
+                            class="h-10 w-10 rounded-full"
+                            src="https://ui-avatars.com/api/?name=Sarah+Johnson&background=random"
+                            alt=""
+                          />
+                        </div>
+                        <div class="ml-4">
+                          <div class="text-sm font-medium text-gray-900">
+                            Sarah Johnson
+                          </div>
+                          <div class="text-sm text-gray-500">
+                            sarah@example.com
+                          </div>
+                        </div>
+                      </div>
+                    </td>
+                    <td class="px-6 py-4 whitespace-nowrap">
+                      <div class="text-sm text-gray-900">Mathematics</div>
+                    </td>
+                    <td class="px-6 py-4 whitespace-nowrap">
+                      <div class="text-sm text-gray-900">2 days ago</div>
+                    </td>
+                    <td class="px-6 py-4 whitespace-nowrap">
+                      <span
+                        class="px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-green-100 text-green-800"
+                      >
+                        Active
+                      </span>
+                    </td>
+                    <td
+                      class="px-6 py-4 whitespace-nowrap text-right text-sm font-medium"
+                    >
+                      <a href="#" class="text-blue-500 hover:text-blue-700"
+                        >View</a
+                      >
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="px-6 py-4 whitespace-nowrap">
+                      <div class="flex items-center">
+                        <div class="flex-shrink-0 h-10 w-10">
+                          <img
+                            class="h-10 w-10 rounded-full"
+                            src="https://ui-avatars.com/api/?name=Michael+Brown&background=random"
+                            alt=""
+                          />
+                        </div>
+                        <div class="ml-4">
+                          <div class="text-sm font-medium text-gray-900">
+                            Michael Brown
+                          </div>
+                          <div class="text-sm text-gray-500">
+                            michael@example.com
+                          </div>
+                        </div>
+                      </div>
+                    </td>
+                    <td class="px-6 py-4 whitespace-nowrap">
+                      <div class="text-sm text-gray-900">Physics</div>
+                    </td>
+                    <td class="px-6 py-4 whitespace-nowrap">
+                      <div class="text-sm text-gray-900">1 week ago</div>
+                    </td>
+                    <td class="px-6 py-4 whitespace-nowrap">
+                      <span
+                        class="px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-yellow-100 text-yellow-800"
+                      >
+                        Paused
+                      </span>
+                    </td>
+                    <td
+                      class="px-6 py-4 whitespace-nowrap text-right text-sm font-medium"
+                    >
+                      <a href="#" class="text-blue-500 hover:text-blue-700"
+                        >View</a
+                      >
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </main>
+      </div>
+    </div>
+
+    <script>
+      // Toggle sidebar on mobile
+      document
+        .getElementById("sidebarToggle")
+        .addEventListener("click", function () {
+          document
+            .querySelector(".sidebar")
+            .classList.toggle("-translate-x-full");
+        });
+
+      // Toggle user dropdown menu
+      document
+        .getElementById("userMenuButton")
+        .addEventListener("click", function () {
+          document.getElementById("userMenu").classList.toggle("hidden");
+        });
+
+      // Close dropdown when clicking outside
+      document.addEventListener("click", function (event) {
+        const userMenu = document.getElementById("userMenu");
+        const userMenuButton = document.getElementById("userMenuButton");
+
+        if (
+          !userMenu.contains(event.target) &&
+          !userMenuButton.contains(event.target)
+        ) {
+          userMenu.classList.add("hidden");
+        }
+      });
+    </script>
+  </body>
+</html>
