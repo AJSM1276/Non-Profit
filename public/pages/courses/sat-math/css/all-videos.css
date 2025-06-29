@@ -8,7 +8,7 @@
   }
   
   .hero-title span {
-    color: hsl(145, 32%, 46%);
+    color: hsl(214, 32%, 46%);
   }
   
   /* Adjust DNA icon animation */
@@ -38,7 +38,7 @@
   }
   
   .course-cta:hover {
-    background: hsl(145, 32%, 46%);
+    background: hsl(214, 32%, 46%);
     transform: translateY(-3px);
   }
   
@@ -63,7 +63,7 @@
   }
   
   .value-card h3 a:hover {
-    color: hsl(145, 32%, 46%);
+    color: hsl(214, 32%, 46%);
   }
   
   /* =============== CTA SECTION =============== */
