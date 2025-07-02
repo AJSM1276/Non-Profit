@@ -310,6 +310,12 @@
   background: hsl(145, 15%, 99%);
 }
 
+.value-proposition a {
+  color: hsl(145, 48%, 28%);
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
 .value-cards {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
