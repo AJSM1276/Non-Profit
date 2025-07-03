@@ -1,148 +1,529 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <!-- Google tag (gtag.js) -->
-    <script
-      async
-      src="https://www.googletagmanager.com/gtag/js?id=G-RB5YGLMJ29"
-    ></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag() {
-        dataLayer.push(arguments);
-      }
-      gtag("js", new Date());
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-RB5YGLMJ29"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
 
-      gtag("config", "G-RB5YGLMJ29");
-    </script>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Tutorly - Coming Soon</title>
-    <link
-      href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css"
-      rel="stylesheet"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
-    />
-    <style>
-      @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap");
+  gtag('config', 'G-RB5YGLMJ29');
+</script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Learn about Tutorly - our mission, team, and values in providing free online peer tutoring">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="shortcut icon" href="/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <meta name="apple-mobile-web-app-title" content="Tutorly" />
+    <link rel="manifest" href="/site.webmanifest" />
+    
+    <!-- Fonts & Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="/public/main-css/header.css">
+    <link rel="stylesheet" href="./css/general.css">
+    <link rel="stylesheet" href="/public/main-css/home.css">
+    <link rel="stylesheet" href="/public/main-css/footer.css">
+    
+    <title>About Tutorly | Free Online Peer Tutoring</title>
+    
+    <!-- Open Graph Tags -->
+    <meta property="og:title" content="About Tutorly | Free Online Peer Tutoring">
+    <meta property="og:description" content="Learn about our mission, team, and values in providing free online peer tutoring">
+    <meta property="og:image" content="https://tutorlyonline.org/public/assets/social-preview.jpg">
+    <meta property="og:url" content="https://tutorlyonline.org/public/pages/still-working">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <nav class="nav container">
+            <div class="nav__data">
+                <a href="/" class="nav__logo">
+                    <i class="fa-solid fa-graduation-cap"></i> Tutorly
+                </a>
+                    <div class="nav__toggle" id="nav-toggle">
+                        <i class="ri-menu-line nav__toggle-menu"></i>
+                        <i class="ri-close-line nav__toggle-close"></i>
+                    </div>
+                </div>
+            </div>
 
-      * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-        font-family: "Poppins", sans-serif;
-      }
+            <!-- Nav Menu -->
+            <div class="nav__menu" id="nav-menu">
+                <ul class="nav__list">
+                    <li><a href="/" class="nav__link">Home</a></li>
+                    <li><a href="/public/pages/still-working" class="nav__link">About</a></li>
+                    <li><a href="https://tutorlyonline.notion.site/All-Courses-1c7007644bdf8080a573e092c9f63ad9?pvs=4" class="nav__link">All Courses</a></li>
 
-      body {
-        background-color: hsl(220, 80%, 96%);
-        height: 100vh;
+                    <li class="dropdown__item">
+                        <div class="nav__link dropdown__button">
+                            Discover <i class="ri-arrow-down-s-line dropdown__arrow"></i>
+                        </div>
+                        <div class="dropdown__container">
+                            <div class="dropdown__content">
+                                <div class="dropdown__group">
+                                    <div class="dropdown__icon"><i class="fa-solid fa-star"></i></div>
+                                    <span class="dropdown__title">Newly released courses</span>
+                                    <ul class="dropdown__list">
+                                        <li><a href="/public/pages/courses/apbiology/home" class="dropdown__link">AP Biology</a></li>
+                                    </ul>
+                                </div>
+
+                                <div class="dropdown__group">
+                                    <div class="dropdown__icon"><i class="fa-solid fa-fire"></i></div>
+                                    <span class="dropdown__title">Popular courses</span>
+                                    <ul class="dropdown__list">
+                                        <li><a href="/public/pages/courses/apbiology/home" class="dropdown__link">AP Biology</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li class="dropdown__item">
+                        <div class="nav__link dropdown__button">
+                            Resources <i class="ri-arrow-down-s-line dropdown__arrow"></i>
+                        </div>
+                        <div class="dropdown__container">
+                            <div class="dropdown__content">
+                                <div class="dropdown__group">
+                                    <div class="dropdown__icon"><i class="fa-solid fa-pencil"></i></div>
+                                    <span class="dropdown__title">Study techniques</span>
+                                    <ul class="dropdown__list">
+                                        <li><a href="/public/pages/still-working" class="dropdown__link">Pomodoro</a></li>
+                                        <li><a href="/public/pages/courses/anki/anki-home" class="dropdown__link">Anki</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main class="about-page">
+        <!-- Hero Section -->
+        <section class="about-hero">
+            <div class="container">
+                <div class="about-hero-content">
+                    <h1>About Tutorly</h1>
+                    <p class="subtitle">Our mission to make quality education accessible to all</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Mission Section -->
+        <section class="mission-section">
+            <div class="container">
+                <div class="mission-grid">
+                    <div class="mission-content">
+                        <h2>Our Mission</h2>
+                        <p>Tutorly was founded on the belief that every student deserves access to quality education, regardless of their financial situation. We connect students with qualified peer tutors who provide free academic support across a wide range of subjects.</p>
+                        <p>By leveraging the power of peer-to-peer learning, we create an environment where knowledge is shared freely and students can thrive academically without the burden of costly tutoring fees.</p>
+                    </div>
+                    <div class="mission-image">
+                        <img src="./images/hero.png" alt="Students learning together" loading="lazy">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Values Section -->
+        <section class="values-section">
+            <div class="container">
+                <h2>Our Core Values</h2>
+                <p class="section-subtitle">These principles guide everything we do at Tutorly</p>
+                
+                <div class="values-grid">
+                    <div class="value-card">
+                        <div class="value-icon"><i class="fas fa-hand-holding-heart"></i></div>
+                        <h3>Accessibility</h3>
+                        <p>We believe education should be free and accessible to all students, regardless of their financial background.</p>
+                    </div>
+                    
+                    <div class="value-card">
+                        <div class="value-icon"><i class="fas fa-users"></i></div>
+                        <h3>Community</h3>
+                        <p>We foster a supportive learning community where students help each other succeed.</p>
+                    </div>
+                    
+                    <div class="value-card">
+                        <div class="value-icon"><i class="fas fa-star"></i></div>
+                        <h3>Excellence</h3>
+                        <p>We maintain high standards for our tutors to ensure quality instruction for all students.</p>
+                    </div>
+                    
+                    <div class="value-card">
+                        <div class="value-icon"><i class="fas fa-lightbulb"></i></div>
+                        <h3>Innovation</h3>
+                        <p>We continuously improve our platform to provide the best learning experience possible.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Team Section -->
+        <section class="team-section">
+            <div class="container">
+                <h2>Meet Our Team</h2>
+                <p class="section-subtitle">The passionate individuals behind Tutorly</p>
+                
+                <div class="team-grid">
+                    <div class="team-member">
+                        <div class="member-image">
+                            <img src="./images/me.png" alt="Team member" loading="lazy">
+                        </div>
+                        <h3>Founder</h3>
+                        <p class="role">CEO & Lead Developer</p>
+                        <p class="bio">Our founder started Tutorly after recognizing the need for accessible tutoring options for students from all backgrounds.</p>
+                    </div>
+
+                    <div class="team-member">
+                        <div class="member-image">
+                            <img src="/public/assets/images/team/placeholder.jpg" alt="Team member" loading="lazy">
+                        </div>
+                        <h3>Directors</h3>
+                        <p class="role">Curriculum Developers</p>
+                        <p class="bio">Our content team works tirelessly to create high-quality educational materials for all our courses.</p>
+                    </div>
+
+                    <div class="team-member">
+                        <div class="member-image">
+                            <img src="/public/assets/images/team/placeholder.jpg" alt="Team member" loading="lazy">
+                        </div>
+                        <h3>Committee Members</h3>
+                        <p class="role">Curriculum Developers</p>
+                        <p class="bio">Our content team works tirelessly to create high-quality educational materials for all our courses.</p>
+                    </div>
+
+                    <div class="team-member">
+                        <div class="member-image">
+                            <img src="/public/assets/images/team/placeholder.jpg" alt="Team member" loading="lazy">
+                        </div>
+                        <h3>Volunteers</h3>
+                        <p class="role">Educators & Mentors</p>
+                        <p class="bio">Our team of dedicated volunteer tutors are high-achieving students passionate about helping others succeed.</p>
+                    </div>
+                </div>
+                
+                <div class="join-team">
+                    <h3>Want to join our team?</h3>
+                    <p>We're always looking for passionate individuals to help us grow our platform and reach more students.</p>
+                    <a href="/public/pages/hiring-applications/applications" class="cta-button">View Open Positions</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Impact Section -->
+        <section class="impact-section">
+            <div class="container">
+                <h2>Our Impact</h2>
+                <p class="section-subtitle">See how Tutorly is making a difference</p>
+                
+                <div class="impact-stats">
+                    <div class="stat-item">
+                        <div class="stat-number">100+</div>
+                        <div class="stat-label">Students Helped</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">20+</div>
+                        <div class="stat-label">Volunteer Tutors</div>
+                    </div>
+                    <!-- <div class="stat-item">
+                        <div class="stat-number">20+</div>
+                        <div class="stat-label">Courses Offered</div>
+                    </div> -->
+                    <div class="stat-item">
+                        <div class="stat-number">100%</div>
+                        <div class="stat-label">Free Access</div>
+                    </div>
+                </div>
+                
+                <div class="testimonial">
+                    <blockquote>
+                        XXX
+                    </blockquote>
+                    <div class="author">- First L., Student</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Support Section
+        <section class="support-section">
+            <div class="container">
+                <div class="support-content">
+                    <h2>Support Our Mission</h2>
+                    <p>Tutorly operates as a completely free service run by volunteer tutors. Your donation helps cover essential costs and expands our reach to more students in need.</p>
+                    <a href="https://gofund.me/bf09bae8" class="cta-button" target="_blank">Donate Now</a>
+                </div>
+            </div>
+        </section> -->
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-grid">
+                <div class="footer-column">
+                    <h3 class="footer-logo">
+                        <i class="fa-solid fa-graduation-cap"></i> Tutorly
+                    </h3>
+                    <p class="footer-about">
+                        Peer-to-peer learning platform connecting students with qualified tutors.
+                    </p>
+                    <div class="footer-social">
+                        <a href="https://discord.gg/KvTEwuYYXc"><i class="fab fa-discord"></i></a>
+                        <a href="https://www.instagram.com/tutorlyonline/"><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.youtube.com/channel/UCwMIQD0kkJbeYCDhcY8IqpQ"><i class="fab fa-youtube"></i></a>
+                        <a href="https://www.tiktok.com/@tutorlyonline?lang=en"><i class="fab fa-tiktok"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Navigation</h3>
+                    <ul class="footer-links">
+                        <li><a href="/">Home</a></li>
+                        <li><a href="https://tutorlyonline.notion.site/All-Courses-1c7007644bdf8080a573e092c9f63ad9?pvs=4">Courses</a></li>
+                        <li><a href="/public/pages/still-working">About</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Support</h3>
+                    <ul class="footer-links">
+                        <li><a href="/public/pages/help/contact">Contact</a></li>
+                        <li><a href="/public/pages/help/terms-and-conditions" target="_blank">Terms & Conditions</a></li>
+                        <li><a href="/public/pages/help/privacy-policy" target="_blank">Privacy Policy</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-column">
+                    <h3>Apply</h3>
+                    <ul class="footer-links">
+                        <li><a href="https://docs.google.com/forms/d/e/1FAIpQLScYi5C79uxjRfZlFuTvFYFj--pihv9wCq6TUJg169iXw6QOTA/viewform?usp=header" target="_blank">Tutor Application</a></li>
+                        <li><a href="https://docs.google.com/forms/d/e/1FAIpQLSeBF2uVM3kbkGdKLWkRXoJY6Xx6Kds646CqPXX_tVenN_AkBg/viewform?usp=dialog" target="_blank">Social Media Team Application</a></li>
+                        <li><a href="https://docs.google.com/forms/d/e/1FAIpQLSeM8hqQRiLXtN7BpMBetiWBQZ4xrd5PPyISZj0DgV4JlfQPaw/viewform?usp=dialog" target="_blank">Miscellaneous Application</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2025 Tutorly. All rights reserved.</p>
+                <div class="footer-payments">
+                    <i class="fab fa-cc-visa"></i>
+                    <i class="fab fa-cc-mastercard"></i>
+                    <i class="fab fa-cc-paypal"></i>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="/public/js/main.js"></script>
+   <!--Start of Tawk.to Script-->
+<style>
+    /* Container for the custom chat button */
+    .custom-chat-button {
+        position: fixed;
+        bottom: 25px;
+        right: 29px;
         display: flex;
-        justify-content: center;
         align-items: center;
-        text-align: center;
-        padding: 20px;
-      }
-
-      .construction-container {
-        max-width: 600px;
-        width: 100%;
-      }
-
-      .emoji-container {
-        font-size: 4rem;
-        margin-bottom: 1.5rem;
-        height: 80px;
-        position: relative;
-      }
-
-      .emoji {
-        position: absolute;
-        left: 50%;
-        transform: translateX(-50%);
-        animation: float 3s ease-in-out infinite;
-      }
-
-      .emoji:nth-child(1) {
-        animation-delay: 0s;
-      }
-
-      .emoji:nth-child(2) {
-        animation-delay: 0.5s;
-      }
-
-      .emoji:nth-child(3) {
-        animation-delay: 1s;
-      }
-
-      @keyframes float {
-        0%,
-        100% {
-          transform: translateY(0) translateX(-50%);
-        }
-        50% {
-          transform: translateY(-15px) translateX(-50%);
-        }
-      }
-
-      h1 {
-        font-size: 2.2rem;
-        color: hsl(220, 48%, 28%);
-        margin-bottom: 1rem;
-        font-weight: 600;
-      }
-
-      p {
-        font-size: 1.1rem;
-        color: hsl(220, 48%, 28%);
-        margin-bottom: 2rem;
-        line-height: 1.6;
-      }
-
-      .cta-button {
-        padding: 1.2rem 2.5rem;
-        font-size: 1.2rem;
-        font-weight: 600;
-        background: hsl(220, 48%, 28%);
+        cursor: pointer;
+        z-index: 1000;
+        transition: transform 0.3s ease;
+    }
+    
+    .custom-chat-button:hover {
+        transform: scale(1.25);
+    }
+    
+    /* Text bubble styling */
+    .chat-text-bubble {
+        background-color: #f54a4a;
         color: white;
-        text-decoration: none;
-        border-radius: 15px;
-        transition: all 0.6s ease;
-        box-shadow: 0 3px 12px rgba(0, 0, 0, 0.2);
-        display: inline-block;
-      }
-
-      .cta-button:hover {
-        background: hsl(220, 70%, 50%);
-        transform: translateY(-3px);
-        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
-      }
-
-      @media (max-width: 768px) {
-        h1 {
-          font-size: 1.8rem;
+        padding: 8px 16px;
+        border-radius: 20px;
+        font-weight: bold;
+        font-size: 14px;
+        margin-right: 10px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    }
+    
+    /* Logo container styling */
+    .chat-logo {
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        background-color: hsl(0, 0%, 100%);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+        overflow: hidden;
+    }
+    
+    /* Your logo styling */
+    .chat-logo img {
+        width: 40px;
+        height: 100vh;
+        object-fit: contain;
+    }
+  
+    /* Media query for mobile devices */
+    @media only screen and (max-width: 768px) {
+                /* .chat-logo {
+            display: none;
+        } */
+        
+        .chat-text-bubble {
+            margin-right: 0; /* Remove right margin since there's no logo */
         }
-
-        .emoji-container {
-          font-size: 3rem;
-        }
-      }
-    </style>
-  </head>
-  <body>
-    <div class="construction-container">
-      <div class="emoji-container">
-        <div class="emoji">🚧</div>
-        <div class="emoji">🛠️</div>
-      </div>
-      <h1>We're Still Working on This Page!</h1>
-      <p>
-        Our team is busy creating something amazing here. Check back soon for
-        updates!
-      </p>
-      <a href="../../.." class="cta-button">Return Home</a>
+    }
+  
+    /* Remove borders from tawk.to iframe */
+    .tawk-iframe-container, .tawk-min-container {
+        border: none !important;
+        padding: 0 !important;
+        box-shadow: 0 2px 10px rgba(0,0,0,0.3) !important;
+        border-radius: 10px !important;
+        overflow: hidden !important;
+    }
+    
+    /* Remove borders from the chat window */
+    #tawk-body-iframe, #tawk-minified-iframe {
+        border: none !important;
+    }
+    
+    /* Target the iframe documents */
+    iframe[title="chat widget"] {
+        border: none !important;
+    }
+  </style>
+  
+  <!-- Custom Chat Button -->
+  <div class="custom-chat-button" id="custom-tawk-button">
+    <!-- <div class="chat-text-bubble">Live Chat</div> -->
+    <div class="chat-logo">
+        <!-- Replace this with your actual logo -->
+        <img src="/public/assets/images/tutorlyonly.png" alt="Company Logo">
     </div>
-  </body>
+  </div>
+  
+  <!-- tawk.to Integration Script -->
+  <script>
+    // Custom button click handler
+    document.getElementById('custom-tawk-button').addEventListener('click', function() {
+        // If Tawk is loaded, show the chat window
+        if (window.Tawk_API && window.Tawk_API.showWidget) {
+            window.Tawk_API.maximize();
+        }
+    });
+  
+    // tawk.to Integration
+    var Tawk_API = Tawk_API || {};
+    var Tawk_LoadStart = new Date();
+    
+    // Configure Tawk before loading
+    // This will prevent the chat from auto-opening
+    Tawk_API = Tawk_API || {};
+    
+    // Prevent auto-popup
+    Tawk_API.onBeforeLoad = function() {
+        // Disable automatic popups
+        Tawk_API.disablePopups = true;
+    };
+    
+    // When tawk loads
+    Tawk_API.onLoad = function() {
+        // Hide the default button
+        Tawk_API.hideWidget();
+        
+        // Ensure the widget starts hidden
+        setTimeout(function() {
+            Tawk_API.hideWidget();
+        }, 100);
+        
+        // Apply CSS to remove borders
+        removeTawkBorders();
+    };
+    
+    // Function to remove tawk.to borders
+    function removeTawkBorders() {
+        // Create a new style element
+        const style = document.createElement('style');
+        style.type = 'text/css';
+        
+        // CSS to remove borders from tawk.to elements
+        const css = `
+            .tawk-iframe-container, .tawk-min-container {
+                border: none !important;
+                padding: 0 !important;
+                box-shadow: 0 2px 10px rgba(0,0,0,0.3) !important;
+                border-radius: 10px !important;
+                overflow: hidden !important;
+            }
+            
+            #tawk-body-iframe, #tawk-minified-iframe {
+                border: none !important;
+            }
+        `;
+        
+        // Add the CSS to the style element
+        if (style.styleSheet) {
+            style.styleSheet.cssText = css;
+        } else {
+            style.appendChild(document.createTextNode(css));
+        }
+        
+        // Add the style to the document head
+        document.head.appendChild(style);
+        
+        // Try to modify iframe content when available
+        setTimeout(function() {
+            try {
+                const tawkIframes = document.querySelectorAll('iframe[title="chat widget"]');
+                tawkIframes.forEach(iframe => {
+                    if (iframe.contentDocument) {
+                        const iframeStyle = document.createElement('style');
+                        iframeStyle.textContent = `
+                            .card, .card-header, .card-body, .card-footer {
+                                border: none !important;
+                            }
+                            .tawk-card {
+                                border: none !important;
+                                box-shadow: none !important;
+                            }
+                        `;
+                        iframe.contentDocument.head.appendChild(iframeStyle);
+                    }
+                });
+            } catch (e) {
+                console.log("Could not modify tawk iframe due to cross-origin restrictions");
+            }
+        }, 3000);
+    }
+    
+    // Load the tawk.to script
+    (function() {
+        var s1 = document.createElement("script");
+        var s0 = document.getElementsByTagName("script")[0];
+        s1.async = true;
+        s1.src = 'https://embed.tawk.to/68007b3e78f7d71911b54352/1ip10c6pm';
+        s1.charset = 'UTF-8';
+        s1.setAttribute('crossorigin', '*');
+        s0.parentNode.insertBefore(s1, s0);
+    })();
+  </script>
+</body>
 </html>
