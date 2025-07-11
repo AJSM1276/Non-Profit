@@ -5,11 +5,11 @@
   --header-height: 3.5rem;
   /*========== Colors ==========*/
   /*Color mode HSL(hue, saturation, lightness)*/
-  --first-color: hsl(44, 27%, 75%);
-  --first-color-lighten: hsl(45, 41%, 43%);
+  --first-color: hsl(258, 27%, 75%);
+  --first-color-lighten: hsl(258, 56%, 62%);
   --title-color: hsl(0, 0%, 100%);
   --text-color: hsl(44, 14%, 85%);
-  --body-color: hsl(45, 49%, 51%);
+  --body-color: hsl(258, 49%, 51%);
   /*========== Font and typography ==========*/
   /*.5rem = 8px | 1rem = 16px ...*/
   --body-font: "Poppins", sans-serif;
@@ -148,11 +148,11 @@ a {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  transition: all .3s ease-in-out;
+  transition: all 0.3s ease-in-out;
 }
 .nav__link:hover {
   background-color: var(--first-color-lighten);
-  transition: all .3s ease-in-out;
+  transition: all 0.3s ease-in-out;
 }
 
 /* Show menu */
@@ -267,7 +267,7 @@ a {
     column-gap: 3rem;
     height: 100%;
   }
-  
+
   .nav li {
     display: flex;
   }
@@ -288,12 +288,12 @@ a {
     position: absolute;
     left: 0;
     right: 0;
-    top: .5rem;
+    top: 0.5rem;
     background-color: var(--body-color);
     box-shadow: 0 6px 8px hsla(220, 68%, 12%, 0.05);
     pointer-events: none;
     opacity: 0;
-    transition: top .2s, opacity 0.3s;
+    transition: top 0.2s, opacity 0.3s;
     border-radius: 0 0 30px 30px;
   }
   .dropdown__content {

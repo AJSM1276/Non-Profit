@@ -1,0 +1,761 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-RB5YGLMJ29"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-RB5YGLMJ29');
+</script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Tutorly - Premium online tutoring platform with expert high school and college tutors">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="shortcut icon" href="/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <meta name="apple-mobile-web-app-title" content="Tutorly" />
+    <link rel="manifest" href="/site.webmanifest" />
+    
+    <!-- Fonts & Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="/public/main-css/header.css">
+    <link rel="stylesheet" href="/public/main-css/home.css">
+    <link rel="stylesheet" href="/public/css/footer.css">
+    
+    <title>Tutorly | All Courses </title>
+    
+    <!-- Open Graph Tags -->
+    <meta property="og:title" content="Tutorly | Free Online Peer Tutoring">
+    <meta property="og:description" content="Learn from expert high school and college tutors across various subjects">
+    <meta property="og:image" content="https://tutorlyonline.org/public/assets/social-preview.jpg">
+    <meta property="og:url" content="https://tutorlyonline.org">
+    
+    <!-- Additional CSS for the courses page -->
+    <style>
+        /* =============== COURSES PAGE STYLES =============== */
+        .courses-page {
+            padding: 4rem 5%;
+            background: hsl(228, 100%, 99%);
+        }
+        
+        .courses-header {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+        
+        .search-filter-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1.5rem;
+            justify-content: center;
+            margin-bottom: 2.5rem;
+        }
+        
+        .search-bar {
+            flex: 1;
+            min-width: 300px;
+            max-width: 500px;
+            position: relative;
+        }
+        
+        .search-bar input {
+            width: 100%;
+            padding: 1rem 1.5rem;
+            border: 2px solid hsl(220, 20%, 90%);
+            border-radius: 50px;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+            padding-left: 3rem;
+        }
+        
+        .search-bar input:focus {
+            outline: none;
+            border-color: hsl(220, 70%, 50%);
+            box-shadow: 0 0 0 3px rgba(33, 107, 165, 0.2);
+        }
+        
+        .search-bar i {
+            position: absolute;
+            left: 1.2rem;
+            top: 50%;
+            transform: translateY(-50%);
+            color: hsl(220, 20%, 70%);
+        }
+        
+        .tag-filters {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.8rem;
+            justify-content: center;
+            margin-bottom: 2rem;
+        }
+        
+        .tag-filter {
+            padding: 0.5rem 1.2rem;
+            background: hsl(220, 80%, 96%);
+            border-radius: 50px;
+            font-size: 0.9rem;
+            font-weight: 500;
+            color: hsl(220, 48%, 28%);
+            cursor: pointer;
+            transition: all 0.3s ease;
+            border: 1px solid hsl(220, 20%, 90%);
+        }
+        
+        .tag-filter:hover {
+            background: hsl(220, 70%, 50%);
+            color: white;
+        }
+        
+        .tag-filter.active {
+            background: hsl(220, 70%, 50%);
+            color: white;
+            box-shadow: 0 3px 10px rgba(33, 107, 165, 0.3);
+        }
+        
+        .courses-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+        
+        .course-card {
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+            transition: all 0.3s ease;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            position: relative;
+        }
+        
+        .course-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        }
+        
+        .course-image {
+            height: 180px;
+            background-size: cover;
+            background-position: center;
+        }
+        
+        .course-content {
+            padding: 1.5rem;
+        }
+        
+        .course-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin-bottom: 0.8rem;
+        }
+        
+        .course-tag {
+            padding: 0.3rem 0.8rem;
+            background: hsl(220, 80%, 96%);
+            border-radius: 50px;
+            font-size: 0.7rem;
+            font-weight: 600;
+            color: hsl(220, 48%, 28%);
+        }
+        
+        .course-title {
+            font-size: 1.3rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+            color: hsl(220, 48%, 28%);
+        }
+        
+        .course-description {
+            color: hsl(220, 48%, 28%);
+            opacity: 0.8;
+            font-size: 0.9rem;
+            margin-bottom: 1rem;
+            line-height: 1.5;
+        }
+        
+        .course-meta {
+            display: flex;
+            justify-content: space-between;
+            color: hsl(220, 48%, 28%);
+            font-size: 0.9rem;
+            margin-bottom: 1rem;
+        }
+        
+        .course-cta {
+            display: block;
+            text-align: center;
+            padding: 0.8rem;
+            background: hsl(220, 48%, 28%);
+            color: white;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 0.4s ease;
+        }
+        
+        .course-cta:hover {
+            background: hsl(220, 70%, 50%);
+            box-shadow: 0 3px 10px rgba(33, 107, 165, 0.2);
+            transform: translateY(-2px);
+            border-radius: 20px;
+        }
+        
+        .no-results {
+            text-align: center;
+            grid-column: 1 / -1;
+            padding: 3rem;
+            color: hsl(220, 48%, 28%);
+            opacity: 0.7;
+        }
+        
+        @media (max-width: 768px) {
+            .search-filter-container {
+                flex-direction: column;
+            }
+            
+            .search-bar {
+                min-width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Your existing header -->
+    <header class="header">
+        <!-- Keep your existing header content -->
+         <nav class="nav container">
+            <div class="nav__data">
+                <a href="./" class="nav__logo">
+                    <i class="fa-solid fa-graduation-cap"></i> Tutorly
+                </a>
+                    <div class="nav__toggle" id="nav-toggle">
+                        <i class="ri-menu-line nav__toggle-menu"></i>
+                        <i class="ri-close-line nav__toggle-close"></i>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Nav Menu -->
+            <div class="nav__menu" id="nav-menu">
+                <ul class="nav__list">
+                    <li><a href="./" class="nav__link">Home</a></li>
+                    <li><a href="/public/pages/still-working" class="nav__link">About</a></li>
+                    <li><a href="https://tutorlyonline.notion.site/All-Courses-1c7007644bdf8080a573e092c9f63ad9?pvs=4" class="nav__link">All Courses</a></li>
+
+                    <li class="dropdown__item">
+                        <div class="nav__link dropdown__button">
+                            Discover <i class="ri-arrow-down-s-line dropdown__arrow"></i>
+                        </div>
+                        <div class="dropdown__container">
+                            <div class="dropdown__content">
+                                <div class="dropdown__group">
+                                    <div class="dropdown__icon"><i class="fa-solid fa-star"></i></div>
+                                    <span class="dropdown__title">Newly released courses</span>
+                                    <ul class="dropdown__list">
+                                        <li><a href="/public/pages/courses/apbiology/home" class="dropdown__link">AP Biology</a></li>
+                                    </ul>
+                                </div>
+
+                                <div class="dropdown__group">
+                                    <div class="dropdown__icon"><i class="fa-solid fa-fire"></i></div>
+                                    <span class="dropdown__title">Popular courses</span>
+                                    <ul class="dropdown__list">
+                                        <li><a href="/public/pages/courses/apbiology/home" class="dropdown__link">AP Biology</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li class="dropdown__item">
+                        <div class="nav__link dropdown__button">
+                            Resources <i class="ri-arrow-down-s-line dropdown__arrow"></i>
+                        </div>
+                        <div class="dropdown__container">
+                            <div class="dropdown__content">
+                                <div class="dropdown__group">
+                                    <div class="dropdown__icon"><i class="fa-solid fa-pencil"></i></div>
+                                    <span class="dropdown__title">Study techniques</span>
+                                    <ul class="dropdown__list">
+                                        <li><a href="/public/pages/still-working" class="dropdown__link">Pomodoro</a></li>
+                                        <li><a href="/public/pages/courses/anki/anki-home" class="dropdown__link">Anki</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Main Courses Content -->
+    <main class="courses-page">
+        <div class="courses-header">
+             <br><br><br>
+            <h1 class="section-title">Explore All Courses</h1>
+            <p class="section-subtitle">Filter by subject, level, or search for specific topics</p>
+        </div>
+        
+        <div class="search-filter-container">
+            <div class="search-bar">
+                <i class="ri-search-line"></i>
+                <input type="text" id="search-input" placeholder="Search courses...">
+            </div>
+        </div>
+        
+        <div class="tag-filters" id="tag-filters">
+            <div class="tag-filter" data-tag="all">All Courses</div>
+            <div class="tag-filter" data-tag="ap">AP Courses</div>
+            <div class="tag-filter" data-tag="test-prep">Test Prep</div>
+            <div class="tag-filter" data-tag="science">Science</div>
+            <div class="tag-filter" data-tag="technology">Technology</div>
+            <div class="tag-filter" data-tag="engineering">Engineering</div>
+            <div class="tag-filter" data-tag="math">Math</div>
+            <div class="tag-filter" data-tag="humanities">Humanities</div>
+            <div class="tag-filter" data-tag="arts">Arts</div>
+            <div class="tag-filter" data-tag="social-sciences">Social Sciences</div>
+            <div class="tag-filter" data-tag="college">College Prep</div>
+            <div class="tag-filter" data-tag="life-skills">Life Skills</div>
+            <div class="tag-filter" data-tag="hobbies">Hobbies</div>
+        </div>
+        
+        <div class="courses-grid" id="courses-grid">
+            <!-- Course cards will be dynamically inserted here -->
+        </div>
+    </main>
+
+    <!-- Your existing footer -->
+    <footer class="footer">
+        <!-- Keep your existing footer content -->
+         <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-grid">
+                <div class="footer-column">
+                    <h3 class="footer-logo">
+                        <i class="fa-solid fa-graduation-cap"></i> Tutorly
+                    </h3>
+                    <p class="footer-about">
+                        Peer-to-peer learning platform connecting students with qualified tutors.
+                    </p>
+                    <div class="footer-social">
+                        <a href="https://discord.gg/KvTEwuYYXc"><i class="fab fa-discord"></i></a>
+                        <a href="https://www.instagram.com/tutorlyonline/"><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.youtube.com/channel/UCwMIQD0kkJbeYCDhcY8IqpQ"><i class="fab fa-youtube"></i></a>
+                        <a href="https://www.tiktok.com/@tutorlyonline?lang=en"><i class="fab fa-tiktok"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Navigation</h3>
+                    <ul class="footer-links">
+                        <li><a href="./">Home</a></li>
+                        <li><a href="https://tutorlyonline.notion.site/All-Courses-1c7007644bdf8080a573e092c9f63ad9?pvs=4">Courses</a></li>
+                        <li><a href="/public/pages/still-working">About</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Support</h3>
+                    <ul class="footer-links">
+                        <li><a href="/public/pages/help/contact">Contact</a></li>
+                        <li><a href="/public/pages/help/terms-and-conditions" target="_blank">Terms & Conditions</a></li>
+                        <li><a href="/public/pages/help/privacy-policy" target="_blank">Privacy Policy</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-column">
+                    <h3>Apply</h3>
+                    <ul class="footer-links">
+                        <li><a href="https://docs.google.com/forms/d/e/1FAIpQLScYi5C79uxjRfZlFuTvFYFj--pihv9wCq6TUJg169iXw6QOTA/viewform?usp=header" target="_blank">Tutor Application</a></li>
+                        <li><a href="https://docs.google.com/forms/d/e/1FAIpQLSeBF2uVM3kbkGdKLWkRXoJY6Xx6Kds646CqPXX_tVenN_AkBg/viewform?usp=dialog" target="_blank">Social Media Team Application</a></li>
+                        <li><a href="https://docs.google.com/forms/d/e/1FAIpQLSeM8hqQRiLXtN7BpMBetiWBQZ4xrd5PPyISZj0DgV4JlfQPaw/viewform?usp=dialog" target="_blank">Miscellaneous Application</a></li>
+                    </ul>
+                </div>
+                
+                <!-- <div class="footer-column">
+                    <h3>Newsletter</h3>
+                    <form class="footer-newsletter">
+                        <input type="email" placeholder="Your email address" required>
+                        <button type="submit">Subscribe</button>
+                    </form>
+                    <p class="footer-disclaimer">
+                        By subscribing, you agree to our Privacy Policy.
+                    </p>
+                </div> -->
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2025 Tutorly. All rights reserved.</p>
+                <div class="footer-payments">
+                    <i class="fab fa-cc-visa"></i>
+                    <i class="fab fa-cc-mastercard"></i>
+                    <i class="fab fa-cc-paypal"></i>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript for filtering functionality -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Sample course data - replace with your actual courses
+            const courses = [
+                {
+                    title: "AP Biology",
+                    description: "Comprehensive coverage of AP Biology curriculum with interactive lessons and practice exams.",
+                    tags: ["ap", "science"],
+                    image: "#",
+                    level: "In Progress",
+                    units: "8 Units",
+                    link: "/public/pages/courses/apbiology/home"
+                },
+                {
+                    title: "SAT Math Prep",
+                    description: "Comprehensive preparation for the SAT Math section with practice problems and strategies.",
+                    tags: ["test-prep", "math"],
+                    image: "#",
+                    level: "In Progress",
+                    units: "5 Concepts",
+                    link: "/public/pages/courses/sat-math/home"
+                },
+                {
+                    title: "AP Chemistry",
+                    description: "In-depth study of chemical principles with lab simulations and problem sets.",
+                    tags: ["ap", "science"],
+                    image: "#",
+                    level: "Coming Soon",
+                    units: "7 Units",
+                    link: "/public/pages/courses/apchemistry/home"
+                },
+                {
+                    title: "AP US Government and Politics",
+                    description: "Dive into the structures, functions, and political processes of the U.S. government.",
+                    tags: ["ap", "social-sciences"],
+                    image: "#",
+                    level: "In Progress",
+                    units: "5 Concepts",
+                    link: "/public/pages/courses/sat-math/home"
+                }
+            ];
+            
+            // DOM elements
+            const coursesGrid = document.getElementById('courses-grid');
+            const searchInput = document.getElementById('search-input');
+            const tagFilters = document.querySelectorAll('.tag-filter');
+            
+            // Current filter state
+            let activeTags = [];
+            let searchTerm = '';
+            
+            // Initialize the page with all courses
+            renderCourses(courses);
+            
+            // Event listeners
+            searchInput.addEventListener('input', function(e) {
+                searchTerm = e.target.value.toLowerCase();
+                filterCourses();
+            });
+            
+            tagFilters.forEach(filter => {
+                filter.addEventListener('click', function() {
+                    const tag = this.dataset.tag;
+                    
+                    if (tag === 'all') {
+                        // Clear all filters
+                        activeTags = [];
+                        tagFilters.forEach(f => f.classList.remove('active'));
+                        this.classList.add('active');
+                    } else {
+                        // Toggle this filter
+                        this.classList.toggle('active');
+                        
+                        if (this.classList.contains('active')) {
+                            activeTags.push(tag);
+                        } else {
+                            activeTags = activeTags.filter(t => t !== tag);
+                        }
+                        
+                        // If no filters are active, show all courses
+                        if (activeTags.length === 0) {
+                            document.querySelector('.tag-filter[data-tag="all"]').classList.add('active');
+                        } else {
+                            document.querySelector('.tag-filter[data-tag="all"]').classList.remove('active');
+                        }
+                    }
+                    
+                    filterCourses();
+                });
+            });
+            
+            // Filter courses based on active tags and search term
+            function filterCourses() {
+                let filteredCourses = courses;
+                
+                // Filter by tags if any are active
+                if (activeTags.length > 0) {
+                    filteredCourses = filteredCourses.filter(course => 
+                        course.tags.some(tag => activeTags.includes(tag))
+                    );
+                }
+                
+                // Filter by search term if one exists
+                if (searchTerm) {
+                    filteredCourses = filteredCourses.filter(course => 
+                        course.title.toLowerCase().includes(searchTerm) || 
+                        course.description.toLowerCase().includes(searchTerm) ||
+                        course.tags.some(tag => tag.includes(searchTerm))
+                    );
+                }
+                
+                renderCourses(filteredCourses);
+            }
+            
+            // Render courses to the grid
+            function renderCourses(coursesToRender) {
+                coursesGrid.innerHTML = '';
+                
+                if (coursesToRender.length === 0) {
+                    coursesGrid.innerHTML = `
+                        <div class="no-results">
+                            <h3>No courses found</h3>
+                            <p>Try adjusting your filters or search term</p>
+                        </div>
+                    `;
+                    return;
+                }
+                
+                coursesToRender.forEach(course => {
+                    const courseCard = document.createElement('div');
+                    courseCard.className = 'course-card';
+                    courseCard.innerHTML = `
+                        <!-- <div class="course-image" style="background-image: url('${course.image}')"></div> -->
+                        <div class="course-content">
+                            <div class="course-tags">
+                                ${course.tags.map(tag => `<span class="course-tag">${tag.toUpperCase()}</span>`).join('')}
+                            </div>
+                            <h3 class="course-title">${course.title}</h3>
+                            <p class="course-description">${course.description}</p>
+                            <div class="course-meta">
+                                <span><i class="fa-solid fa-bars-progress"></i> ${course.level}</span>
+                                <span><i class="fa-solid fa-book"></i> ${course.units}</span>
+                            </div>
+                            <a href="${course.link}" class="course-cta">View Course</a>
+                        </div>
+                    `;
+                    coursesGrid.appendChild(courseCard);
+                });
+            }
+        });
+    </script>
+    
+    <!-- Your existing JavaScript files -->
+    <script src="/public/js/main.js"></script>
+       <!--Start of Tawk.to Script-->
+<style>
+    /* Container for the custom chat button */
+    .custom-chat-button {
+        position: fixed;
+        bottom: 25px;
+        right: 29px;
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+        z-index: 1000;
+        transition: transform 0.3s ease;
+    }
+    
+    .custom-chat-button:hover {
+        transform: scale(1.25);
+    }
+    
+    /* Text bubble styling */
+    .chat-text-bubble {
+        background-color: #f54a4a;
+        color: white;
+        padding: 8px 16px;
+        border-radius: 20px;
+        font-weight: bold;
+        font-size: 14px;
+        margin-right: 10px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    }
+    
+    /* Logo container styling */
+    .chat-logo {
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        background-color: hsl(0, 0%, 100%);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+        overflow: hidden;
+    }
+    
+    /* Your logo styling */
+    .chat-logo img {
+        width: 40px;
+        height: 100vh;
+        object-fit: contain;
+    }
+  
+    /* Media query for mobile devices */
+    @media only screen and (max-width: 768px) {
+                /* .chat-logo {
+            display: none;
+        } */
+        
+        .chat-text-bubble {
+            margin-right: 0; /* Remove right margin since there's no logo */
+        }
+    }
+  
+    /* Remove borders from tawk.to iframe */
+    .tawk-iframe-container, .tawk-min-container {
+        border: none !important;
+        padding: 0 !important;
+        box-shadow: 0 2px 10px rgba(0,0,0,0.3) !important;
+        border-radius: 10px !important;
+        overflow: hidden !important;
+    }
+    
+    /* Remove borders from the chat window */
+    #tawk-body-iframe, #tawk-minified-iframe {
+        border: none !important;
+    }
+    
+    /* Target the iframe documents */
+    iframe[title="chat widget"] {
+        border: none !important;
+    }
+  </style>
+  
+  <!-- Custom Chat Button -->
+  <div class="custom-chat-button" id="custom-tawk-button">
+    <!-- <div class="chat-text-bubble">Live Chat</div> -->
+    <div class="chat-logo">
+        <!-- Replace this with your actual logo -->
+        <img src="/public/assets/images/tutorlyonly.png" alt="Company Logo">
+    </div>
+  </div>
+  
+  <!-- tawk.to Integration Script -->
+  <script>
+    // Custom button click handler
+    document.getElementById('custom-tawk-button').addEventListener('click', function() {
+        // If Tawk is loaded, show the chat window
+        if (window.Tawk_API && window.Tawk_API.showWidget) {
+            window.Tawk_API.maximize();
+        }
+    });
+  
+    // tawk.to Integration
+    var Tawk_API = Tawk_API || {};
+    var Tawk_LoadStart = new Date();
+    
+    // Configure Tawk before loading
+    // This will prevent the chat from auto-opening
+    Tawk_API = Tawk_API || {};
+    
+    // Prevent auto-popup
+    Tawk_API.onBeforeLoad = function() {
+        // Disable automatic popups
+        Tawk_API.disablePopups = true;
+    };
+    
+    // When tawk loads
+    Tawk_API.onLoad = function() {
+        // Hide the default button
+        Tawk_API.hideWidget();
+        
+        // Ensure the widget starts hidden
+        setTimeout(function() {
+            Tawk_API.hideWidget();
+        }, 100);
+        
+        // Apply CSS to remove borders
+        removeTawkBorders();
+    };
+    
+    // Function to remove tawk.to borders
+    function removeTawkBorders() {
+        // Create a new style element
+        const style = document.createElement('style');
+        style.type = 'text/css';
+        
+        // CSS to remove borders from tawk.to elements
+        const css = `
+            .tawk-iframe-container, .tawk-min-container {
+                border: none !important;
+                padding: 0 !important;
+                box-shadow: 0 2px 10px rgba(0,0,0,0.3) !important;
+                border-radius: 10px !important;
+                overflow: hidden !important;
+            }
+            
+            #tawk-body-iframe, #tawk-minified-iframe {
+                border: none !important;
+            }
+        `;
+        
+        // Add the CSS to the style element
+        if (style.styleSheet) {
+            style.styleSheet.cssText = css;
+        } else {
+            style.appendChild(document.createTextNode(css));
+        }
+        
+        // Add the style to the document head
+        document.head.appendChild(style);
+        
+        // Try to modify iframe content when available
+        setTimeout(function() {
+            try {
+                const tawkIframes = document.querySelectorAll('iframe[title="chat widget"]');
+                tawkIframes.forEach(iframe => {
+                    if (iframe.contentDocument) {
+                        const iframeStyle = document.createElement('style');
+                        iframeStyle.textContent = `
+                            .card, .card-header, .card-body, .card-footer {
+                                border: none !important;
+                            }
+                            .tawk-card {
+                                border: none !important;
+                                box-shadow: none !important;
+                            }
+                        `;
+                        iframe.contentDocument.head.appendChild(iframeStyle);
+                    }
+                });
+            } catch (e) {
+                console.log("Could not modify tawk iframe due to cross-origin restrictions");
+            }
+        }, 3000);
+    }
+    
+    // Load the tawk.to script
+    (function() {
+        var s1 = document.createElement("script");
+        var s0 = document.getElementsByTagName("script")[0];
+        s1.async = true;
+        s1.src = 'https://embed.tawk.to/68007b3e78f7d71911b54352/1ip10c6pm';
+        s1.charset = 'UTF-8';
+        s1.setAttribute('crossorigin', '*');
+        s0.parentNode.insertBefore(s1, s0);
+    })();
+  </script>
+</body>
+</html>
