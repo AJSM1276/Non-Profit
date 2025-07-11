@@ -125,8 +125,17 @@
         
         .courses-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            max-width: 1400px; /* Adjust based on your layout */
+            margin: 0 auto; /* Centers the grid */
             gap: 2rem;
+        }
+
+        /* Ensures max 4 columns even on very wide screens */
+        @media (min-width: 1200px) {
+            .courses-grid {
+                grid-template-columns: repeat(4, minmax(250px, 1fr));
+            }
         }
         
         .course-card {
@@ -437,7 +446,7 @@
                     image: "#",
                     level: "Coming Soon",
                     units: "7 Units",
-                    link: "/public/pages/courses/apchemistry/home"
+                    link: "/public/pages/still-working"
                 },
                 {
                     title: "AP US Government and Politics",
@@ -445,8 +454,8 @@
                     tags: ["ap", "social-sciences"],
                     image: "#",
                     level: "In Progress",
-                    units: "5 Concepts",
-                    link: "/public/pages/courses/sat-math/home"
+                    units: "5 Units",
+                    link: "/public/pages/courses/apusgov/home"
                 }
             ];
             
