@@ -335,9 +335,11 @@
             <div class="tag-filter" data-tag="humanities">Humanities</div>
             <div class="tag-filter" data-tag="arts">Arts</div>
             <div class="tag-filter" data-tag="social-sciences">Social Sciences</div>
-            <div class="tag-filter" data-tag="college">College Prep</div>
+            <div class="tag-filter" data-tag="college-prep">College Prep</div>
             <div class="tag-filter" data-tag="life-skills">Life Skills</div>
             <div class="tag-filter" data-tag="hobbies">Hobbies</div>
+            <div class="tag-filter" data-tag="social-studies">Social Studies</div>
+            <div class="tag-filter" data-tag="honors">Honors</div>
         </div>
         
         <div class="courses-grid" id="courses-grid">
@@ -451,11 +453,92 @@
                 {
                     title: "AP US Government and Politics",
                     description: "Dive into the structures, functions, and political processes of the U.S. government.",
-                    tags: ["ap", "social-sciences"],
+                    tags: ["ap", "social-studies"],
                     image: "#",
                     level: "In Progress",
                     units: "5 Units",
                     link: "/public/pages/courses/apusgov/home"
+                },
+                {
+                    title: "Crochet",
+                    description: "Learn the art of crochet from beginner to advanced techniques with step-by-step tutorials.",
+                    tags: ["hobbies", "arts"],
+                    image: "#",
+                    level: "Coming Soon",
+                    units: "7 Units",
+                    link: "/public/pages/still-working"
+                },
+                {
+                    title: "AP Precalculus",
+                    description: "Master the concepts of precalculus with interactive lessons and practice problems.",
+                    tags: ["ap", "math"],
+                    image: "#",
+                    level: "Coming Soon",
+                    units: "4 Units",
+                    link: "/public/pages/still-working"
+                },
+                {
+                    title: "AP Seminar",
+                    description: "Develop critical thinking and research skills through interdisciplinary projects and presentations.",
+                    tags: ["ap", "college-prep"],
+                    image: "#",
+                    level: "Coming Soon",
+                    units: "TBD",
+                    link: "/public/pages/still-working"
+                },
+                {
+                    title: "AP Human Geography",
+                    description: "Analyze patterns of human culture, migration, and land use through geographic lenses to understand global interconnectedness.",
+                    tags: ["ap", "social-studies"],
+                    image: "#",
+                    level: "Coming Soon",
+                    units: "TBD",
+                    link: "/public/pages/still-working"
+                },
+                {
+                    title: "Honors Physics",
+                    description: "Explore the fundamental principles of physics with advanced problem-solving techniques and experiments.",
+                    tags: ["science", "math", "honors"],
+                    image: "#",
+                    level: "Coming Soon",
+                    units: "TBD",
+                    link: "/public/pages/still-working"
+                },
+                {
+                    title: "Honors Biology",
+                    description: "Learn advanced biological concepts with a focus on cellular processes, genetics, and ecology.",
+                    tags: ["science", "honors"],
+                    image: "#",
+                    level: "Coming Soon",
+                    units: "TBD",
+                    link: "/public/pages/still-working"
+                },
+                {
+                    title: "Honors Biology",
+                    description: "Learn advanced biological concepts with a focus on cellular processes, genetics, and ecology.",
+                    tags: ["science", "honors"],
+                    image: "#",
+                    level: "Coming Soon",
+                    units: "TBD",
+                    link: "/public/pages/still-working"
+                },
+                {
+                    title: "Honors Chemistry",
+                    description: "Explore advanced chemical principles with a focus on molecular structure, reactions, and stoichiometry.",
+                    tags: ["science", "honors"],
+                    image: "#",
+                    level: "Coming Soon",
+                    units: "TBD",
+                    link: "/public/pages/still-working"
+                },
+                {
+                    title: "Honors Algebra 1",
+                    description: "Master the foundations of algebra with a focus on equations, functions, and graphing techniques.",
+                    tags: ["math", "honors"],
+                    image: "#",
+                    level: "Coming Soon",
+                    units: "TBD",
+                    link: "/public/pages/still-working"
                 }
             ];
             
@@ -509,13 +592,15 @@
             });
             
             // Filter courses based on active tags and search term
+            // Filter courses based on active tags and search term
             function filterCourses() {
                 let filteredCourses = courses;
                 
                 // Filter by tags if any are active
                 if (activeTags.length > 0) {
                     filteredCourses = filteredCourses.filter(course => 
-                        course.tags.some(tag => activeTags.includes(tag))
+                        // CHANGED: Now checks if ALL active tags are present in course tags
+                        activeTags.every(tag => course.tags.includes(tag))
                     );
                 }
                 

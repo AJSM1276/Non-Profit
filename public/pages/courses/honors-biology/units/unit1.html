@@ -1,0 +1,1735 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Google tag (gtag.js) -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-RB5YGLMJ29"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+
+      gtag("config", "G-RB5YGLMJ29");
+    </script>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tutorly | AP Biology - Unit 1: Chemistry of Life</title>
+
+    <!-- Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+
+    <style>
+      :root {
+        --primary: hsl(145, 85%, 42%);
+        --primary-light: #8b85ff;
+        --primary-dark: #4d44db;
+        --secondary: #ff6584;
+        --accent: #ffc107;
+        --light: #f8f9ff;
+        --dark: hsl(145, 48%, 28%);
+        --dark-light: #4a4a6a;
+        --gray: #e5e7eb;
+        --success: #27ae60;
+        --warning: #f39c12;
+        --danger: #e74c3c;
+        --info: #3498db;
+      }
+
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: "Poppins", sans-serif;
+        background-color: var(--light);
+        color: var(--dark);
+        line-height: 1.7;
+        overflow-x: hidden;
+      }
+
+      /* Header Styles - Matching Tutorly */
+      .header {
+        background: white;
+        box-shadow: 0 2px 20px rgba(0, 0, 0, 0.08);
+        position: sticky;
+        top: 0;
+        z-index: 100;
+      }
+
+      .nav__container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 1rem 2rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      .nav__logo {
+        font-size: 1.5rem;
+        font-weight: 700;
+        color: var(--primary);
+        text-decoration: none;
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+      }
+
+      .nav__logo i {
+        color: var(--primary);
+      }
+
+      #tutorly {
+        font-size: 1.3rem;
+        margin-left: 2rem;
+      }
+
+      /* Main Content */
+      .unit-container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 2rem;
+        padding-bottom: 0;
+      }
+
+      /* Hero Section */
+      .unit-hero {
+        background: linear-gradient(
+          135deg,
+          var(--primary) 0%,
+          var(--dark) 100%
+        );
+        color: white;
+        padding: 4rem 3rem;
+        border-radius: 24px;
+        margin-bottom: 3rem;
+        position: relative;
+        overflow: hidden;
+        box-shadow: 0 15px 40px rgba(108, 99, 255, 0.25);
+      }
+
+      .unit-hero::before {
+        content: "";
+        position: absolute;
+        top: -50%;
+        left: -50%;
+        width: 200%;
+        height: 200%;
+        background: radial-gradient(
+          circle,
+          rgba(255, 255, 255, 0.12) 0%,
+          rgba(255, 255, 255, 0) 70%
+        );
+        transform: rotate(30deg);
+        animation: shimmer 8s linear infinite;
+      }
+
+      @keyframes shimmer {
+        0% {
+          transform: translateX(-100%) rotate(30deg);
+        }
+        100% {
+          transform: translateX(100%) rotate(30deg);
+        }
+      }
+
+      .unit-title {
+        font-size: 2.8rem;
+        font-weight: 800;
+        margin-bottom: 1rem;
+        position: relative;
+        line-height: 1.2;
+      }
+
+      .unit-subtitle {
+        font-size: 1.2rem;
+        font-weight: 400;
+        opacity: 0.9;
+        max-width: 700px;
+        margin-bottom: 2rem;
+        position: relative;
+      }
+
+      .unit-meta {
+        display: flex;
+        gap: 2rem;
+        margin-bottom: 2rem;
+        position: relative;
+      }
+
+      .meta-item {
+        display: flex;
+        align-items: center;
+        gap: 0.8rem;
+        font-size: 1rem;
+        font-weight: 500;
+        background: rgba(255, 255, 255, 0.15);
+        padding: 0.6rem 1.2rem;
+        border-radius: 50px;
+        backdrop-filter: blur(5px);
+      }
+
+      .meta-item i {
+        font-size: 1.2rem;
+      }
+
+      .unit-progress {
+        width: 100%;
+        height: 10px;
+        background: rgba(255, 255, 255, 0.2);
+        border-radius: 5px;
+        margin-bottom: 2rem;
+        position: relative;
+        overflow: hidden;
+      }
+
+      .progress-bar {
+        height: 100%;
+        width: 35%;
+        background: white;
+        border-radius: 5px;
+        position: relative;
+        box-shadow: 0 0 15px rgba(255, 255, 255, 0.4);
+      }
+
+      .unit-actions {
+        display: flex;
+        gap: 1.5rem;
+        margin-top: 2rem;
+        position: relative;
+      }
+
+      /* Key Concepts */
+      .key-concepts {
+        background: white;
+        border-radius: 20px;
+        padding: 2.5rem;
+        margin-bottom: 3rem;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+        position: relative;
+        overflow: hidden;
+      }
+
+      .key-concepts::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 150px;
+        height: 150px;
+        background: radial-gradient(
+          circle,
+          var(--primary-light) 0%,
+          rgba(108, 99, 255, 0) 70%
+        );
+        opacity: 0.2;
+        z-index: 1;
+      }
+
+      .concepts-title {
+        font-size: 1.5rem;
+        font-weight: 700;
+        margin-bottom: 1.5rem;
+        color: var(--primary);
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        position: relative;
+        z-index: 2;
+      }
+
+      .concepts-title i {
+        color: var(--primary);
+        font-size: 1.8rem;
+      }
+
+      .concepts-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+        gap: 1.2rem;
+        position: relative;
+        z-index: 2;
+      }
+
+      .concept-item {
+        background: var(--light);
+        padding: 1.2rem;
+        border-radius: 12px;
+        font-size: 1rem;
+        font-weight: 600;
+        text-align: center;
+        transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        border: 1px solid var(--gray);
+        cursor: pointer;
+      }
+
+      .concept-item:hover {
+        background: var(--primary);
+        color: white;
+        transform: translateY(-5px) scale(1.03);
+        box-shadow: 0 10px 25px rgba(108, 99, 255, 0.3);
+        border-color: var(--primary);
+      }
+
+      /* Chapter Cards */
+      .chapter-card {
+        background: white;
+        border-radius: 20px;
+        padding: 2.5rem;
+        margin-bottom: 2.5rem;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+        transition: transform 0.4s, box-shadow 0.4s;
+        border-left: 5px solid var(--primary);
+        position: relative;
+        overflow: hidden;
+      }
+
+      .chapter-card:hover {
+        transform: translateY(-8px);
+        box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+      }
+
+      .chapter-card::after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        width: 100px;
+        height: 100px;
+        background: radial-gradient(
+          circle,
+          var(--primary-light) 0%,
+          rgba(108, 99, 255, 0) 70%
+        );
+        opacity: 0.1;
+        z-index: 1;
+      }
+
+      .chapter-title {
+        font-size: 1.8rem;
+        font-weight: 700;
+        color: var(--primary);
+        margin-bottom: 1rem;
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        position: relative;
+        z-index: 2;
+      }
+
+      .chapter-title i {
+        color: var(--primary);
+        font-size: 2rem;
+        width: 50px;
+        height: 50px;
+        background: rgba(108, 99, 255, 0.1);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 12px;
+      }
+
+      .chapter-desc {
+        color: var(--dark-light);
+        margin-bottom: 1.5rem;
+        font-size: 1.1rem;
+        font-weight: 400;
+        max-width: 800px;
+        position: relative;
+        z-index: 2;
+      }
+
+      /* Resources Grid */
+      .resources-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+        gap: 1.5rem;
+        margin-top: 2rem;
+        position: relative;
+        z-index: 2;
+      }
+
+      .resource-card {
+        background: var(--light);
+        border-radius: 16px;
+        padding: 1.8rem;
+        transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        border: 1px solid var(--gray);
+        position: relative;
+        overflow: hidden;
+      }
+
+      .resource-card:hover {
+        background: white;
+        box-shadow: 0 15px 40px rgba(0, 0, 0, 0.08);
+        transform: translateY(-5px);
+        border-color: var(--primary-light);
+      }
+
+      .resource-type {
+        display: inline-block;
+        padding: 0.4rem 0.8rem;
+        border-radius: 50px;
+        font-size: 0.75rem;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+        margin-bottom: 1.2rem;
+      }
+
+      .video-type {
+        background: rgba(232, 67, 147, 0.1);
+        color: #e84393;
+      }
+      .quiz-type {
+        background: rgba(46, 213, 115, 0.1);
+        color: #2ed573;
+      }
+      .reading-type {
+        background: rgba(83, 82, 237, 0.1);
+        color: #5352ed;
+      }
+      .lab-type {
+        background: rgba(253, 167, 15, 0.1);
+        color: #fda70f;
+      }
+
+      .resource-title {
+        font-weight: 700;
+        margin-bottom: 0.8rem;
+        color: var(--primary);
+        font-size: 1.2rem;
+      }
+
+      .resource-desc {
+        font-size: 0.95rem;
+        color: var(--dark-light);
+        margin-bottom: 1.5rem;
+        font-weight: 400;
+      }
+
+      .resource-link {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.5rem;
+        font-size: 0.95rem;
+        color: var(--primary);
+        font-weight: 600;
+        text-decoration: none;
+        transition: all 0.3s;
+      }
+
+      .resource-link:hover {
+        color: var(--primary-dark);
+      }
+
+      .resource-link i {
+        font-size: 0.9rem;
+        transition: transform 0.3s;
+      }
+
+      .resource-link:hover i {
+        transform: translateX(5px);
+      }
+
+      /* Buttons */
+      .btn {
+        padding: 1rem 2rem;
+        border-radius: 12px;
+        font-weight: 600;
+        font-size: 1rem;
+        display: inline-flex;
+        align-items: center;
+        gap: 0.8rem;
+        text-decoration: none;
+        transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        cursor: pointer;
+        border: none;
+        outline: none;
+      }
+
+      .btn-primary {
+        background: white;
+        color: var(--primary);
+        box-shadow: 0 5px 20px rgba(255, 255, 255, 0.3);
+      }
+
+      .btn-primary:hover {
+        background: rgba(255, 255, 255, 0.9);
+        transform: translateY(-3px);
+        box-shadow: 0 10px 30px rgba(255, 255, 255, 0.4);
+      }
+
+      .btn-secondary {
+        background: rgba(255, 255, 255, 0.15);
+        color: white;
+        backdrop-filter: blur(5px);
+        border: 1px solid rgba(255, 255, 255, 0.2);
+      }
+
+      .btn-secondary:hover {
+        background: rgba(255, 255, 255, 0.25);
+        transform: translateY(-3px);
+        box-shadow: 0 10px 30px rgba(255, 255, 255, 0.2);
+      }
+
+      /* Breadcrumb */
+      .breadcrumb {
+        display: flex;
+        align-items: center;
+        gap: 0.8rem;
+        margin-bottom: 2rem;
+        font-size: 0.95rem;
+        font-weight: 500;
+      }
+
+      .breadcrumb a {
+        color: var(--dark-light);
+        text-decoration: none;
+        transition: color 0.3s;
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+      }
+
+      .breadcrumb a:hover {
+        color: var(--primary);
+      }
+
+      .breadcrumb .separator {
+        color: var(--gray);
+        font-size: 0.8rem;
+      }
+
+      .current-page {
+        color: var(--primary);
+        font-weight: 600;
+      }
+
+      /* Footer - Matching Tutorly */
+      .footer {
+        background: var(--dark);
+        color: white;
+        padding: 4rem 0 2rem;
+        margin-top: 4rem;
+      }
+
+      .footer-container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 2rem;
+      }
+
+      .footer-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 3rem;
+        margin-bottom: 3rem;
+      }
+
+      .footer-column h3 {
+        font-size: 1.2rem;
+        font-weight: 700;
+        margin-bottom: 1.5rem;
+        color: white;
+      }
+
+      .footer-logo {
+        font-size: 1.5rem;
+        font-weight: 700;
+        color: white;
+        display: flex;
+        align-items: center;
+        gap: 0.8rem;
+        margin-bottom: 1.5rem;
+      }
+
+      .footer-logo i {
+        color: white;
+      }
+
+      .footer-about {
+        color: rgba(255, 255, 255, 0.7);
+        margin-bottom: 1.5rem;
+        line-height: 1.6;
+      }
+
+      .footer-social {
+        display: flex;
+        gap: 1rem;
+      }
+
+      .footer-social a {
+        color: white;
+        font-size: 1.2rem;
+        transition: color 0.3s;
+      }
+
+      .footer-social a:hover {
+        color: var(--primary);
+      }
+
+      .footer-links {
+        list-style: none;
+      }
+
+      .footer-links li {
+        margin-bottom: 0.8rem;
+      }
+
+      .footer-links a {
+        color: rgba(255, 255, 255, 0.7);
+        text-decoration: none;
+        transition: color 0.3s;
+        font-weight: 400;
+      }
+
+      .footer-links a:hover {
+        color: white;
+      }
+
+      .footer-bottom {
+        border-top: 1px solid rgba(255, 255, 255, 0.1);
+        padding-top: 2rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        color: rgba(255, 255, 255, 0.5);
+        font-size: 0.9rem;
+      }
+
+      .footer-payments i {
+        font-size: 1.5rem;
+        margin-left: 1rem;
+        color: rgba(255, 255, 255, 0.7);
+      }
+
+      /* Responsive */
+      @media (max-width: 1024px) {
+        .unit-title {
+          font-size: 2.4rem;
+        }
+
+        .concepts-grid {
+          grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+        }
+      }
+
+      @media (max-width: 768px) {
+        .unit-hero {
+          padding: 3rem 2rem;
+        }
+
+        .unit-title {
+          font-size: 2rem;
+        }
+
+        .unit-meta {
+          flex-direction: column;
+          gap: 1rem;
+        }
+
+        .unit-actions {
+          flex-direction: column;
+          gap: 1rem;
+        }
+
+        .resources-grid {
+          grid-template-columns: 1fr;
+        }
+
+        .chapter-card {
+          padding: 2rem 1.5rem;
+        }
+
+        .footer-grid {
+          grid-template-columns: 1fr;
+          gap: 2rem;
+        }
+      }
+
+      @media (max-width: 480px) {
+        .unit-hero {
+          padding: 2.5rem 1.5rem;
+        }
+
+        .unit-title {
+          font-size: 1.8rem;
+        }
+
+        .unit-subtitle {
+          font-size: 1rem;
+        }
+
+        .chapter-title {
+          font-size: 1.5rem;
+          flex-direction: column;
+          align-items: flex-start;
+          gap: 0.5rem;
+        }
+
+        .chapter-title i {
+          width: 40px;
+          height: 40px;
+          font-size: 1.5rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Header -->
+    <header class="header">
+      <nav class="nav__container">
+        <a href="/public/pages/courses/honors-biology/home" class="nav__logo">
+          <i class="fa-solid fa-dna"></i>AP Bio
+        </a>
+        <a href="/" class="nav__logo" id="tutorly">
+          <i class="fa-solid fa-graduation-cap"></i> Tutorly
+        </a>
+      </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+      <div class="unit-container">
+        <div class="breadcrumb">
+          <a href="/public/pages/courses/honors-biology/home"
+            ><i class="fas fa-home"></i> AP Bio Home</a
+          >
+          <span class="separator">/</span>
+          <a href="../curriculum">Curriculum</a>
+          <span class="separator">/</span>
+          <span class="current-page">Unit 1: Chemistry of Life</span>
+        </div>
+
+        <div class="unit-hero">
+          <h1 class="unit-title">Chemistry of Life</h1>
+          <p class="unit-subtitle">
+            Discover how atoms and molecules—like DNA, proteins, and
+            sugars—interact through chemical reactions to build cells, store
+            energy, and create the blueprint for life itself.
+          </p>
+
+          <div class="unit-meta">
+            <div class="meta-item">
+              <i class="fas fa-percentage"></i>
+              <span>8-11% of AP Exam</span>
+            </div>
+            <div class="meta-item">
+              <i class="fas fa-clock"></i>
+              <span>6 Chapters</span>
+            </div>
+            <!-- <div class="meta-item">
+              <i class="fas fa-bolt"></i>
+              <span>Difficulty: Easy</span>
+            </div> -->
+          </div>
+
+          <div class="unit-progress">
+            <div class="progress-bar"></div>
+          </div>
+
+          <div class="unit-actions">
+            <a
+              href="https://tutorlyonline.notion.site/221007644bdf808d9272f015a9da7943?v=221007644bdf812b9c6d000ccd1efa77&source=copy_link"
+              class="btn btn-primary"
+              target="_blank"
+            >
+              <i class="fas fa-play-circle"></i> Start Learning
+            </a>
+            <a
+              href="https://tutorlyonline.notion.site/1db007644bdf80e4b3abe387f4b5ed0d?v=1db007644bdf81fab922000c84ccbc17&source=copy_link"
+              class="btn btn-secondary"
+              target="_blank"
+            >
+              <i class="fa-solid fa-file"></i> View All Notes
+            </a>
+          </div>
+        </div>
+        <div class="key-concepts">
+          <h3 class="concepts-title">
+            <i class="fas fa-key"></i> Key Vocab & Concepts
+          </h3>
+          <div class="concepts-grid">
+            <div class="concept-item">Atomic Structure</div>
+            <div class="concept-item">Types of Bonds</div>
+            <div class="concept-item">Polarity</div>
+            <div class="concept-item">Properties of Water</div>
+            <div class="concept-item">Solvent/Solute</div>
+            <div class="concept-item">SPONCH</div>
+            <div class="concept-item">Macromolecules</div>
+            <div class="concept-item">Protein Structure</div>
+            <div class="concept-item">Hydrolysis</div>
+            <div class="concept-item">Dehydration Synthesis</div>
+          </div>
+        </div>
+
+        <!-- Chapter 1 -->
+        <div class="chapter-card">
+          <h3 class="chapter-title">
+            <i class="fas fa-droplet"></i> 1.1 Structure of Water and Hydrogen
+            Bonding
+          </h3>
+          <p class="chapter-desc">
+            Water's polar structure and hydrogen bonding give it unique,
+            life-supporting properties like cohesion, temperature regulation,
+            and surface tension.
+          </p>
+
+          <div class="resources-grid">
+            <div class="resource-card">
+              <span class="resource-type video-type">Video</span>
+              <h4 class="resource-title">Tutor's Videos</h4>
+              <p class="resource-desc">
+                Watch videos brought to you by the Tutorly's AP Biology team
+              </p>
+              <a
+                href="https://tutorlyonline.notion.site/1-1-Structure-of-Water-and-Hydrogen-Bonding-221007644bdf817eb2b5ec937e2b5109?source=copy_link"
+                class="resource-link"
+                target="_blank"
+              >
+                Watch Now <i class="fas fa-arrow-right"></i>
+              </a>
+            </div>
+            <div class="resource-card">
+              <span class="resource-type reading-type">Notes</span>
+              <h4 class="resource-title">Tutor's Notes</h4>
+              <p class="resource-desc">
+                Review notes created by Tutorly's AP Biology team
+              </p>
+              <a
+                href="https://tutorlyonline.notion.site/1-1-Structure-of-Water-and-Hydrogen-Bonding-1ee007644bdf809cb90ee1f1ab6b43c3?source=copy_link"
+                class="resource-link"
+                target="_blank"
+              >
+                Review Now <i class="fas fa-arrow-right"></i>
+              </a>
+            </div>
+            <div class="resource-card">
+              <span class="resource-type lab-type">Flashcards</span>
+              <h4 class="resource-title">Tutor's Flashcards</h4>
+              <p class="resource-desc">
+                Practice using flashcard decks designed by tutorly's AP Biology
+                team
+              </p>
+              <a
+                href="https://tutorlyonline.notion.site/1-1-Structure-of-Water-and-Hydrogen-Bonding-221007644bdf81889c60c0f27e351164?source=copy_link"
+                class="resource-link"
+                target="_blank"
+              >
+                Practice Now <i class="fas fa-arrow-right"></i>
+              </a>
+            </div>
+
+            <!-- <div class="resource-card">
+                        <span class="resource-type lab-type">Lab</span>
+                        <h4 class="resource-title">Photosynthesis Simulation</h4>
+                        <p class="resource-desc">Interactive lab exploring factors affecting photosynthesis rate (light intensity, CO2, etc.).</p>
+                        <a href="https://www.biomanbio.com/HTML5GamesandLabs/PhotoRespgames/photointeractivehtml5page" class="resource-link" target="_blank">
+                            Start Lab <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div> -->
+
+            <div class="resource-card">
+              <span class="resource-type quiz-type">Quiz</span>
+              <h4 class="resource-title">Chapter Quizzes</h4>
+              <p class="resource-desc">
+                Challenge yourself with quizzes designed by Tutorly's AP Biology
+                team
+              </p>
+              <a
+                href="https://tutorlyonline.notion.site/1-1-Structure-of-Water-and-Hydrogen-Bonding-221007644bdf81618565eb847503c2b6?source=copy_link"
+                class="resource-link"
+                target="_blank"
+              >
+                Take Quiz <i class="fas fa-arrow-right"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Chapter 2 -->
+        <div class="chapter-card">
+          <h3 class="chapter-title">
+            <i class="fa-solid fa-heart-pulse"></i>1.2 Elements of Life
+          </h3>
+          <p class="chapter-desc">
+            Carbon, hydrogen, oxygen, nitrogen, phosphorus, and sulfur enable
+            life's chemistry.
+          </p>
+
+          <div class="resources-grid">
+            <div class="resource-card">
+              <span class="resource-type video-type">Video</span>
+              <h4 class="resource-title">Tutor's Videos</h4>
+              <p class="resource-desc">
+                Watch videos brought to you by the Tutorly's AP Biology team
+              </p>
+              <a
+                href="https://tutorlyonline.notion.site/1-2-Elements-of-Life-221007644bdf81749021cc2046bdcb4f?source=copy_link"
+                class="resource-link"
+                target="_blank"
+              >
+                Watch Now <i class="fas fa-arrow-right"></i>
+              </a>
+            </div>
+            <div class="resource-card">
+              <span class="resource-type reading-type">Notes</span>
+              <h4 class="resource-title">Tutor's Notes</h4>
+              <p class="resource-desc">
+                Review notes created by Tutorly's AP Biology team
+              </p>
+              <a
+                href="https://tutorlyonline.notion.site/1-2-Elements-of-Life-1ee007644bdf805091efd09911afdcc2?source=copy_link"
+                class="resource-link"
+                target="_blank"
+              >
+                Review Now <i class="fas fa-arrow-right"></i>
+              </a>
+            </div>
+
+            <div class="resource-card">
+              <span class="resource-type lab-type">Flashcards</span>
+              <h4 class="resource-title">Tutor's Flashcards</h4>
+              <p class="resource-desc">
+                Practice using flashcard decks designed by tutorly's AP Biology
+                team
+              </p>
+              <a
+                href="https://tutorlyonline.notion.site/1-2-Elements-of-Life-221007644bdf81779610f45ea2b6311f?source=copy_link"
+                class="resource-link"
+                target="_blank"
+              >
+                Practice Now <i class="fas fa-arrow-right"></i>
+              </a>
+            </div>
+
+            <!-- <div class="resource-card">
+              <span class="resource-type lab-type">Lab</span>
+              <h4 class="resource-title">Respiration Simulation</h4>
+              <p class="resource-desc">
+                Interactive exploration of aerobic and anaerobic respiration
+                with different substrates.
+              </p>
+              <a
+                href="https://www.biomanbio.com/HTML5GamesandLabs/PhotoRespgames/respiration-interactive"
+                class="resource-link" target="_blank"
+              >
+                Start Lab <i class="fas fa-arrow-right"></i>
+              </a>
+            </div> -->
+
+            <!-- <div class="resource-card">
+                        <span class="resource-type lab-type">Lab</span>
+                        <h4 class="resource-title">Photosynthesis Simulation</h4>
+                        <p class="resource-desc">Interactive lab exploring factors affecting photosynthesis rate (light intensity, CO2, etc.).</p>
+                        <a href="https://www.biomanbio.com/HTML5GamesandLabs/PhotoRespgames/photointeractivehtml5page" class="resource-link" target="_blank">
+                            Start Lab <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div> -->
+
+            <div class="resource-card">
+              <span class="resource-type quiz-type">Quiz</span>
+              <h4 class="resource-title">Chapter Quizzes</h4>
+              <p class="resource-desc">
+                Challenge yourself with quizzes designed by Tutorly's AP Biology
+                team
+              </p>
+              <a
+                href="https://tutorlyonline.notion.site/1-2-Elements-of-Life-221007644bdf8188bc52c2fa618e94e6?source=copy_link"
+                class="resource-link"
+                target="_blank"
+              >
+                Take Quiz <i class="fas fa-arrow-right"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Chapter 3 -->
+        <div class="chapter-card">
+          <h3 class="chapter-title">
+            <i class="fa-solid fa-cubes"></i>1.3 Introduction to Biological
+            Macromolecules
+          </h3>
+          <p class="chapter-desc">
+            Biological macromolecules—carbs, lipids, proteins, nucleic
+            acids—provide energy, structure, genetic coding, and enable life's
+            functions.
+          </p>
+
+          <div class="resources-grid">
+            <div class="resource-card">
+              <span class="resource-type video-type">Video</span>
+              <h4 class="resource-title">Tutor's Videos</h4>
+              <p class="resource-desc">
+                Watch videos brought to you by the Tutorly's AP Biology team
+              </p>
+              <a
+                href="https://tutorlyonline.notion.site/1-3-Introduction-to-Biological-Macromolecules-221007644bdf8127a88bc09cbf7daeca?source=copy_link"
+                class="resource-link"
+                target="_blank"
+              >
+                Watch Now <i class="fas fa-arrow-right"></i>
+              </a>
+            </div>
+            <div class="resource-card">
+              <span class="resource-type reading-type">Notes</span>
+              <h4 class="resource-title">Tutor's Notes</h4>
+              <p class="resource-desc">
+                Review notes created by Tutorly's AP Biology team
+              </p>
+              <a
+                href="https://tutorlyonline.notion.site/1-3-Introduction-to-Biological-Macromolecules-1ee007644bdf80dea5d9f143fbbb00fa?source=copy_link"
+                class="resource-link"
+                target="_blank"
+              >
+                Review Now <i class="fas fa-arrow-right"></i>
+              </a>
+            </div>
+
+            <div class="resource-card">
+              <span class="resource-type lab-type">Flashcards</span>
+              <h4 class="resource-title">Tutor's Flashcards</h4>
+              <p class="resource-desc">
+                Practice using flashcard decks designed by tutorly's AP Biology
+                team
+              </p>
+              <a
+                href="https://tutorlyonline.notion.site/1-3-Introduction-to-Biological-Macromolecules-221007644bdf81148090fc2fc400f5d2?source=copy_link"
+                class="resource-link"
+                target="_blank"
+              >
+                Practice Now <i class="fas fa-arrow-right"></i>
+              </a>
+            </div>
+
+            <!-- <div class="resource-card">
+              <span class="resource-type lab-type">Lab</span>
+              <h4 class="resource-title">Photosynthesis Simulation</h4>
+              <p class="resource-desc">
+                Interactive lab exploring factors affecting photosynthesis rate
+                (light intensity, CO2, etc.).
+              </p>
+              <a
+                href="https://www.biomanbio.com/HTML5GamesandLabs/PhotoRespgames/photointeractivehtml5page"
+                class="resource-link" target="_blank"
+              >
+                Start Lab <i class="fas fa-arrow-right"></i>
+              </a>
+            </div> -->
+
+            <div class="resource-card">
+              <span class="resource-type quiz-type">Quiz</span>
+              <h4 class="resource-title">Chapter Quizzes</h4>
+              <p class="resource-desc">
+                Challenge yourself with quizzes designed by Tutorly's AP Biology
+                team
+              </p>
+              <a
+                href="https://tutorlyonline.notion.site/1-3-Introduction-to-Biological-Macromolecules-221007644bdf81f4b099c077767eaa30?source=copy_link"
+                class="resource-link"
+                target="_blank"
+              >
+                Take Quiz <i class="fas fa-arrow-right"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Chapter 4 -->
+        <div class="chapter-card">
+          <h3 class="chapter-title">
+            <i class="fa-solid fa-database"></i>1.4 Properties of Biological
+            Macromolecules
+          </h3>
+          <p class="chapter-desc">
+            Macromolecules enable life via energy (carbs/lipids), molecular
+            machines (proteins), and genetic coding (nucleic acids).
+          </p>
+
+          <div class="resources-grid">
+            <div class="resource-card">
+              <span class="resource-type video-type">Video</span>
+              <h4 class="resource-title">Tutor's Videos</h4>
+              <p class="resource-desc">
+                Watch videos brought to you by the Tutorly's AP Biology team
+              </p>
+              <a
+                href="https://tutorlyonline.notion.site/1-4-Properties-of-Biological-Macromolecules-221007644bdf8160a21fe3ce2d937df8?source=copy_link"
+                class="resource-link"
+                target="_blank"
+              >
+                Watch Now <i class="fas fa-arrow-right"></i>
+              </a>
+            </div>
+            <div class="resource-card">
+              <span class="resource-type reading-type">Notes</span>
+              <h4 class="resource-title">Tutor's Notes</h4>
+              <p class="resource-desc">
+                Review notes created by Tutorly's AP Biology team
+              </p>
+              <a
+                href="https://tutorlyonline.notion.site/1-4-Properties-of-Biological-Macromolecules-1ee007644bdf80f4b152c793c5052dcd?source=copy_link"
+                class="resource-link"
+                target="_blank"
+              >
+                Review Now <i class="fas fa-arrow-right"></i>
+              </a>
+            </div>
+
+            <div class="resource-card">
+              <span class="resource-type lab-type">Flashcards</span>
+              <h4 class="resource-title">Tutor's Flashcards</h4>
+              <p class="resource-desc">
+                Practice using flashcard decks designed by tutorly's AP Biology
+                team
+              </p>
+              <a
+                href="https://tutorlyonline.notion.site/1-4-Properties-of-Biological-Macromolecules-221007644bdf81fdbcf7e13b0a5e521b?source=copy_link"
+                class="resource-link"
+                target="_blank"
+              >
+                Practice Now <i class="fas fa-arrow-right"></i>
+              </a>
+            </div>
+
+            <!-- <div class="resource-card">
+              <span class="resource-type lab-type">Lab</span>
+              <h4 class="resource-title">Photosynthesis Simulation</h4>
+              <p class="resource-desc">
+                Interactive lab exploring factors affecting photosynthesis rate
+                (light intensity, CO2, etc.).
+              </p>
+              <a
+                href="https://www.biomanbio.com/HTML5GamesandLabs/PhotoRespgames/photointeractivehtml5page"
+                class="resource-link" target="_blank"
+              >
+                Start Lab <i class="fas fa-arrow-right"></i>
+              </a>
+            </div> -->
+
+            <div class="resource-card">
+              <span class="resource-type quiz-type">Quiz</span>
+              <h4 class="resource-title">Chapter Quizzes</h4>
+              <p class="resource-desc">
+                Challenge yourself with quizzes designed by Tutorly's AP Biology
+                team
+              </p>
+              <a
+                href="https://tutorlyonline.notion.site/1-4-Properties-of-Biological-Macromolecules-221007644bdf8119bf1be1985924a60f?source=copy_link"
+                class="resource-link"
+                target="_blank"
+              >
+                Take Quiz <i class="fas fa-arrow-right"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Chapter 5 -->
+        <div class="chapter-card">
+          <h3 class="chapter-title">
+            <i class="fa-solid fa-database"></i>1.5 Structure and Function of
+            Biological Macromolecules
+          </h3>
+          <p class="chapter-desc">
+            Macromolecules' structures dictate functions: carbs (energy), lipids
+            (membranes), proteins (catalysts/structures), and nucleic acids
+            (genetic code) collectively sustain life.
+          </p>
+
+          <div class="resources-grid">
+            <div class="resource-card">
+              <span class="resource-type video-type">Video</span>
+              <h4 class="resource-title">Tutor's Videos</h4>
+              <p class="resource-desc">
+                Watch videos brought to you by the Tutorly's AP Biology team
+              </p>
+              <a
+                href="https://tutorlyonline.notion.site/1-5-Structure-and-Function-of-Biological-Macromolecules-221007644bdf812fb094e66883f12a3b?source=copy_link"
+                class="resource-link"
+                target="_blank"
+              >
+                Watch Now <i class="fas fa-arrow-right"></i>
+              </a>
+            </div>
+            <div class="resource-card">
+              <span class="resource-type reading-type">Notes</span>
+              <h4 class="resource-title">Tutor's Notes</h4>
+              <p class="resource-desc">
+                Review notes created by Tutorly's AP Biology team
+              </p>
+              <a
+                href="https://tutorlyonline.notion.site/1-5-Structure-and-Function-of-Biological-Macromolecules-1ee007644bdf80cdbe8fd5708c1b24e6?source=copy_link"
+                class="resource-link"
+                target="_blank"
+              >
+                Review Now <i class="fas fa-arrow-right"></i>
+              </a>
+            </div>
+
+            <div class="resource-card">
+              <span class="resource-type lab-type">Flashcards</span>
+              <h4 class="resource-title">Tutor's Flashcards</h4>
+              <p class="resource-desc">
+                Practice using flashcard decks designed by tutorly's AP Biology
+                team
+              </p>
+              <a
+                href="https://tutorlyonline.notion.site/1-5-Structure-and-Function-of-Biological-Macromolecules-221007644bdf814696b1c655c11ccee1?source=copy_link"
+                class="resource-link"
+                target="_blank"
+              >
+                Practice Now <i class="fas fa-arrow-right"></i>
+              </a>
+            </div>
+
+            <!-- <div class="resource-card">
+              <span class="resource-type lab-type">Lab</span>
+              <h4 class="resource-title">Photosynthesis Simulation</h4>
+              <p class="resource-desc">
+                Interactive lab exploring factors affecting photosynthesis rate
+                (light intensity, CO2, etc.).
+              </p>
+              <a
+                href="https://www.biomanbio.com/HTML5GamesandLabs/PhotoRespgames/photointeractivehtml5page"
+                class="resource-link" target="_blank"
+              >
+                Start Lab <i class="fas fa-arrow-right"></i>
+              </a>
+            </div> -->
+
+            <div class="resource-card">
+              <span class="resource-type quiz-type">Quiz</span>
+              <h4 class="resource-title">Chapter Quizzes</h4>
+              <p class="resource-desc">
+                Challenge yourself with quizzes designed by Tutorly's AP Biology
+                team
+              </p>
+              <a
+                href="https://tutorlyonline.notion.site/1-5-Structure-and-Function-of-Biological-Macromolecules-221007644bdf815199d4f08b54990446?source=copy_link"
+                class="resource-link"
+                target="_blank"
+              >
+                Take Quiz <i class="fas fa-arrow-right"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Chapter 6 -->
+        <div class="chapter-card">
+          <h3 class="chapter-title">
+            <i class="fa-solid fa-database"></i>1.6 Nucleic Acids
+          </h3>
+          <p class="chapter-desc">
+            Nucleic acids (DNA and RNA) store genetic information in their
+            nucleotide sequences—DNA's double helix ensures stability while
+            RNA's single strand enables protein synthesis and gene regulation.
+          </p>
+
+          <div class="resources-grid">
+            <div class="resource-card">
+              <span class="resource-type video-type">Video</span>
+              <h4 class="resource-title">Tutor's Videos</h4>
+              <p class="resource-desc">
+                Watch videos brought to you by the Tutorly's AP Biology team
+              </p>
+              <a
+                href="https://tutorlyonline.notion.site/1-6-Nucleic-Acids-221007644bdf81718171f9036d134100?source=copy_link"
+                class="resource-link"
+                target="_blank"
+              >
+                Watch Now <i class="fas fa-arrow-right"></i>
+              </a>
+            </div>
+            <div class="resource-card">
+              <span class="resource-type reading-type">Notes</span>
+              <h4 class="resource-title">Tutor's Notes</h4>
+              <p class="resource-desc">
+                Review notes created by Tutorly's AP Biology team
+              </p>
+              <a
+                href="https://tutorlyonline.notion.site/1-6-Nucleic-Acids-1ee007644bdf804c8ca2e5a48d2973f0?source=copy_link"
+                class="resource-link"
+                target="_blank"
+              >
+                Review Now <i class="fas fa-arrow-right"></i>
+              </a>
+            </div>
+
+            <div class="resource-card">
+              <span class="resource-type lab-type">Flashcards</span>
+              <h4 class="resource-title">Tutor's Flashcards</h4>
+              <p class="resource-desc">
+                Practice using flashcard decks designed by tutorly's AP Biology
+                team
+              </p>
+              <a
+                href="https://tutorlyonline.notion.site/1-6-Nucleic-Acids-221007644bdf81b98468dbfc96685394?source=copy_link"
+                class="resource-link"
+                target="_blank"
+              >
+                Practice Now <i class="fas fa-arrow-right"></i>
+              </a>
+            </div>
+
+            <!-- <div class="resource-card">
+              <span class="resource-type lab-type">Lab</span>
+              <h4 class="resource-title">Photosynthesis Simulation</h4>
+              <p class="resource-desc">
+                Interactive lab exploring factors affecting photosynthesis rate
+                (light intensity, CO2, etc.).
+              </p>
+              <a
+                href="https://www.biomanbio.com/HTML5GamesandLabs/PhotoRespgames/photointeractivehtml5page"
+                class="resource-link" target="_blank"
+              >
+                Start Lab <i class="fas fa-arrow-right"></i>
+              </a>
+            </div> -->
+
+            <div class="resource-card">
+              <span class="resource-type quiz-type">Quiz</span>
+              <h4 class="resource-title">Chapter Quizzes</h4>
+              <p class="resource-desc">
+                Challenge yourself with quizzes designed by Tutorly's AP Biology
+                team
+              </p>
+              <a
+                href="https://tutorlyonline.notion.site/1-6-Nucleic-Acids-221007644bdf81efa887d4189d5afa0d?source=copy_link"
+                class="resource-link"
+                target="_blank"
+              >
+                Take Quiz <i class="fas fa-arrow-right"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Whole Unit -->
+        <div class="chapter-card">
+          <h3 class="chapter-title">
+            <i class="fa-solid fa-book"></i>Whole Unit
+          </h3>
+          <p class="chapter-desc">
+            Nucleic acids (DNA and RNA) store genetic information in their
+            nucleotide sequences—DNA's double helix ensures stability while
+            RNA's single strand enables protein synthesis and gene regulation.
+          </p>
+
+          <div class="resources-grid">
+            <div class="resource-card">
+              <span class="resource-type video-type">Video</span>
+              <h4 class="resource-title">Tutor's Videos</h4>
+              <p class="resource-desc">
+                Watch videos brought to you by the Tutorly's AP Biology team
+              </p>
+              <a
+                href="https://tutorlyonline.notion.site/1-6-Nucleic-Acids-221007644bdf81718171f9036d134100?source=copy_link"
+                class="resource-link"
+                target="_blank"
+              >
+                Watch Now <i class="fas fa-arrow-right"></i>
+              </a>
+            </div>
+            <div class="resource-card">
+              <span class="resource-type reading-type">Notes</span>
+              <h4 class="resource-title">Tutor's Notes</h4>
+              <p class="resource-desc">
+                Review notes created by Tutorly's AP Biology team
+              </p>
+              <a
+                href="https://tutorlyonline.notion.site/1-6-Nucleic-Acids-1ee007644bdf804c8ca2e5a48d2973f0?source=copy_link"
+                class="resource-link"
+                target="_blank"
+              >
+                Review Now <i class="fas fa-arrow-right"></i>
+              </a>
+            </div>
+
+            <div class="resource-card">
+              <span class="resource-type lab-type">Flashcards</span>
+              <h4 class="resource-title">Tutor's Flashcards</h4>
+              <p class="resource-desc">
+                Practice using flashcard decks designed by tutorly's AP Biology
+                team
+              </p>
+              <a
+                href="https://tutorlyonline.notion.site/1-6-Nucleic-Acids-221007644bdf81b98468dbfc96685394?source=copy_link"
+                class="resource-link"
+                target="_blank"
+              >
+                Practice Now <i class="fas fa-arrow-right"></i>
+              </a>
+            </div>
+
+            <!-- <div class="resource-card">
+              <span class="resource-type lab-type">Lab</span>
+              <h4 class="resource-title">Photosynthesis Simulation</h4>
+              <p class="resource-desc">
+                Interactive lab exploring factors affecting photosynthesis rate
+                (light intensity, CO2, etc.).
+              </p>
+              <a
+                href="https://www.biomanbio.com/HTML5GamesandLabs/PhotoRespgames/photointeractivehtml5page"
+                class="resource-link" target="_blank"
+              >
+                Start Lab <i class="fas fa-arrow-right"></i>
+              </a>
+            </div> -->
+
+            <div class="resource-card">
+              <span class="resource-type quiz-type">Quiz</span>
+              <h4 class="resource-title">Chapter Quizzes</h4>
+              <p class="resource-desc">
+                Challenge yourself with quizzes designed by Tutorly's AP Biology
+                team
+              </p>
+              <a
+                href="https://tutorlyonline.notion.site/1-6-Nucleic-Acids-221007644bdf81efa887d4189d5afa0d?source=copy_link"
+                class="resource-link"
+                target="_blank"
+              >
+                Take Quiz <i class="fas fa-arrow-right"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+        <!-- <div class="unit-actions">
+          <a href="../still-working" class="btn btn-primary">
+            <i class="fas fa-clipboard-list"></i> Unit Test
+          </a>
+          <a href="../still-working" class="btn btn-primary">
+            <i class="fas fa-file-pdf"></i> Unit Study Guide
+          </a>
+          <a href="../still-working" class="btn btn-primary">
+            <i class="fa-solid fa-note-sticky"></i> Unit Flashcards
+          </a>
+        </div> -->
+      </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="footer-container">
+        <div class="footer-grid">
+          <div class="footer-column">
+            <h3 class="footer-logo">
+              <i class="fa-solid fa-graduation-cap"></i> Tutorly
+            </h3>
+            <p class="footer-about">
+              Peer-to-peer learning platform connecting students with qualified
+              tutors.
+            </p>
+            <div class="footer-social">
+              <a href="https://discord.gg/KvTEwuYYXc"
+                ><i class="fab fa-discord"></i
+              ></a>
+              <a href="https://www.instagram.com/tutorlyonline/"
+                ><i class="fab fa-instagram"></i
+              ></a>
+              <a href="https://www.youtube.com/channel/UCwMIQD0kkJbeYCDhcY8IqpQ"
+                ><i class="fab fa-youtube"></i
+              ></a>
+              <a href="https://www.tiktok.com/@tutorlyonline?lang=en"
+                ><i class="fab fa-tiktok"></i
+              ></a>
+            </div>
+          </div>
+
+          <div class="footer-column">
+            <h3>Navigation</h3>
+            <ul class="footer-links">
+              <li>
+                <a href="/public/pages/courses/honors-biology/home">AP Bio Home</a>
+              </li>
+              <li><a href="../curriculum">Curriculum</a></li>
+              <li><a href="../all-videos">Watch Videos</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-column">
+            <h3>Support</h3>
+            <ul class="footer-links">
+              <li>
+                <a href="/public/pages/help/contact">Contact</a>
+              </li>
+              <li>
+                <a href="/public/pages/help/terms-and-conditions"
+                  >Terms & Conditions</a
+                >
+              </li>
+              <li>
+                <a href="/public/pages/help/privacy-policy">Privacy Policy</a>
+              </li>
+            </ul>
+          </div>
+
+          <div class="footer-column">
+            <h3>Apply</h3>
+            <ul class="footer-links">
+              <li>
+                <a
+                  href="https://docs.google.com/forms/d/e/1FAIpQLSeM8hqQRiLXtN7BpMBetiWBQZ4xrd5PPyISZj0DgV4JlfQPaw/viewform?usp=dialog"
+                  target="_blank"
+                  >Tutor Application</a
+                >
+              </li>
+              <li>
+                <a
+                  href="https://docs.google.com/forms/d/e/1FAIpQLSeBF2uVM3kbkGdKLWkRXoJY6Xx6Kds646CqPXX_tVenN_AkBg/viewform?usp=dialog"
+                  target="_blank"
+                  >Social Media Team Application</a
+                >
+              </li>
+              <li>
+                <a
+                  href="https://docs.google.com/forms/d/e/1FAIpQLSeM8hqQRiLXtN7BpMBetiWBQZ4xrd5PPyISZj0DgV4JlfQPaw/viewform?usp=dialog"
+                  target="_blank"
+                  >Miscellaneous Application</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="footer-bottom">
+          <p>&copy; 2025 Tutorly. All rights reserved.</p>
+          <div class="footer-payments">
+            <i class="fab fa-cc-visa"></i>
+            <i class="fab fa-cc-mastercard"></i>
+            <i class="fab fa-cc-paypal"></i>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!--Start of Tawk.to Script-->
+    <style>
+      /* Container for the custom chat button */
+      .custom-chat-button {
+        position: fixed;
+        bottom: 25px;
+        right: 29px;
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+        z-index: 1000;
+        transition: transform 0.3s ease;
+      }
+
+      .custom-chat-button:hover {
+        transform: scale(1.25);
+      }
+
+      /* Text bubble styling */
+      .chat-text-bubble {
+        background-color: #f54a4a;
+        color: white;
+        padding: 8px 16px;
+        border-radius: 20px;
+        font-weight: bold;
+        font-size: 14px;
+        margin-right: 10px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+      }
+
+      /* Logo container styling */
+      .chat-logo {
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        background-color: hsl(145, 48%, 28%);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+        overflow: hidden;
+      }
+
+      /* Your logo styling */
+      .chat-logo img {
+        width: 40px;
+        height: 100vh;
+        object-fit: contain;
+      }
+
+      /* Media query for mobile devices */
+      @media only screen and (max-width: 768px) {
+        .chat-logo {
+          display: none; /* Hide the logo on mobile */
+        }
+
+        .chat-text-bubble {
+          margin-right: 0; /* Remove right margin since there's no logo */
+        }
+      }
+
+      /* Remove borders from tawk.to iframe */
+      .tawk-iframe-container,
+      .tawk-min-container {
+        border: none !important;
+        padding: 0 !important;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3) !important;
+        border-radius: 10px !important;
+        overflow: hidden !important;
+      }
+
+      /* Remove borders from the chat window */
+      #tawk-body-iframe,
+      #tawk-minified-iframe {
+        border: none !important;
+      }
+
+      /* Target the iframe documents */
+      iframe[title="chat widget"] {
+        border: none !important;
+      }
+
+      .tawk-button-container,
+      .tawk-min-container,
+      .tawk-max-container {
+        display: none !important;
+      }
+    </style>
+
+    <!-- Custom Chat Button -->
+    <div class="custom-chat-button" id="custom-tawk-button">
+      <!-- <div class="chat-text-bubble">Live Chat</div> -->
+      <div class="chat-logo">
+        <!-- Replace this with your actual logo -->
+        <img src="../images/apbiologytawktoicon.png" alt="Company Logo" />
+      </div>
+    </div>
+
+    <!-- tawk.to Integration Script -->
+    <script>
+      // Custom button click handler
+      document
+        .getElementById("custom-tawk-button")
+        .addEventListener("click", function () {
+          // If Tawk is loaded, show the chat window
+          if (window.Tawk_API && window.Tawk_API.showWidget) {
+            window.Tawk_API.maximize();
+          }
+        });
+
+      // tawk.to Integration
+      var Tawk_API = Tawk_API || {};
+      var Tawk_LoadStart = new Date();
+
+      // Configure Tawk before loading
+      // This will prevent the chat from auto-opening
+      Tawk_API = Tawk_API || {};
+
+      // Prevent auto-popup
+      Tawk_API.onBeforeLoad = function () {
+        // Disable automatic popups
+        Tawk_API.disablePopups = true;
+      };
+
+      // When tawk loads
+      Tawk_API.onLoad = function () {
+        // Hide the default button
+        Tawk_API.hideWidget();
+
+        // Ensure the widget starts hidden
+        setTimeout(function () {
+          Tawk_API.hideWidget();
+        }, 100);
+
+        // Apply CSS to remove borders
+        removeTawkBorders();
+      };
+
+      // Function to remove tawk.to borders
+      function removeTawkBorders() {
+        // Create a new style element
+        const style = document.createElement("style");
+        style.type = "text/css";
+
+        // CSS to remove borders from tawk.to elements
+        const css = `
+          .tawk-iframe-container, .tawk-min-container {
+              border: none !important;
+              padding: 0 !important;
+              box-shadow: 0 2px 10px rgba(0,0,0,0.3) !important;
+              border-radius: 10px !important;
+              overflow: hidden !important;
+          }
+          
+          #tawk-body-iframe, #tawk-minified-iframe {
+              border: none !important;
+          }
+      `;
+
+        // Add the CSS to the style element
+        if (style.styleSheet) {
+          style.styleSheet.cssText = css;
+        } else {
+          style.appendChild(document.createTextNode(css));
+        }
+
+        // Add the style to the document head
+        document.head.appendChild(style);
+
+        // Try to modify iframe content when available
+        setTimeout(function () {
+          try {
+            const tawkIframes = document.querySelectorAll(
+              'iframe[title="chat widget"]'
+            );
+            tawkIframes.forEach((iframe) => {
+              if (iframe.contentDocument) {
+                const iframeStyle = document.createElement("style");
+                iframeStyle.textContent = `
+                          .card, .card-header, .card-body, .card-footer {
+                              border: none !important;
+                          }
+                          .tawk-card {
+                              border: none !important;
+                              box-shadow: none !important;
+                          }
+                      `;
+                iframe.contentDocument.head.appendChild(iframeStyle);
+              }
+            });
+          } catch (e) {
+            console.log(
+              "Could not modify tawk iframe due to cross-origin restrictions"
+            );
+          }
+        }, 3000);
+      }
+
+      // Load the tawk.to script
+      (function () {
+        var s1 = document.createElement("script");
+        var s0 = document.getElementsByTagName("script")[0];
+        s1.async = true;
+        s1.src = "https://embed.tawk.to/680088b0f308dc1911a96463/1ip11bs31";
+        s1.charset = "UTF-8";
+        s1.setAttribute("crossorigin", "*");
+        s0.parentNode.insertBefore(s1, s0);
+      })();
+    </script>
+  </body>
+</html>
