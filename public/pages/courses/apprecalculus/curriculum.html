@@ -1,0 +1,1230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-RB5YGLMJ29"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-RB5YGLMJ29');
+</script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Tutorly - Premium online tutoring platform with expert high school and college tutors">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="shortcut icon" href="/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <meta name="apple-mobile-web-app-title" content="Tutorly" />
+    <link rel="manifest" href="/site.webmanifest" />
+    
+    <!-- Fonts & Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="./css/apchemistry-footer.css">
+    <link rel="stylesheet" href="./css/apchemistry-header.css">
+    <link rel="stylesheet" href="./css/apchemistry-home.css">
+    
+    <title>Tutorly | AP Chemistry Curriculum</title>
+    
+    <style>
+        /* Enhanced Curriculum Styles */
+        .curriculum-container {
+            max-width: 1000px;
+            margin: 3rem auto;
+            padding: 0 1.5rem;
+            animation: fadeIn 0.6s ease-out;
+        }
+        
+        .curriculum-header {
+            text-align: center;
+            margin-bottom: 2.5rem;
+        }
+        
+        .curriculum-title {
+            font-size: 2.5rem;
+            color: hsl(135, 29%, 53%);
+            margin-bottom: 0.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 1rem;
+        }
+        
+        .curriculum-subtitle {
+            color: hsl(135, 47%, 69%);
+            font-size: 1.1rem;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        
+        .units-grid {
+            display: flex;
+            flex-direction: column;
+            gap: 1.25rem;
+        }
+        
+        .unit-card {
+            background: white;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+            transition: all 0.3s ease;
+            opacity: 0;
+            transform: translateY(20px);
+        }
+        
+        /* Staggered unit animations */
+        .unit-card:nth-child(1) { animation: fadeInUp 0.6s ease-out 0.1s forwards; }
+        .unit-card:nth-child(2) { animation: fadeInUp 0.6s ease-out 0.2s forwards; }
+        .unit-card:nth-child(3) { animation: fadeInUp 0.6s ease-out 0.3s forwards; }
+        .unit-card:nth-child(4) { animation: fadeInUp 0.6s ease-out 0.4s forwards; }
+        .unit-card:nth-child(5) { animation: fadeInUp 0.6s ease-out 0.5s forwards; }
+        .unit-card:nth-child(6) { animation: fadeInUp 0.6s ease-out 0.6s forwards; }
+        .unit-card:nth-child(7) { animation: fadeInUp 0.6s ease-out 0.7s forwards; }
+        .unit-card:nth-child(8) { animation: fadeInUp 0.6s ease-out 0.8s forwards; }
+        .unit-card:nth-child(9) { animation: fadeInUp 0.6s ease-out 0.9s forwards; }
+        .unit-card:nth-child(10) { animation: fadeInUp 0.6s ease-out 1.0s forwards; }
+        .unit-card:nth-child(11) { animation: fadeInUp 0.6s ease-out 1.1s forwards; }
+        
+        .unit-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(0,0,0,0.12);
+        }
+        
+        .unit-header {
+    padding: 1.25rem 1.75rem;
+    background: hsl(135, 29%, 53%); /* Changed from gradient to solid color */
+    color: white;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+body {
+    background-color: white;
+}
+
+.curriculum-container {
+    background-color: white; /* This was empty before - now set to white */
+}
+
+.unit-header:hover {
+    background: hsl(135, 47%, 69%); /* Changed from gradient to solid color */
+}
+        
+        .unit-number {
+            width: 32px;
+            height: 32px;
+            background: #d8f3dc;
+            color: hsl(135, 29%, 53%);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 1rem;
+            font-weight: bold;
+            font-size: 0.95rem;
+            flex-shrink: 0;
+        }
+        
+        .unit-title {
+            flex-grow: 1;
+            font-weight: 600;
+            font-size: 1.1rem;
+        }
+        
+        .unit-toggle {
+            width: 22px;
+            height: 22px;
+            transition: transform 0.4s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+            flex-shrink: 0;
+        }
+        
+        .unit-card.active .unit-toggle {
+            transform: rotate(180deg);
+        }
+        
+        .chapters-list {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height .4s cubic-bezier(0.4, 0, 0.2, 1);
+            background: white;
+        }
+        
+        .unit-card.active .chapters-list {
+            max-height: 2000px;
+        }
+        
+        .chapter-item {
+            padding: 1.25rem 1.75rem;
+            border-bottom: 1px solid #f5f5f5;
+            display: flex;
+            align-items: center;
+            opacity: 0;
+            transform: translateY(-10px);
+            transition: 
+                opacity 0.3s ease,
+                transform 0.3s ease,
+                background-color 0.2s ease;
+        }
+        
+        .unit-card.active .chapter-item {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        /* Staggered chapter animations */
+        .unit-card.active .chapter-item:nth-child(1) { transition-delay: 0.1s; }
+        .unit-card.active .chapter-item:nth-child(2) { transition-delay: 0.15s; }
+        .unit-card.active .chapter-item:nth-child(3) { transition-delay: 0.2s; }
+        .unit-card.active .chapter-item:nth-child(4) { transition-delay: 0.25s; }
+        .unit-card.active .chapter-item:nth-child(5) { transition-delay: 0.3s; }
+        .unit-card.active .chapter-item:nth-child(6) { transition-delay: 0.35s; }
+        .unit-card.active .chapter-item:nth-child(7) { transition-delay: 0.4s; }
+        .unit-card.active .chapter-item:nth-child(8) { transition-delay: 0.45s; }
+        .unit-card.active .chapter-item:nth-child(9) { transition-delay: 0.5s; }
+        .unit-card.active .chapter-item:nth-child(10) { transition-delay: 0.55s; }
+        .unit-card.active .chapter-item:nth-child(11) { transition-delay: 0.6s; }
+        
+        .chapter-item:hover {
+            background: #f9f9f9;
+        }
+        
+        .chapter-number {
+            color: hsl(135, 29%, 53%);
+            font-weight: 600;
+            min-width: 50px;
+            font-family: 'Inter', sans-serif;
+        }
+        
+        .chapter-title {
+            flex-grow: 1;
+            color: #333;
+        }
+        
+        .chapter-duration {
+            font-size: 0.85rem;
+            color: #2d6a4f;
+            background: rgba(93, 155, 123, 0.1);
+            padding: 0.35rem 0.75rem;
+            border-radius: 20px;
+            font-weight: 500;
+        }
+        
+        .header {
+    position: relative;
+    z-index: 100;
+}
+
+        /* Animations */
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        
+        @keyframes fadeInUp {
+            from { 
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to { 
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .curriculum-container {
+                padding: 0 1rem;
+                margin: 2rem auto;
+            }
+            
+            .curriculum-title {
+                font-size: 2rem;
+            }
+            
+            .unit-header {
+                padding: 1.1rem 1.25rem;
+            }
+            
+            .chapter-item {
+                padding: 1rem 1.25rem;
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 0.5rem;
+            }
+            
+            .chapter-duration {
+                align-self: flex-start;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Your Original Header -->
+    <header class="header">
+        <nav class="nav container">
+            <div class="nav__data">
+                <a href="/" class="nav__logo">
+                    <i class="fa-solid fa-graduation-cap"></i> Tutorly
+                </a>
+                <a href="/public/pages/courses/apchemistry/home" class="nav__logo" id="tutorly">
+                    <i class="fa-solid fa-vial"></i>&nbsp;AP Chem
+                </a>
+                    <div class="nav__toggle" id="nav-toggle">
+                        <i class="ri-menu-line nav__toggle-menu"></i>
+                        <i class="ri-close-line nav__toggle-close"></i>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Nav Menu -->
+            <div class="nav__menu" id="nav-menu">
+                <ul class="nav__list">
+                    <li><a href="https://tutorlyonline.notion.site/AP-Chemistry-Department-Staff-1f3007644bdf81d28504cf1d6f0c8d6c?source=copy_link" class="nav__link" target="_blank">Staff</a></li>
+                    <li><a href="/public/pages/courses/apchemistry/curriculum" class="nav__link">Curriculum</a></li>
+                    <li class="dropdown__item">
+                        <div class="nav__link dropdown__button">
+                            Navigation <i class="ri-arrow-down-s-line dropdown__arrow"></i>
+                        </div>
+                        <div class="dropdown__container">
+                            <div class="dropdown__content">
+                                <div class="dropdown__group">
+                                    <div class="dropdown__icon"><i class="fa-solid fa-video"></i></div>
+                                    <span class="dropdown__title">Videos</span>
+                                    <ul class="dropdown__list">
+                                        <li><a href="https://tutorlyonline.notion.site/AP-Chemistry-Curriculum-Videos-1f3007644bdf81cd980cf5e4c0ddd101?source=copy_link" class="dropdown__link" target="_blank">Pre-recorded Videos</a></li>
+                                        <li><a href="https://tutorlyonline.notion.site/AP-Chemistry-Live-Meeting-Recordings-1f3007644bdf81f4874dd341def229c1?source=copy_link" class="dropdown__link" target="_blank">Live Meeting Recordings</a></li>
+                                    </ul>
+                                </div>
+                                <div class="dropdown__group">
+                                    <div class="dropdown__icon"><i class="fa-solid fa-star"></i></div>
+                                    <span class="dropdown__title">Test Prep & Review</span>
+                                    <ul class="dropdown__list">
+                                        <li><a href="https://tutorlyonline.notion.site/AP-Chemistry-Course-Curriculum-Notes-1f3007644bdf81198be4fb4481e3ed99?source=copy_link" class="dropdown__link" target="_blank">Curriculum Notes</a></li>
+                                        <li><a href="https://tutorlyonline.notion.site/AP-Chemistry-Course-Curriculum-Flashcards-1f3007644bdf8111bad2f90b74db1f02?source=copy_link" class="dropdown__link" target="_blank">Flashcards</a></li>
+                                        <li><a href="https://tutorlyonline.notion.site/AP-Chemistry-Course-Curriculum-Practice-Assessments-1f3007644bdf81cdbaeac033a9862484?source=copy_link" class="dropdown__link" target="_blank">Assessments</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li class="dropdown__item">
+                        <div class="nav__link dropdown__button">
+                            External Resources <i class="ri-arrow-down-s-line dropdown__arrow"></i>
+                        </div>
+                        <div class="dropdown__container">
+                            <div class="dropdown__content">
+                                <div class="dropdown__group">
+                                    <div class="dropdown__icon"><i class="fa-solid fa-lightbulb"></i></div>
+                                    <span class="dropdown__title">External Sites</span>
+                                    <ul class="dropdown__list">
+                                        <li><a href="https://www.youtube.com/jeremykrug" class="dropdown__link" target="_blank">Jeremy Krug</a></li>
+                                        <li><a href="https://www.khanacademy.org/science/ap-chemistry-beta" class="dropdown__link" target="_blank">Khan Academy</a></li>
+                                        <li><a href="https://apcentral.collegeboard.org/courses/ap-chemistry/exam/past-exam-questions" class="dropdown__link" target="_blank">Past FRQs</a></li>
+                                        <li><a href="https://apstudents.collegeboard.org" class="dropdown__link" target="_blank">AP Classroom</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Enhanced Main Content -->
+    <main class="curriculum-container">
+        <div class="curriculum-header">
+            <h1 class="curriculum-title">
+                <span>🧪</span> AP Chemistry Curriculum <span>🧪</span>
+            </h1>
+            <p class="curriculum-subtitle">Explore all 9 units and their chapters with detailed learning objectives</p>
+        </div>
+        
+        <div class="units-grid">
+            <!-- Unit 1 -->
+            <div class="unit-card">
+                <div class="unit-header">
+                    <div class="unit-number">1</div>
+                    <div class="unit-title">Atomic Structure and Properties</div>
+                    <svg class="unit-toggle" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <polyline points="6 9 12 15 18 9"></polyline>
+                    </svg>
+                </div>
+                <div class="chapters-list">
+                    <div class="chapter-item">
+                        <div class="chapter-number">1.1</div>
+                        <div class="chapter-title">Moles and Molar Mass</div>
+                        <!-- <div class="chapter-duration">2 classes</div> -->
+                    </div>
+                    <div class="chapter-item">
+                        <div class="chapter-number">1.2</div>
+                        <div class="chapter-title">Mass Spectra of Elements</div>
+                        <!-- <div class="chapter-duration">1 class</div> -->
+                    </div>
+                    <div class="chapter-item">
+                        <div class="chapter-number">1.3</div>
+                        <div class="chapter-title">Elemental Composition of Pure Substances</div>
+                        <!-- <div class="chapter-duration">3 classes</div> -->
+                    </div>
+                    <div class="chapter-item">
+                        <div class="chapter-number">1.4</div>
+                        <div class="chapter-title">Composition of Mixtures</div>
+                        <!-- <div class="chapter-duration">3 classes</div> -->
+                    </div>
+                    <div class="chapter-item">
+                        <div class="chapter-number">1.5</div>
+                        <div class="chapter-title">Atomic Spectra and Electron Configuration</div>
+                        <!-- <div class="chapter-duration">3 classes</div> -->
+                    </div>
+                    <div class="chapter-item">
+                        <div class="chapter-number">1.6</div>
+                        <div class="chapter-title">Photoelectron Spectroscopy</div>
+                        <!-- <div class="chapter-duration">3 classes</div> -->
+                    </div>
+                    <div class="chapter-item">
+                        <div class="chapter-number">1.7</div>
+                        <div class="chapter-title">Periodic Trends</div>
+                        <!-- <div class="chapter-duration">3 classes</div> -->
+                    </div>
+                    <div class="chapter-item">
+                        <div class="chapter-number">1.8</div>
+                        <div class="chapter-title">Valence Electrons and Ionic Compounds</div>
+                        <!-- <div class="chapter-duration">3 classes</div> -->
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Unit 2 -->
+            <div class="unit-card">
+                <div class="unit-header">
+                    <div class="unit-number">2</div>
+                    <div class="unit-title">Compound Structure and Properties</div>
+                    <svg class="unit-toggle" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <polyline points="6 9 12 15 18 9"></polyline>
+                    </svg>
+                </div>
+                <div class="chapters-list">
+                    <div class="chapter-item">
+                        <div class="chapter-number">2.1</div>
+                        <div class="chapter-title">Types of Chemical Bonds</div>
+                        <!-- <div class="chapter-duration">3 classes</div> -->
+                    </div>
+                    <div class="chapter-item">
+                        <div class="chapter-number">2.2</div>
+                        <div class="chapter-title">Intramolecular Force and Potential Energy</div>
+                        <!-- <div class="chapter-duration">2 classes</div> -->
+                    </div>
+                    <div class="chapter-item">
+                        <div class="chapter-number">2.3</div>
+                        <div class="chapter-title">Structure of Ionic Solids</div>
+                        <!-- <div class="chapter-duration">1 class</div> -->
+                    </div>
+                    <div class="chapter-item">
+                        <div class="chapter-number">2.4</div>
+                        <div class="chapter-title">Structure of Metals and Alloys</div>
+                        <!-- <div class="chapter-duration">1 class</div> -->
+                    </div>
+                    <div class="chapter-item">
+                        <div class="chapter-number">2.5</div>
+                        <div class="chapter-title">Lewis Diagrams</div>
+                        <!-- <div class="chapter-duration">1 class</div> -->
+                    </div>
+                    <div class="chapter-item">
+                        <div class="chapter-number">2.6</div>
+                        <div class="chapter-title">Resonance and Formal Charge</div>
+                        <!-- <div class="chapter-duration">1 class</div> -->
+                    </div>
+                    <div class="chapter-item">
+                        <div class="chapter-number">2.7</div>
+                        <div class="chapter-title">VESPR and Hybridization</div>
+                        <!-- <div class="chapter-duration">1 class</div> -->
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Unit 3 -->
+            <div class="unit-card">
+                <div class="unit-header">
+                    <div class="unit-number">3</div>
+                    <div class="unit-title">Properties of Substances and Mixtures</div>
+                    <svg class="unit-toggle" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <polyline points="6 9 12 15 18 9"></polyline>
+                    </svg>
+                </div>
+                <div class="chapters-list">
+                    <div class="chapter-item">
+                        <div class="chapter-number">3.1</div>
+                        <div class="chapter-title">Intermolecular and Interparticle Forces</div>
+                        <!-- <div class="chapter-duration">3 classes</div> -->
+                    </div>
+                    <div class="chapter-item">
+                        <div class="chapter-number">3.2</div>
+                        <div class="chapter-title">Properties of Solids</div>
+                        <!-- <div class="chapter-duration">2 classes</div> -->
+                    </div>
+                    <div class="chapter-item">
+                        <div class="chapter-number">3.3</div>
+                        <div class="chapter-title">Solids, Liquids, and Gases</div>
+                        <!-- <div class="chapter-duration">1 class</div> -->
+                    </div>
+                    <div class="chapter-item">
+                        <div class="chapter-number">3.4</div>
+                        <div class="chapter-title">Ideal Gas Law</div>
+                        <!-- <div class="chapter-duration">1 class</div> -->
+                    </div>
+                    <div class="chapter-item">
+                        <div class="chapter-number">3.5</div>
+                        <div class="chapter-title">Kinetic Molecular Theory</div>
+                        <!-- <div class="chapter-duration">1 class</div> -->
+                    </div>
+                    <div class="chapter-item">
+                        <div class="chapter-number">3.6</div>
+                        <div class="chapter-title">Deviation from Ideal Gas Law</div>
+                        <!-- <div class="chapter-duration">1 class</div> -->
+                    </div>
+                    <div class="chapter-item">
+                        <div class="chapter-number">3.7</div>
+                        <div class="chapter-title">Solutions and Mixtures</div>
+                        <!-- <div class="chapter-duration">1 class</div> -->
+                    </div>
+                    <div class="chapter-item">
+                        <div class="chapter-number">3.8</div>
+                        <div class="chapter-title">Representations of Solutions</div>
+                        <!-- <div class="chapter-duration">1 class</div> -->
+                    </div>
+                    <div class="chapter-item">
+                        <div class="chapter-number">3.9</div>
+                        <div class="chapter-title">Separation of Solutions and Mixtures</div>
+                        <!-- <div class="chapter-duration">1 class</div> -->
+                    </div>
+                    <div class="chapter-item">
+                        <div class="chapter-number">3.10</div>
+                        <div class="chapter-title">Solubility</div>
+                        <!-- <div class="chapter-duration">1 class</div> -->
+                    </div>
+                    <div class="chapter-item">
+                        <div class="chapter-number">3.11</div>
+                        <div class="chapter-title">Spectroscopy and the Electromagnetic Spectrum</div>
+                        <!-- <div class="chapter-duration">1 class</div> -->
+                    </div>
+                    <div class="chapter-item">
+                        <div class="chapter-number">3.12</div>
+                        <div class="chapter-title">Properties of Photons</div>
+                        <!-- <div class="chapter-duration">1 class</div> -->
+                    </div>
+                    <div class="chapter-item">
+                        <div class="chapter-number">3.13</div>
+                        <div class="chapter-title">Beer-Lambert Law</div>
+                        <!-- <div class="chapter-duration">1 class</div> -->
+                    </div>
+                </div>
+            </div>
+
+            <!-- Unit 4 -->
+            <div class="unit-card">
+                <div class="unit-header">
+                    <div class="unit-number">4</div>
+                    <div class="unit-title">Chemical Reactions</div>
+                    <svg class="unit-toggle" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <polyline points="6 9 12 15 18 9"></polyline>
+                    </svg>
+                </div>
+                <div class="chapters-list">
+                    <div class="chapter-item">
+                        <div class="chapter-number">4.1</div>
+                        <div class="chapter-title">Introduction for Reactions</div>
+                        <!-- <div class="chapter-duration">3 classes</div> -->
+                    </div>
+                    <div class="chapter-item">
+                        <div class="chapter-number">4.2</div>
+                        <div class="chapter-title">Net Ionic Equations</div>
+                        <!-- <div class="chapter-duration">2 classes</div> -->
+                    </div>
+                    <div class="chapter-item">
+                        <div class="chapter-number">4.3</div>
+                        <div class="chapter-title">Representations of Reactions</div>
+                        <!-- <div class="chapter-duration">1 class</div> -->
+                    </div>
+                    <div class="chapter-item">
+                        <div class="chapter-number">4.4</div>
+                        <div class="chapter-title">Physical and Chemical Changes</div>
+                        <!-- <div class="chapter-duration">1 class</div> -->
+                    </div>
+                    <div class="chapter-item">
+                        <div class="chapter-number">4.5</div>
+                        <div class="chapter-title">Stoichiometry</div>
+                        <!-- <div class="chapter-duration">1 class</div> -->
+                    </div>
+                    <div class="chapter-item">
+                        <div class="chapter-number">4.6</div>
+                        <div class="chapter-title">Introduction to Titration</div>
+                        <!-- <div class="chapter-duration">1 class</div> -->
+                    </div>
+                    <div class="chapter-item">
+                        <div class="chapter-number">4.7</div>
+                        <div class="chapter-title">Types of Chemical Reactions</div>
+                        <!-- <div class="chapter-duration">1 class</div> -->
+                    </div>
+                    <div class="chapter-item">
+                        <div class="chapter-number">4.8</div>
+                        <div class="chapter-title">Introduction to Acid-Base Reactions</div>
+                        <!-- <div class="chapter-duration">1 class</div> -->
+                    </div>
+                    <div class="chapter-item">
+                        <div class="chapter-number">4.9</div>
+                        <div class="chapter-title">Oxidation-Reduction (Redox) Reactions</div>
+                        <!-- <div class="chapter-duration">1 class</div> -->
+                    </div>
+                </div>
+            </div>
+
+            <!-- Unit 5 -->
+            <div class="unit-card">
+                <div class="unit-header">
+                    <div class="unit-number">5</div>
+                    <div class="unit-title">Kinetics</div>
+                    <svg class="unit-toggle" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <polyline points="6 9 12 15 18 9"></polyline>
+                    </svg>
+                </div>
+                <div class="chapters-list">
+                    <div class="chapter-item">
+                        <div class="chapter-number">5.1</div>
+                        <div class="chapter-title">Reaction Rates</div>
+                        <!-- <div class="chapter-duration">3 classes</div> -->
+                    </div>
+                    <div class="chapter-item">
+                        <div class="chapter-number">5.2</div>
+                        <div class="chapter-title">Introduction to Rate Law</div>
+                        <!-- <div class="chapter-duration">2 classes</div> -->
+                    </div>
+                    <div class="chapter-item">
+                        <div class="chapter-number">5.3</div>
+                        <div class="chapter-title">Concentration Changes Over Time</div>
+                        <!-- <div class="chapter-duration">1 class</div> -->
+                    </div>
+                    <div class="chapter-item">
+                        <div class="chapter-number">5.4</div>
+                        <div class="chapter-title">Elementary Reactions</div>
+                        <!-- <div class="chapter-duration">1 class</div> -->
+                    </div>
+                    <div class="chapter-item">
+                        <div class="chapter-number">5.5</div>
+                        <div class="chapter-title">Collision Model</div>
+                        <!-- <div class="chapter-duration">1 class</div> -->
+                    </div>
+                    <div class="chapter-item">
+                        <div class="chapter-number">5.6</div>
+                        <div class="chapter-title">Reaction Energy Profile</div>
+                        <!-- <div class="chapter-duration">1 class</div> -->
+                    </div>
+                    <div class="chapter-item">
+                        <div class="chapter-number">5.7</div>
+                        <div class="chapter-title">Introduction to Reaction Mechanisms</div>
+                        <!-- <div class="chapter-duration">1 class</div> -->
+                    </div>
+                    <div class="chapter-item">
+                        <div class="chapter-number">5.8</div>
+                        <div class="chapter-title">Reaction Mechanism and Rate Law</div>
+                        <!-- <div class="chapter-duration">1 class</div> -->
+                    </div>
+                    <div class="chapter-item">
+                        <div class="chapter-number">5.9</div>
+                        <div class="chapter-title">Pre-Equilibrium Approximation</div>
+                        <!-- <div class="chapter-duration">1 class</div> -->
+                    </div>
+                    <div class="chapter-item">
+                        <div class="chapter-number">5.10</div>
+                        <div class="chapter-title">Multistep Reaction Energy Profile</div>
+                        <!-- <div class="chapter-duration">1 class</div> -->
+                    </div>
+                    <div class="chapter-item">
+                        <div class="chapter-number">5.11</div>
+                        <div class="chapter-title">Catalysis</div>
+                        <!-- <div class="chapter-duration">1 class</div> -->
+                    </div>
+                </div>
+            </div>
+
+            <!-- Add more units as needed -->
+            <!-- Unit 6 -->
+            <div class="unit-card">
+                <div class="unit-header">
+                    <div class="unit-number">6</div>
+                    <div class="unit-title">Thermochemistry</div>
+                    <svg class="unit-toggle" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <polyline points="6 9 12 15 18 9"></polyline>
+                    </svg>
+                </div>
+                <div class="chapters-list">
+                    <div class="chapter-item">
+                        <div class="chapter-number">6.1</div>
+                        <div class="chapter-title">Endothermic and Exothermic Processes</div>
+                        <!-- <div class="chapter-duration">3 classes</div> -->
+                    </div>
+                    <div class="chapter-item">
+                        <div class="chapter-number">6.2</div>
+                        <div class="chapter-title">Energy Diagrams</div>
+                        <!-- <div class="chapter-duration">2 classes</div> -->
+                    </div>
+                    <div class="chapter-item">
+                        <div class="chapter-number">6.3</div>
+                        <div class="chapter-title">Heat Transfer and Thermal Equilibrium</div>
+                        <!-- <div class="chapter-duration">1 class</div> -->
+                    </div>
+                    <div class="chapter-item">
+                        <div class="chapter-number">6.4</div>
+                        <div class="chapter-title">Heat Capacity and Calorimetry</div>
+                        <!-- <div class="chapter-duration">1 class</div> -->
+                    </div>
+                    <div class="chapter-item">
+                        <div class="chapter-number">6.5</div>
+                        <div class="chapter-title">Energy of Phase Changes</div>
+                        <!-- <div class="chapter-duration">1 class</div> -->
+                    </div>
+                    <div class="chapter-item">
+                        <div class="chapter-number">6.6</div>
+                        <div class="chapter-title">Introduction to Enthalpy of Reaction</div>
+                        <!-- <div class="chapter-duration">1 class</div> -->
+                    </div>
+                    <div class="chapter-item">
+                        <div class="chapter-number">6.7</div>
+                        <div class="chapter-title">Bond Enthalpies</div>
+                        <!-- <div class="chapter-duration">1 class</div> -->
+                    </div>
+                    <div class="chapter-item">
+                        <div class="chapter-number">6.8</div>
+                        <div class="chapter-title">Enthalpy of Formation</div>
+                        <!-- <div class="chapter-duration">1 class</div> -->
+                    </div>
+                    <div class="chapter-item">
+                        <div class="chapter-number">6.9</div>
+                        <div class="chapter-title">Hess's Law</div>
+                        <!-- <div class="chapter-duration">1 class</div> -->
+                    </div>
+                </div>
+            </div>
+            <!-- Unit 7 -->
+            <div class="unit-card">
+                <div class="unit-header">
+                    <div class="unit-number">7</div>
+                    <div class="unit-title">Equilibrium</div>
+                    <svg class="unit-toggle" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <polyline points="6 9 12 15 18 9"></polyline>
+                    </svg>
+                </div>
+                <div class="chapters-list">
+                    <div class="chapter-item">
+                        <div class="chapter-number">7.1</div>
+                        <div class="chapter-title">Introduction to Equilibrium</div>
+                        <!-- <div class="chapter-duration">3 classes</div> -->
+                    </div>
+                    <div class="chapter-item">
+                        <div class="chapter-number">7.2</div>
+                        <div class="chapter-title">Direction of Reversible Reactions</div>
+                        <!-- <div class="chapter-duration">2 classes</div> -->
+                    </div>
+                    <div class="chapter-item">
+                        <div class="chapter-number">7.3</div>
+                        <div class="chapter-title">Reaction Quotient and Equilibrium Constant</div>
+                        <!-- <div class="chapter-duration">1 class</div> -->
+                    </div>
+                    <div class="chapter-item">
+                        <div class="chapter-number">7.4</div>
+                        <div class="chapter-title">Calculating the Equilibrium Constant</div>
+                        <!-- <div class="chapter-duration">1 class</div> -->
+                    </div>
+                    <div class="chapter-item">
+                        <div class="chapter-number">7.5</div>
+                        <div class="chapter-title">Magnitude of the Equilibrium Constant</div>
+                        <!-- <div class="chapter-duration">1 class</div> -->
+                    </div>
+                    <div class="chapter-item">
+                        <div class="chapter-number">7.6</div>
+                        <div class="chapter-title">Properties of the Equilibrium Constant</div>
+                        <!-- <div class="chapter-duration">1 class</div> -->
+                    </div>
+                    <div class="chapter-item">
+                        <div class="chapter-number">7.7</div>
+                        <div class="chapter-title">Calculating Equilibrium Concetrations</div>
+                        <!-- <div class="chapter-duration">1 class</div> -->
+                    </div>
+                    <div class="chapter-item">
+                        <div class="chapter-number">7.8</div>
+                        <div class="chapter-title">Representations of Equilibrium</div>
+                        <!-- <div class="chapter-duration">1 class</div> -->
+                    </div>
+                    <div class="chapter-item">
+                        <div class="chapter-number">7.9</div>
+                        <div class="chapter-title">Introduction to Le Châtelier’s Principle</div>
+                        <!-- <div class="chapter-duration">1 class</div> -->
+                    </div>
+                    <div class="chapter-item">
+                        <div class="chapter-number">7.10</div>
+                        <div class="chapter-title">Reaction Quotient and Le Châtelier’s Principle</div>
+                        <!-- <div class="chapter-duration">1 class</div> -->
+                    </div>
+                    <div class="chapter-item">
+                        <div class="chapter-number">7.11</div>
+                        <div class="chapter-title">Introduction to Solubility Equilibria</div>
+                        <!-- <div class="chapter-duration">1 class</div> -->
+                    </div>
+                    <div class="chapter-item">
+                        <div class="chapter-number">7.12</div>
+                        <div class="chapter-title">Common-Ion Effect</div>
+                        <!-- <div class="chapter-duration">1 class</div> -->
+                    </div>
+                </div>
+            </div>
+            <div class="unit-card">
+                <div class="unit-header">
+                    <div class="unit-number">8</div>
+                    <div class="unit-title">Acids and Bases</div>
+                    <svg class="unit-toggle" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <polyline points="6 9 12 15 18 9"></polyline>
+                    </svg>
+                </div>
+                <div class="chapters-list">
+                    <div class="chapter-item">
+                        <div class="chapter-number">8.1</div>
+                        <div class="chapter-title">Introduction to Acids and Bases</div>
+                        <!-- <div class="chapter-duration">3 classes</div> -->
+                    </div>
+                    <div class="chapter-item">
+                        <div class="chapter-number">8.2</div>
+                        <div class="chapter-title">pH and pOH of Strong Acids and Bases</div>
+                        <!-- <div class="chapter-duration">2 classes</div> -->
+                    </div>
+                    <div class="chapter-item">
+                        <div class="chapter-number">8.3</div>
+                        <div class="chapter-title">Weak Acid and Base Equilibria</div>
+                        <!-- <div class="chapter-duration">1 class</div> -->
+                    </div>
+                    <div class="chapter-item">
+                        <div class="chapter-number">8.4</div>
+                        <div class="chapter-title">Acid-Base Reactions and Buffers</div>
+                        <!-- <div class="chapter-duration">1 class</div> -->
+                    </div>
+                    <div class="chapter-item">
+                        <div class="chapter-number">8.5</div>
+                        <div class="chapter-title">Acid-Base Titrations</div>
+                        <!-- <div class="chapter-duration">1 class</div> -->
+                    </div>
+                    <div class="chapter-item">
+                        <div class="chapter-number">8.6</div>
+                        <div class="chapter-title">Molecular Structure of Acids and Bases</div>
+                        <!-- <div class="chapter-duration">1 class</div> -->
+                    </div>
+                    <div class="chapter-item">
+                        <div class="chapter-number">8.7</div>
+                        <div class="chapter-title">pH and pKₐ</div>
+                        <!-- <div class="chapter-duration">1 class</div> -->
+                    </div>
+                    <div class="chapter-item">
+                        <div class="chapter-number">8.8</div>
+                        <div class="chapter-title">Properties of Buffers</div>
+                        <!-- <div class="chapter-duration">1 class</div> -->
+                    </div>
+                </div>
+            </div>
+            <div class="unit-card">
+                <div class="unit-header">
+                    <div class="unit-number">9</div>
+                    <div class="unit-title">Thermodynamics and Electrochemistry</div>
+                    <svg class="unit-toggle" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <polyline points="6 9 12 15 18 9"></polyline>
+                    </svg>
+                </div>
+                <div class="chapters-list">
+                    <div class="chapter-item">
+                        <div class="chapter-number">9.1</div>
+                        <div class="chapter-title">Introduction to Entropy</div>
+                        <!-- <div class="chapter-duration">3 classes</div> -->
+                    </div>
+                    <div class="chapter-item">
+                        <div class="chapter-number">9.2</div>
+                        <div class="chapter-title">Absolute Entropy and Entropy Change</div>
+                        <!-- <div class="chapter-duration">2 classes</div> -->
+                    </div>
+                    <div class="chapter-item">
+                        <div class="chapter-number">9.3</div>
+                        <div class="chapter-title">Gibbs Free Energy and Thermodynamic Favorability</div>
+                        <!-- <div class="chapter-duration">1 class</div> -->
+                    </div>
+                    <div class="chapter-item">
+                        <div class="chapter-number">9.4</div>
+                        <div class="chapter-title">Thermodynamic and Kinetic Control</div>
+                        <!-- <div class="chapter-duration">1 class</div> -->
+                    </div>
+                    <div class="chapter-item">
+                        <div class="chapter-number">9.5</div>
+                        <div class="chapter-title">Free Energy and Equilibrium</div>
+                        <!-- <div class="chapter-duration">1 class</div> -->
+                    </div>
+                    <div class="chapter-item">
+                        <div class="chapter-number">9.6</div>
+                        <div class="chapter-title">Free Energy of Dissolution</div>
+                        <!-- <div class="chapter-duration">1 class</div> -->
+                    </div>
+                    <div class="chapter-item">
+                        <div class="chapter-number">9.7</div>
+                        <div class="chapter-title">Coupled Reactions</div>
+                        <!-- <div class="chapter-duration">1 class</div> -->
+                    </div>
+                    <div class="chapter-item">
+                        <div class="chapter-number">9.8</div>
+                        <div class="chapter-title">Galvanic (Voltaic) and Electrolytic Cells</div>
+                        <!-- <div class="chapter-duration">1 class</div> -->
+                    </div>
+                    <div class="chapter-item">
+                        <div class="chapter-number">9.9</div>
+                        <div class="chapter-title">Cell Potential and Free Energy</div>
+                        <!-- <div class="chapter-duration">1 class</div> -->
+                    </div>
+                    <div class="chapter-item">
+                        <div class="chapter-number">9.10</div>
+                        <div class="chapter-title">Cell Potential Under Nonstandard Conditions</div>
+                        <!-- <div class="chapter-duration">1 class</div> -->
+                    </div>
+                    <div class="chapter-item">
+                        <div class="chapter-number">9.11</div>
+                        <div class="chapter-title">Electrolysis and Faraday's Law</div>
+                        <!-- <div class="chapter-duration">1 class</div> -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Your Original Footer -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-grid">
+                <div class="footer-column">
+                    <h3 class="footer-logo">
+                        <i class="fa-solid fa-graduation-cap"></i> Tutorly
+                    </h3>
+                    <p class="footer-about">
+                        Peer-to-peer learning platform connecting students with qualified tutors.
+                    </p>
+                    <div class="footer-social">
+                        <a href="https://discord.gg/KvTEwuYYXc" target="_blank"><i class="fab fa-discord"></i></a>
+                       <a href="https://www.instagram.com/tutorlyonline/" target="_blank"><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.youtube.com/channel/UCwMIQD0kkJbeYCDhcY8IqpQ" target="_blank"><i class="fab fa-youtube"></i></a>
+                        <a href="https://www.tiktok.com/@tutorlyonline?lang=en" target="_blank"><i class="fab fa-tiktok"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Navigation</h3>
+                    <ul class="footer-links">
+                        <li><a href="/public/pages/courses/apchemistry/home">AP Chem Home</a></li>
+                        <li><a href="./curriculum">Curriculum</a></li>
+                        <li><a href="./all-videos">Watch Videos</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Support</h3>
+                    <ul class="footer-links">
+                        <li><a href="/public/pages/help/contact">Contact</a></li>
+                        <li><a href="/public/pages/help/terms-and-conditions" target="_blank">Terms & Conditions</a></li>
+                        <li><a href="/public/pages/help/privacy-policy" target="_blank">Privacy Policy</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-column">
+                    <h3>Apply</h3>
+                    <ul class="footer-links">
+                        <li><a href="https://docs.google.com/forms/d/e/1FAIpQLScYi5C79uxjRfZlFuTvFYFj--pihv9wCq6TUJg169iXw6QOTA/viewform?usp=header" target="_blank">Tutor Application</a></li>
+                        <li><a href="https://docs.google.com/forms/d/e/1FAIpQLSeBF2uVM3kbkGdKLWkRXoJY6Xx6Kds646CqPXX_tVenN_AkBg/viewform?usp=dialog" target="_blank">Social Media Team Application</a></li>
+                        <li><a href="https://docs.google.com/forms/d/e/1FAIpQLSeM8hqQRiLXtN7BpMBetiWBQZ4xrd5PPyISZj0DgV4JlfQPaw/viewform?usp=dialog" target="_blank">Miscellaneous Application</a></li>
+                    </ul>
+                </div>
+                
+                <!-- <div class="footer-column">
+                    <h3>Newsletter</h3>
+                    <form class="footer-newsletter">
+                        <input type="email" placeholder="Your email address" required>
+                        <button type="submit">Subscribe</button>
+                    </form>
+                    <p class="footer-disclaimer">
+                        By subscribing, you agree to our Privacy Policy.
+                    </p>
+                </div> -->
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2025 Tutorly. All rights reserved.</p>
+                <div class="footer-payments">
+                    <i class="fab fa-cc-visa"></i>
+                    <i class="fab fa-cc-mastercard"></i>
+                    <i class="fab fa-cc-paypal"></i>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="./apchemistry.js"></script>
+    <script>
+        // Enhanced Unit Dropdown Functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const unitHeaders = document.querySelectorAll('.unit-header');
+            
+            unitHeaders.forEach(header => {
+                header.addEventListener('click', function() {
+                    const unit = this.parentElement;
+                    const wasActive = unit.classList.contains('active');
+                    
+                    // Close all other units
+                    document.querySelectorAll('.unit-card').forEach(u => {
+                        if (u !== unit && u.classList.contains('active')) {
+                            u.classList.remove('active');
+                        }
+                    });
+                    
+                    // Toggle current unit
+                    unit.classList.toggle('active', !wasActive);
+                });
+            });
+            
+            // Mobile menu toggle (preserving your existing functionality)
+            const navToggle = document.getElementById('nav-toggle');
+            const navMenu = document.getElementById('nav-menu');
+            
+            if (navToggle && navMenu) {
+                navToggle.addEventListener('click', function() {
+                    navMenu.classList.toggle('show-menu');
+                    this.classList.toggle('active');
+                });
+            }
+        });
+        // Replace your existing mobile menu toggle code with this:
+document.addEventListener('DOMContentLoaded', function() {
+    const navToggle = document.getElementById('nav-toggle');
+    const navMenu = document.getElementById('nav-menu');
+    
+    if (navToggle && navMenu) {
+        navToggle.addEventListener('click', function() {
+            // Toggle the menu visibility
+            navMenu.classList.toggle('show-menu');
+            // Toggle the hamburger/close icons
+            this.classList.toggle('active');
+        });
+    }
+    
+    // Keep your existing unit dropdown functionality
+    const unitHeaders = document.querySelectorAll('.unit-header');
+    // ... rest of your unit dropdown code
+});
+    </script>
+   <!--Start of Tawk.to Script-->
+<style>
+    /* Container for the custom chat button */
+    .custom-chat-button {
+        position: fixed;
+        bottom: 25px;
+        right: 29px;
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+        z-index: 1000;
+        transition: transform 0.3s ease;
+    }
+    
+    .custom-chat-button:hover {
+        transform: scale(1.25);
+    }
+    
+    /* Text bubble styling */
+    .chat-text-bubble {
+        background-color: #f54a4a;
+        color: white;
+        padding: 8px 16px;
+        border-radius: 20px;
+        font-weight: bold;
+        font-size: 14px;
+        margin-right: 10px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    }
+    
+    /* Logo container styling */
+    .chat-logo {
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        background-color: hsl(135, 29%, 53%);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+        overflow: hidden;
+    }
+    
+    /* Your logo styling */
+    .chat-logo img {
+        width: 40px;
+        height: 100vh;
+        object-fit: contain;
+    }
+  
+    /* Media query for mobile devices */
+    @media only screen and (max-width: 768px) {
+                /* .chat-logo {
+            display: none;
+        } */
+        
+        .chat-text-bubble {
+            margin-right: 0; /* Remove right margin since there's no logo */
+        }
+    }
+  
+    /* Remove borders from tawk.to iframe */
+    .tawk-iframe-container, .tawk-min-container {
+        border: none !important;
+        padding: 0 !important;
+        box-shadow: 0 2px 10px rgba(0,0,0,0.3) !important;
+        border-radius: 10px !important;
+        overflow: hidden !important;
+    }
+    
+    /* Remove borders from the chat window */
+    #tawk-body-iframe, #tawk-minified-iframe {
+        border: none !important;
+    }
+    
+    /* Target the iframe documents */
+    iframe[title="chat widget"] {
+        border: none !important;
+    }
+  </style>
+  
+  <!-- Custom Chat Button -->
+  <div class="custom-chat-button" id="custom-tawk-button">
+    <!-- <div class="chat-text-bubble">Live Chat</div> -->
+    <div class="chat-logo">
+        <!-- Replace this with your actual logo -->
+        <img src="./images/tawktoicon.png" alt="Company Logo">
+    </div>
+  </div>
+  
+  <!-- tawk.to Integration Script -->
+  <script>
+    // Custom button click handler
+    document.getElementById('custom-tawk-button').addEventListener('click', function() {
+        // If Tawk is loaded, show the chat window
+        if (window.Tawk_API && window.Tawk_API.showWidget) {
+            window.Tawk_API.maximize();
+        }
+    });
+  
+    // tawk.to Integration
+    var Tawk_API = Tawk_API || {};
+    var Tawk_LoadStart = new Date();
+    
+    // Configure Tawk before loading
+    // This will prevent the chat from auto-opening
+    Tawk_API = Tawk_API || {};
+    
+    // Prevent auto-popup
+    Tawk_API.onBeforeLoad = function() {
+        // Disable automatic popups
+        Tawk_API.disablePopups = true;
+    };
+    
+    // When tawk loads
+    Tawk_API.onLoad = function() {
+        // Hide the default button
+        Tawk_API.hideWidget();
+        
+        // Ensure the widget starts hidden
+        setTimeout(function() {
+            Tawk_API.hideWidget();
+        }, 100);
+        
+        // Apply CSS to remove borders
+        removeTawkBorders();
+    };
+    
+    // Function to remove tawk.to borders
+    function removeTawkBorders() {
+        // Create a new style element
+        const style = document.createElement('style');
+        style.type = 'text/css';
+        
+        // CSS to remove borders from tawk.to elements
+        const css = `
+            .tawk-iframe-container, .tawk-min-container {
+                border: none !important;
+                padding: 0 !important;
+                box-shadow: 0 2px 10px rgba(0,0,0,0.3) !important;
+                border-radius: 10px !important;
+                overflow: hidden !important;
+            }
+            
+            #tawk-body-iframe, #tawk-minified-iframe {
+                border: none !important;
+            }
+        `;
+        
+        // Add the CSS to the style element
+        if (style.styleSheet) {
+            style.styleSheet.cssText = css;
+        } else {
+            style.appendChild(document.createTextNode(css));
+        }
+        
+        // Add the style to the document head
+        document.head.appendChild(style);
+        
+        // Try to modify iframe content when available
+        setTimeout(function() {
+            try {
+                const tawkIframes = document.querySelectorAll('iframe[title="chat widget"]');
+                tawkIframes.forEach(iframe => {
+                    if (iframe.contentDocument) {
+                        const iframeStyle = document.createElement('style');
+                        iframeStyle.textContent = `
+                            .card, .card-header, .card-body, .card-footer {
+                                border: none !important;
+                            }
+                            .tawk-card {
+                                border: none !important;
+                                box-shadow: none !important;
+                            }
+                        `;
+                        iframe.contentDocument.head.appendChild(iframeStyle);
+                    }
+                });
+            } catch (e) {
+                console.log("Could not modify tawk iframe due to cross-origin restrictions");
+            }
+        }, 3000);
+    }
+    
+    // Load the tawk.to script
+    (function() {
+        var s1 = document.createElement("script");
+        var s0 = document.getElementsByTagName("script")[0];
+        s1.async = true;
+        s1.src = 'https://embed.tawk.to/680088b0f308dc1911a96463/1ip11bs31';
+        s1.charset = 'UTF-8';
+        s1.setAttribute('crossorigin', '*');
+        s0.parentNode.insertBefore(s1, s0);
+    })();
+  </script>
+</body>
+</html>
