@@ -5,11 +5,11 @@
   --header-height: 3.5rem;
   /*========== Colors ==========*/
   /*Color mode HSL(hue, saturation, lightness)*/
-  --first-color: hsl(135, 47%, 69%);
-  --first-color-lighten: hsl(135, 26%, 48%);
+  --first-color: hsl(200, 57%, 79%);
+  --first-color-lighten: hsl(200, 26%, 48%);
   --title-color: hsl(0, 0%, 100%);
-  --text-color: hsl(144, 28%, 79%);
-  --body-color: hsl(135, 29%, 53%);
+  --text-color: hsl(200, 28%, 79%);
+  --body-color: hsl(200, 29%, 53%);
   /*========== Font and typography ==========*/
   /*.5rem = 8px | 1rem = 16px ...*/
   --body-font: "Poppins", sans-serif;
